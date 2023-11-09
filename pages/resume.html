@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume - Jose's Portfolio</title>
 
-  <!-- Link your CSS files -->
-<link rel="stylesheet" href="./css/layout.css">
-<link rel="stylesheet" href="./css/typography.css">
-<link rel="stylesheet" href="./css/utilities.css">
-<link rel="stylesheet" href="./css/styles.css">
+  <!-- Link your CSS files, including styles.css for button styles -->
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/styles.css">
 
   <style>
     /* CSS for the initial state of the navbar */
@@ -29,31 +29,20 @@
       padding: 20px;
       border: 1px solid #ddd;
     }
-
-    /* Style the button */
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: #fff;
-      text-decoration: none;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navbar (same structure as index.html) -->
   <div class="navbar scroll-fade">
-      <a class="nav-title-link" href="index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">Jose's Portfolio</span>
-      </a>
+    <a class="nav-title-link" href="index.html">
+      <span class="nav-title">Jose's Portfolio</span>
+    </a>
 
     <div class="button-container">
-      <a class="button" href="./project-pages/project-template.html">
+      <a class="button" href="/project-pages/project-template.html">
         <span class="button-text">Projects</span>
       </a>
-      <a class="button" href="/pages/resume.html">
+      <a class="button" href="resume.html">
         <span class="button-text">Resume</span>
       </a>
       <a class="button" href="mailto:chupix13@gmail.com">
@@ -71,5 +60,19 @@
   <footer>
     <!-- Your footer content here -->
   </footer>
+
+  <!-- Script to handle the navbar fade (same as in index.html) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbar = document.querySelector(".scroll-fade");
+
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+
+        navbar.style.opacity = navbarOpacity;
+      });
+    });
+  </script>
 </body>
 </html>
