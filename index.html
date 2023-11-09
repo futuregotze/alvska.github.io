@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <!-- 
+      <!-- 
       TODO
 
       Upload your Unemployable (or whatever photo you like) to the assets/images folder
@@ -23,8 +23,27 @@
     <link rel="stylesheet" href="./css/utilities.css">
 
     <script defer src="./js/script.js"></script>
+    <style>
+      /* CSS for the initial state of the navbar */
+      .scroll-fade {
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s; /* Adjust the duration as needed */
+      }
 
-       <!-- Your existing code for JavaScript -->
+      /* CSS for the visible state of the navbar */
+      .scroll-fade.visible {
+        opacity: 1; /* Fully visible when scrolling */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your HTML content here -->
+
+    <div class="navbar scroll-fade">
+      <!-- Your navbar content here -->
+    </div>
+
+    <!-- Your JavaScript code at the end of the body -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", () => {
@@ -39,23 +58,7 @@
         });
       });
     </script>
-    
-<style>
-  /* CSS for the initial state of the navbar */
-  .scroll-fade {
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s; /* Adjust the duration as needed */
-  }
 
-  /* CSS for the visible state of the navbar */
-  .scroll-fade.visible {
-    opacity: 1; /* Fully visible when scrolling */
-  }
-</style>
-
-
-  </head>
-  <!-- Rest of your HTML document -->
 	<body>
     <!-- NAVBAR -->
 <div class="navbar scroll-fade">
