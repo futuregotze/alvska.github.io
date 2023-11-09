@@ -26,7 +26,7 @@ a.icon-link:hover {
   display: flex;
   justify-content: space-between; /* Pushes the buttons to the right */
   align-items: center;
-  padding: 10px 20px 10px 0;
+  padding: 20px;
 }
 
 .nav-title-link {
