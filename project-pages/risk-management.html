@@ -1,5 +1,20 @@
 <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 
+<style>
+  /* CSS for styling the content */
+  #markdown-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-left: 5px solid #007acc;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  h1, h2, h3 {
+    color: #007acc;
+  }
+</style>
+
 <div id="markdown-content">
   <!-- Your Markdown content will be displayed here -->
 </div>
@@ -7,7 +22,6 @@
 <script>
   // Your Markdown content
   var markdownText = `
-
 # Understanding Risk Management in IT
 
 ## Introduction
@@ -105,7 +119,6 @@ Testing open ports and security measures is crucial to risk management. Methods 
 - **Testing Open Ports:** Examining the software and services running on open ports to ensure they are secure.
 
 By understanding and implementing these components of risk management, organizations can better protect their IT assets and reduce the likelihood of security breaches and other IT-related risks.
-
   `;
 
   // Create a new Showdown converter
