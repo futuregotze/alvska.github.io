@@ -75,6 +75,14 @@ a.button:hover {
   cursor: pointer;
 }
 
+/* Center the "Contact Me" button and push "Projects" button to the right */
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
 
 /* Footer Styling */
 
