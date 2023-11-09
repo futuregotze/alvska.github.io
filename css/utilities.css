@@ -52,14 +52,26 @@ a.icon-link:hover {
 
 
 /* Button Styling */
-a.button {
+/* Button Styling for left-side buttons (Contact Me and Projects) */
+a.button.left {
   padding: 8px 16px;
   border: 3px solid #141414;
   border-radius: 50px;
   color: black;
   text-decoration: none;
   width: fit-content;
-  margin: 0 5px; /* Adjust the margin to control spacing between buttons */
+  margin: 0 10px; /* Adjust the margin for left-side buttons */
+}
+
+/* Button Styling for right-side buttons (Documentation and Resume) */
+a.button.right {
+  padding: 8px 16px;
+  border: 3px solid #141414;
+  border-radius: 50px;
+  color: black;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0 5px; /* Adjust the margin for right-side buttons */
 }
 
 a.button:hover {
