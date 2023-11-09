@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <div id="markdown-content"></div>
 <script>
-
+    var markdownText = `
 # Understanding Risk Management in IT
 
 ## Introduction
@@ -99,10 +99,8 @@ Testing open ports and security measures is crucial to risk management. Methods 
 - **Testing Open Ports:** Examining the software and services running on open ports to ensure they are secure.
 
 By understanding and implementing these components of risk management, organizations can better protect their IT assets and reduce the likelihood of security breaches and other IT-related risks.
-  // Your Markdown content
-  var markdownText = `
-  ... (your Markdown content here)
-  `;
+
+`;
 
   // Convert Markdown to HTML using the marked library
   document.getElementById("markdown-content").innerHTML = marked(markdownText);
