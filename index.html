@@ -82,20 +82,19 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", () => {
-      const navbar = document.querySelector(".scroll-fade");
+      const navbar = document.querySelector(".navbar.scroll-fade");
       const scrollY = window.scrollY;
 
       if (navbar) {
         if (scrollY > 100) {
-          navbar.classList.add("visible");
+          navbar.style.opacity = "0";
         } else {
-          navbar.classList.remove("visible");
+          navbar.style.opacity = "1";
         }
       }
     });
   });
 </script>
-
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
