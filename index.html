@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="./css/utilities.css">
 
     <script defer src="./js/script.js"></script>
-    
-    <!-- JavaScript for scroll-fading effect -->
+
+       <!-- JavaScript for scroll-fading effect -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", () => {
@@ -39,6 +39,20 @@
         });
       });
     </script>
+    
+    <style>
+      /* CSS for the initial state of the navbar */
+      .scroll-fade {
+        opacity: 0;
+        transition: opacity 0.5s; /* Adjust the duration as needed */
+      }
+
+      /* CSS for the visible state of the navbar */
+      .scroll-fade.visible {
+        opacity: 1;
+      }
+    </style>
+
   </head>
   <!-- Rest of your HTML document -->
 	<body>
