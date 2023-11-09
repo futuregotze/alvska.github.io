@@ -1,1 +1,30 @@
+/* Example animation for an element with the class 'animated' */
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
 
+.animated.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Additional animation classes can be added as needed */
+.animated.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.animated.fade-in.animate {
+  opacity: 1;
+}
+
+.animated.slide-in-left {
+  transform: translateX(-20px);
+}
+
+.animated.slide-in-left.animate {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
