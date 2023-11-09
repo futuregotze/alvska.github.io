@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Your head content here -->
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     
     <!-- 
       TODO
@@ -34,35 +34,6 @@
       .scroll-fade.visible {
         opacity: 1; /* Fully visible when scrolling */
       }
-
-      /* Style the skills section */
-      .skills-section {
-        margin: 20px;
-        padding: 20px;
-        border: 1px solid #ddd;
-      }
-
-      /* Style the button */
-      .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #3498db;
-        color: #fff;
-        text-decoration: none;
-        margin-top: 20px;
-      }
-
-      /* Style the skills list */
-      .skills-list {
-        list-style-type: square;
-        padding-left: 20px;
-      }
-
-      /* Style skills category titles */
-      .skills-category-title {
-        font-weight: bold;
-        margin-top: 10px;
-      }
     </style>
   </head>
   <body>
@@ -81,6 +52,9 @@
         <a class="button" href="/project-pages/project-template.html">
           <span class="button-text">Projects</span>
         </a>
+        <a class="button" href="your_docs_link_here.pdf">
+          <span class="button-text">Documentation</span>
+        </a>
         <a class="button" href="/resume.html">
           <span class="button-text">Resume</span>
         </a>
@@ -91,7 +65,9 @@
     </div>
 
     <!-- Your main content here -->
-    <div id="main-content">
+        <div id="main-content">
+      <!-- Rest of your HTML content here -->
+      
       <!-- PORTFOLIO HEADER -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
@@ -104,18 +80,117 @@
           -->
           <img src="./assets/images/IconJF-3.png" class="portfolio-header-image">
           <!-- <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">Unemployables #1311</span> -->    yup, that's me!
+            <span class="image-caption">Unemployables #1311</span> -->    yup, that's me
           </a>
         </div>
 
-        <!-- 
-          TODO
+          <!-- 
+            TODO
 
-          - Change the main-title to whatever you want
-          - Change the body-text after that to a quick introduction to what you do
-          - Edit the button text if you feel like it. It will link to the skills section below.
-        -->
+            - Change the main-title to whatver you want
+            - Change the body-text after that to a quick introduction to what you do
+            - Edit the button text if you feel like it. It will link to the projects section below.
+          -->
         <div id="portfolio-header-text-container">
-          <div class="header-text">
-            <span class="main-title">Hey, I'm Jose.</span>
-            <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, is passionately safeguard
+            <div class="header-text">
+              <span class="main-title">Hey, I'm Jose.</span>
+              <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, is passionately safeguarding the digital realm while transitioning from cloud server administration.</div>
+            </div>
+            <a class="button" id="my-work-link">
+              <span class="button-text">Check out my projects</span> 
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+        </div>
+      </div>
+
+      <!-- Skills section -->
+    <div class="skills-section">
+      <span class="subheader-text">My Skills</span>
+      <div class="skills-category">
+        <span class="skills-category-title">Operating Systems and Security:</span>
+        <ul class="skills-list">
+          <li>Windows 10</li>
+          <li>Linux</li>
+          <li>Unix</li>
+          <li>CIS (Center for Internet Security) standards</li>
+          <li>Virtualization</li>
+          <li>Patch Management</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <span class="skills-category-title">Network Security and Administration:</span>
+        <ul class="skills-list">
+          <li>Firewall Administration</li>
+          <li>Wireless Network Security</li>
+          <li>VPN (Virtual Private Network)</li>
+          <li>IDS (Intrusion Detection System)</li>
+          <li>Ports (network ports and protocols)</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <span class="skills-category-title">Security Frameworks and Web Services:</span>
+        <ul class="skills-list">
+          <li>Threat Modeling</li>
+          <li>Cyber Kill Chain Framework</li>
+          <li>Cryptography (encryption and decryption techniques)</li>
+          <li>Cloud Security</li>
+          <li>Internet of Things (IoT) security</li>
+          <li>Apache (web server administration)</li>
+          <li>Squid (proxy server)</li>
+        </ul>
+      </div>
+    </div>
+          
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- Add your footer content here -->
+            <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
+        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
+        <image src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+      </a>
+	<!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+        <image src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+      </a>    
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+    <!-- Include your main content here -->
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".scroll-fade");
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+
+      navbar.style.opacity = navbarOpacity;
+       });
+    });
+   </script>
+  </body>
+</html>
