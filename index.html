@@ -38,48 +38,32 @@
   <body>
     <!-- Your HTML content here -->
     <!-- NAVBAR -->
-<div class="navbar scroll-fade">
-  <a class="nav-title-link" href="./index.html">
-    <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-    <span class="nav-title">Jose's Portfolio</span>
-  </a>
+    <div class="navbar scroll-fade">
+      <a class="nav-title-link" href="./index.html">
+        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
+        <span class="nav-title">Jose's Portfolio</span>
+      </a>
 
-  <div class="button-container">
-    <a class="button" href="/project-pages/project-template.html">
-      <span class="button-text">Projects</span>
-    </a>
-    <a class="button" href="your_docs_link_here.pdf">
-      <span class="button-text">Documentation</span>
-    </a>
-    <a class="button" href="your_resume_link_here.pdf">
-      <span class="button-text">Resume</span>
-    </a>
-    <a class="button" href="mailto:chupix13@gmail.com">
-      <span class="button-text">Contact Me</span>
-    </a>
-  </div>
-</div>
+      <div class="button-container">
+        <a class="button" href="/project-pages/project-template.html">
+          <span class="button-text">Projects</span>
+        </a>
+        <a class="button" href="your_docs_link_here.pdf">
+          <span class="button-text">Documentation</span>
+        </a>
+        <a class="button" href="your_resume_link_here.pdf">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button" href="mailto:chupix13@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
 
-<script>
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.querySelector(".scroll-fade");
-
-  window.addEventListener("scroll", () => {
-    const currentScrollPos = window.pageYOffset;
-    
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.top = "0";
-    } else {
-      navbar.style.top = `-${navbar.clientHeight}px`;
-    }
-    
-    prevScrollPos = currentScrollPos;
-  });
-</script>
-
- <!-- MAIN PAGE CONTENT -->
+    <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
-
+      <!-- Rest of your HTML content here -->
+      
       <!-- PORTFOLIO HEADER -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
@@ -197,7 +181,8 @@
 
     <!-- FOOTER -->
     <div id="footer">
-      <!-- 
+      <!-- Add your footer content here -->
+            <!-- 
         TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
 
         This should be the same across all pages.
@@ -231,5 +216,24 @@
       </a>
     </div>
 
-	</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector(".scroll-fade");
+
+        window.addEventListener("scroll", () => {
+          const currentScrollPos = window.pageYOffset;
+          
+          if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0";
+          } else {
+            navbar.style.top = `-${navbar.clientHeight}px`;
+          }
+          
+          prevScrollPos = currentScrollPos;
+        });
+      });
+    </script>
+
+  </body>
 </html>
