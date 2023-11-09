@@ -52,6 +52,38 @@ a.icon-link:hover {
 
 
 /* Button Styling */
+/* Center the main title */
+.center-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Make sub-titles (categories) bold */
+.skills-category-title {
+  font-weight: bold;
+}
+
+/* Arrange skills in three columns */
+.skills-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills-column {
+  width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
+  margin: 0 10px;
+  padding: 0;
+}
+
+/* Adjust the width of .skills-category-title, .skills-list, and .skills-list li as needed */
+
+.skills-category-title,
+.skills-list,
+.skills-list li {
+  width: 100%; /* Makes sub-titles and skills span the whole column */
+}
+
 /* Button Styling */
 a.button {
   padding: 8px 16px;
