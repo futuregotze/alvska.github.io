@@ -26,8 +26,7 @@
     <style>
       /* CSS for the initial state of the navbar */
       .scroll-fade {
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.5s; /* Adjust the duration as needed */
+        transition: opacity 0.3s; /* Adjust the duration as needed */
       }
 
       /* CSS for the visible state of the navbar */
@@ -217,24 +216,19 @@
       </a>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector(".scroll-fade");
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".scroll-fade");
 
-        window.addEventListener("scroll", () => {
-          const currentScrollPos = window.pageYOffset;
-          
-          if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0";
-          } else {
-            navbar.style.top = `-${navbar.clientHeight}px`;
-          }
-          
-          prevScrollPos = currentScrollPos;
-        });
-      });
-    </script>
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+
+      navbar.style.opacity = navbarOpacity;
+    });
+  });
+</script>
+
 
   </body>
 </html>
