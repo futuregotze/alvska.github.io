@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume - Jose's Portfolio</title>
+
+  <!-- Link your CSS files -->
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* CSS for the initial state of the navbar */
+    .scroll-fade {
+      opacity: 1; /* Ensure the navbar is initially visible */
+      transition: opacity 0.5s; /* Adjust the duration as needed */
+    }
+
+    /* CSS for the visible state of the navbar */
+    .scroll-fade.visible {
+      opacity: 0; /* Navbar will fade out as the user scrolls */
+    }
+
+    /* Style the resume container */
+    .resume-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    /* Style the button */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar scroll-fade">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose's Portfolio</span>
+    </a>
+
+    <div class="button-container">
+      <a class="button" href="./project-pages/project-template.html">
+        <span class="button-text">Projects</span>
+      </a>
+      <a class="button" href="./resume.html">
+        <span class="button-text">Resume</span>
+      </a>
+      <a class="button" href="mailto:chupix13@gmail.com">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Resume content -->
+  <div class="resume-container">
+    <iframe src="/assests/Jose Fernandez Resume.pdf" width="100%" height="800px"></iframe>
+  </div>
+
+  <!-- Include your footer if needed -->
+  <footer>
+    <!-- Your footer content here -->
+  </footer>
+</body>
+</html>
