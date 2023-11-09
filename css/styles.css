@@ -1,0 +1,10 @@
+/* CSS for the initial state of the navbar */
+.scroll-fade {
+  opacity: 0;
+  transition: opacity 0.5s; /* Adjust the duration as needed */
+}
+
+/* CSS for the visible state of the navbar */
+.scroll-fade.visible {
+  opacity: 1;
+}
