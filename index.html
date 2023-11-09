@@ -80,29 +80,19 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".navbar.scroll-fade");
-    const scrollY = window.scrollY;
+  const navbar = document.querySelector(".navbar.scroll-fade");
+  let scrolled = false;
 
-    if (navbar) {
-      if (scrollY > 100) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      if (!scrolled) {
         navbar.classList.add("visible");
-      } else {
-        navbar.classList.remove("visible");
+        scrolled = true;
       }
+    } else {
+      navbar.classList.remove("visible");
+      scrolled = false;
     }
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      if (navbar) {
-        if (scrollY > 100) {
-          navbar.classList.add("visible");
-        } else {
-          navbar.classList.remove("visible");
-        }
-      }
-    });
   });
 </script>
 
