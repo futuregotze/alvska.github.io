@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <!-- Your head content here -->
+        <meta charset="utf-8">
     
     <!-- 
       TODO
@@ -36,32 +37,35 @@
     </style>
   </head>
   <body>
-    <!-- Your HTML content here -->
-    <!-- NAVBAR -->
     <div class="navbar scroll-fade">
       <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Jose's Portfolio</span>
       </a>
 
-      <div class="button-container">
+      <button class="mobile-menu-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+
+      <div class="nav-links">
         <a class="button" href="/project-pages/project-template.html">
           <span class="button-text">Projects</span>
         </a>
         <a class="button" href="your_docs_link_here.pdf">
           <span class="button-text">Documentation</span>
         </a>
-        <a class="button" href="./resume.html">
- 	  <span class="button-text">Resume</span>
-	</a>
+        <a class="button" href="/pages/resume.html">
+          <span class="button-text">Resume</span>
+        </a>
         <a class="button" href="mailto:chupix13@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
       </div>
     </div>
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
+    <!-- Your main content here -->
+        <div id="main-content">
       <!-- Rest of your HTML content here -->
       
       <!-- PORTFOLIO HEADER -->
@@ -215,8 +219,19 @@
         <image src="./assets/icons/mail.svg" class="footer-icon"/>
       </a>
     </div>
+    <!-- Include your main content here -->
 
-  <script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(".mobile-menu-button");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuButton.addEventListener("click", function () {
+          navLinks.classList.toggle("visible");
+        });
+      });
+    </script>
+      <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".scroll-fade");
 
@@ -228,7 +243,5 @@
     });
   });
 </script>
-
-
   </body>
 </html>
