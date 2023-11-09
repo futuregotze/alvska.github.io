@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
+  <head>
+    <meta charset="utf-8">
+    
     <!-- 
       TODO
 
@@ -12,18 +12,35 @@
       Change the title in the <title> tag to whatever you would like the title of your portfolio to be
 
       This should be the same across all pages.
-     -->
+    -->
     <link rel="icon" href="./assets/images/IconJF-2.png" />
-		<title>Jose's Portfolio</title>
+    <title>Jose's Portfolio</title>
     <meta name="description" content="A portfolio template for the Unemployables community.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
 
-		<script defer src="./js/script.js"></script>
-	</head>
+    <script defer src="./js/script.js"></script>
+    
+    <!-- JavaScript for scroll-fading effect -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", () => {
+          const navbar = document.querySelector(".scroll-fade");
+          const scrollY = window.scrollY;
+
+          if (scrollY > 100) {
+            navbar.classList.add("visible");
+          } else {
+            navbar.classList.remove("visible");
+          }
+        });
+      });
+    </script>
+  </head>
+  <!-- Rest of your HTML document -->
 	<body>
     <!-- NAVBAR -->
 <div class="navbar">
