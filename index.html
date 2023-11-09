@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Your head content here -->
-        <meta charset="utf-8">
+    <meta charset="utf-8">
     
     <!-- 
       TODO
@@ -34,6 +34,35 @@
       .scroll-fade.visible {
         opacity: 1; /* Fully visible when scrolling */
       }
+
+      /* Style the skills section */
+      .skills-section {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      /* Style the button */
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+
+      /* Style the skills list */
+      .skills-list {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+
+      /* Style skills category titles */
+      .skills-category-title {
+        font-weight: bold;
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -52,9 +81,6 @@
         <a class="button" href="/project-pages/project-template.html">
           <span class="button-text">Projects</span>
         </a>
-        <a class="button" href="your_docs_link_here.pdf">
-          <span class="button-text">Documentation</span>
-        </a>
         <a class="button" href="/resume.html">
           <span class="button-text">Resume</span>
         </a>
@@ -65,9 +91,7 @@
     </div>
 
     <!-- Your main content here -->
-        <div id="main-content">
-      <!-- Rest of your HTML content here -->
-      
+    <div id="main-content">
       <!-- PORTFOLIO HEADER -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
@@ -84,153 +108,14 @@
           </a>
         </div>
 
-          <!-- 
-            TODO
+        <!-- 
+          TODO
 
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
+          - Change the main-title to whatever you want
+          - Change the body-text after that to a quick introduction to what you do
+          - Edit the button text if you feel like it. It will link to the skills section below.
+        -->
         <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm Jose.</span>
-              <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, is passionately safeguarding the digital realm while transitioning from cloud server administration.</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-        </div>
-      </div>
-
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">I'm Jose Fernandez, a cybersecurity enthusiast with a diverse background in sales and tech, passionate about safeguarding the digital realm. My dynamic journey is marked by a relentless pursuit of efficiency, team development, and driving sales growth. I bring a wide range of technical skills, including proficiency in Windows, Linux, Cloud Management, and threat modeling, backed by my CompTIA Cloud+ certification. Beyond tech, I'm a dedicated music producer and pianist. I'm currently seeking new opportunities in Cyber Security and eager to collaborate with like-minded professionals to make a meaningful impact.</div>
-         <!-- <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div> -->
-        </div>
-      </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <!-- 
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
-            </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-      <!-- Add your footer content here -->
-            <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
-        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
-        <image src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
-      </a>
-	<!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
-        <image src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
-      </a>    
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-    </div>
-    <!-- Include your main content here -->
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".scroll-fade");
-
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
-
-      navbar.style.opacity = navbarOpacity;
-       });
-    });
-   </script>
-  </body>
-</html>
+          <div class="header-text">
+            <span class="main-title">Hey, I'm Jose.</span>
+            <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, is passionately safeguard
