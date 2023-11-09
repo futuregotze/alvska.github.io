@@ -220,8 +220,19 @@
       </a>
     </div>
     <!-- Include your main content here -->
-
     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".scroll-fade");
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+
+      navbar.style.opacity = navbarOpacity;
+       });
+    });
+   </script>
+     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuButton = document.querySelector(".mobile-menu-button");
         const navLinks = document.querySelector(".nav-links");
@@ -231,17 +242,5 @@
         });
       });
     </script>
-      <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".scroll-fade");
-
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
-
-      navbar.style.opacity = navbarOpacity;
-    });
-  });
-</script>
   </body>
 </html>
