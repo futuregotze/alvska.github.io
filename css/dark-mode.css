@@ -7,13 +7,45 @@
 }
 
 .dark-mode-switch-label {
+  position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 60px;
+  height: 34px;
   background-color: #2196F3; /* Change the background color as needed */
   border-radius: 25px;
-  position: relative;
   cursor: pointer;
+}
+
+.dark-mode-switch-label .toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-switch-label .toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.dark-mode-switch-label #dark-mode-switch:checked + .toggle {
+  background-color: #2196F3;
+}
+
+.dark-mode-switch-label #dark-mode-switch:checked + .toggle:before {
+  transform: translateX(26px);
 }
 
 #dark-mode-switch {
