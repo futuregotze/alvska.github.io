@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./assets/images/IconJF-3.png" />
     <title>Jose's Portfolio</title>
     <meta name="description" content="A portfolio template for the Unemployables community.">
@@ -14,18 +15,15 @@
 
     <style>
       /* Updated CSS for the initial state of the navbar */
-      .scroll-fade {
-        transition: opacity 0.3s;
-        background-color: transparent; /* Background is transparent initially */
-        padding: 10px 0;
-      }
+    .scroll-fade {
+      opacity: 1; /* Ensure the navbar is initially visible */
+      transition: opacity 0.5s; /* Adjust the duration as needed */
+    }
 
-      /* CSS for the visible state of the navbar */
-      .scroll-fade.visible {
-        opacity: 1;
-        background-color: #ffffff; /* Background becomes white when scrolling */
-        padding: 10px;
-      }
+    /* CSS for the visible state of the navbar */
+    .scroll-fade.visible {
+      opacity: 0; /* Navbar will fade out as the user scrolls */
+    }
     </style>
   </head>
   <body>
