@@ -1,10 +1,16 @@
 /* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: space-between; /* Add space between social icons, dark mode switch, and button menu */
   gap: 16px; /* Adjust as needed */
+}
+
+/* Container for social icons and dark mode switch */
+.social-dark-container {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Adjust the gap between icons */
 }
 
 /* Dark mode switch styling (adjust as needed) */
