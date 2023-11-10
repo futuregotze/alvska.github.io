@@ -211,26 +211,20 @@
       const navbarOpacity = 1 - scrollPosition / 200;
       navbar.style.opacity = navbarOpacity;
 
-      // Disable buttons when the navbar is invisible
-      if (navbarOpacity === 0) {
+      // Toggle 'hidden' class on the navbar based on scroll position
+      if (scrollPosition > navbar.clientHeight) {
+        navbar.classList.add("hidden");
         buttons.forEach((button) => {
           button.style.pointerEvents = "none";
         });
       } else {
+        navbar.classList.remove("hidden");
         buttons.forEach((button) => {
           button.style.pointerEvents = "auto";
         });
-      }
-
-      // Toggle 'hidden' class on the navbar based on scroll position
-      if (scrollPosition > navbar.clientHeight) {
-        navbar.classList.add("hidden");
-      } else {
-        navbar.classList.remove("hidden");
       }
     });
   });
 </script>
 </body>
 </html>
-
