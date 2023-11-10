@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/animations.css"> <!-- New CSS file for animations -->
+    <link rel="stylesheet" href="./css/mobile-menu.css">
   
 
     <style>
@@ -157,6 +158,20 @@
         <!-- Add more skills-columns as needed -->
 
       </div>
+       <!-- Hamburger icon for mobile -->
+  <div class="mobile-menu-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <a class="mobile-menu-item" href="/project-pages/project-template.html">Projects</a>
+    <a class="mobile-menu-item" href="your_docs_link_here.pdf">Documentation</a>
+    <a class="mobile-menu-item" href="resume.html">Resume</a>
+    <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
+  </div>
 <!-- Place this where you want the dark mode switch to appear -->
 <!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
 <style>
@@ -260,6 +275,14 @@
       navbar.classList.remove("hidden");
       buttons.forEach((button) => {
         button.style.pointerEvents = "auto";
+      });
+        // Add JavaScript to toggle the mobile menu visibility
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenuIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("show");
       });
     }
   });
