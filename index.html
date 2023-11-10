@@ -226,22 +226,21 @@
   </label>
   <input type="checkbox" id="dark-mode-switch">
 </div>
-      <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animated"); // Add 'animated' class to elements you want to animate
+    const animatedElements = document.querySelectorAll(".animated");
     animatedElements.forEach((element) => {
-      element.classList.add("animate"); // Add 'animate' class for animation
+      element.classList.add("animate");
     });
 
     const navbar = document.querySelector(".scroll-fade");
-    const buttons = document.querySelectorAll(".button"); // Select all buttons
+    const buttons = document.querySelectorAll(".button");
 
     window.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
       const navbarOpacity = 1 - scrollPosition / 200;
       navbar.style.opacity = navbarOpacity;
 
-      // Toggle 'hidden' class on the navbar based on scroll position
       if (scrollPosition > navbar.clientHeight) {
         navbar.classList.add("hidden");
         buttons.forEach((button) => {
@@ -255,12 +254,11 @@
       }
     });
 
-   // Add dark mode toggle functionality
-  document.addEventListener("DOMContentLoaded", function() {
+    // Add dark mode toggle functionality
     const darkModeSwitch = document.getElementById("dark-mode-switch");
     const darkModeSwitchIcon = document.getElementById("dark-mode-switch-icon");
 
-    darkModeSwitchIcon.addEventListener("click", function() {
+    darkModeSwitchIcon.addEventListener("click", function () {
       darkModeSwitch.checked = !darkModeSwitch.checked;
       // Add your dark mode toggle logic here
       // For example, you can toggle a class on the body element
