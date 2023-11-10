@@ -201,50 +201,57 @@
   </label>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animated"); // Add 'animated' class to elements you want to animate
-    animatedElements.forEach((element) => {
-      element.classList.add("animate"); // Add 'animate' class for animation
-    });
+ document.addEventListener("DOMContentLoaded", function () {
+  const animatedElements = document.querySelectorAll(".animated");
+  animatedElements.forEach((element) => {
+    element.classList.add("animate");
+  });
 
-    const navbar = document.querySelector(".scroll-fade");
-    const buttons = document.querySelectorAll(".button"); // Select all buttons
+  const navbar = document.querySelector(".scroll-fade");
+  const buttons = document.querySelectorAll(".button");
 
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const navbarOpacity = 1 - scrollPosition / 200;
-      navbar.style.opacity = navbarOpacity;
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const navbarOpacity = 1 - scrollPosition / 200;
+    navbar.style.opacity = navbarOpacity;
 
-      // Toggle 'hidden' class on the navbar based on scroll position
-      if (scrollPosition > navbar.clientHeight) {
-        navbar.classList.add("hidden");
-        buttons.forEach((button) => {
-          button.style.pointerEvents = "none";
-        });
-      } else {
-        navbar.classList.remove("hidden");
-        buttons.forEach((button) => {
-          button.style.pointerEvents = "auto";
-        });
-      }
-    });
+    if (scrollPosition > navbar.clientHeight) {
+      navbar.classList.add("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "none";
+      });
+    } else {
+      navbar.classList.remove("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "auto";
+      });
+    }
+  });
 
-   // Add dark mode toggle functionality
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
 
   // Load dark mode preference from local storage if available
   const savedDarkMode = localStorage.getItem("darkMode");
 
-  if (savedDarkMode) {
+  if (savedDarkMode !== null) {
     darkModeSwitch.checked = savedDarkMode === "true";
-    darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
+    updateDarkModeStyles(savedDarkMode);
   }
 
   darkModeSwitch.addEventListener("change", () => {
-    darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
+    const isDarkMode = darkModeSwitch.checked;
+    updateDarkModeStyles(isDarkMode);
+
     // Save dark mode preference to local storage
-    localStorage.setItem("darkMode", darkModeSwitch.checked);
+    localStorage.setItem("darkMode", isDarkMode);
+  });
+
+  function updateDarkModeStyles(isDarkMode) {
+    darkModeStylesheet.href = isDarkMode ? "./css/dark-mode.css" : "";
+  }
+});
+
    });
   });
 </script>
