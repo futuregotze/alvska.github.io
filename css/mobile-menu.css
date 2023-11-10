@@ -25,10 +25,11 @@
 .mobile-menu-icon {
   position: fixed;
   top: 10px;
-  right: 0; /* Add this line to position the hamburger icon on the right */
+  right: 10px; /* Adjust the right value to your preference */
   cursor: pointer;
   z-index: 1500;
-  display: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .bar {
