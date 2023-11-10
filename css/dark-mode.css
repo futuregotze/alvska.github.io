@@ -16,7 +16,7 @@
   left: 4px; /* Adjust the left position as needed */
   width: 16px;
   height: 16px;
-  background-image: url('assets/icons/darkmoon.svg'); /* Replace with the path to your moon icon */
+  background-image: url('/assets/icons/darkmoon.svg'); /* Replace with the path to your moon icon */
   background-size: cover;
 }
 
