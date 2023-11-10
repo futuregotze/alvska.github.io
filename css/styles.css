@@ -6,5 +6,5 @@
 
 .scroll-fade.visible {
   opacity: 0;
-  transition: opacity 1.0s; /* Slower reappearing, adjust as needed */
+  transition: opacity 0.1s; /* Slower reappearing, adjust as needed */
 }
