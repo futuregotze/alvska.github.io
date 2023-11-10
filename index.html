@@ -194,13 +194,11 @@
         </a>
       </div>
 <!-- Place this where you want the dark mode switch to appear -->
+<!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
 <div class="dark-mode-switch-container">
   <input type="checkbox" id="dark-mode-switch">
-  <label for="dark-mode-switch" class="dark-mode-switch-label">
-    <div class="moon-icon"></div>
-  </label>
+  <label for="dark-mode-switch" class="dark-mode-switch-label"></label>
 </div>
-<script>
   document.addEventListener("DOMContentLoaded", function () {
     const animatedElements = document.querySelectorAll(".animated"); // Add 'animated' class to elements you want to animate
     animatedElements.forEach((element) => {
@@ -229,7 +227,7 @@
       }
     });
 
-    // Add dark mode toggle functionality
+   // Add dark mode toggle functionality
     const darkModeSwitch = document.getElementById("dark-mode-switch");
     const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
 
