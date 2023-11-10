@@ -223,8 +223,7 @@
   </label>
   <input type="checkbox" id="dark-mode-switch">
 </div>
-
-<script
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const darkModeSwitch = document.getElementById("dark-mode-switch");
     const darkModeSwitchIcon = document.getElementById("dark-mode-switch-icon");
@@ -235,32 +234,34 @@
     darkModeSwitch.addEventListener("change", function () {
       document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
     });
-    document.addEventListener("DOMContentLoaded", function () {
+
+    // Add animation to elements with the 'animated' class
     const animatedElements = document.querySelectorAll(".animated");
     animatedElements.forEach((element) => {
       element.classList.add("animate");
     });
-   }
-    });
-    const navbar = document.querySelector(".scroll-fade");
-    const buttons = document.querySelectorAll(".button");
+  });
 
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const navbarOpacity = 1 - scrollPosition / 200;
-      navbar.style.opacity = navbarOpacity;
+  const navbar = document.querySelector(".scroll-fade");
+  const buttons = document.querySelectorAll(".button");
 
-      // Toggle 'hidden' class on the navbar based on scroll position
-      if (scrollPosition > navbar.clientHeight) {
-        navbar.classList.add("hidden");
-        buttons.forEach((button) => {
-          button.style.pointerEvents = "none";
-        });
-      } else {
-        navbar.classList.remove("hidden");
-        buttons.forEach((button) => {
-          button.style.pointerEvents = "auto";
-        });
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const navbarOpacity = 1 - scrollPosition / 200;
+    navbar.style.opacity = navbarOpacity;
+
+    // Toggle 'hidden' class on the navbar based on scroll position
+    if (scrollPosition > navbar.clientHeight) {
+      navbar.classList.add("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "none";
+      });
+    } else {
+      navbar.classList.remove("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "auto";
+      });
+    }
   });
 </script>
 </body>
