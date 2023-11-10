@@ -21,10 +21,17 @@ a.icon-link:hover {
 
 /* Navbar Styling */
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Pushes the buttons to the right */
-  align-items: center;
-  padding: 10px 20px; /* Adjust as needed */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Increase the z-index value */
+  background-color: #ffffff;
+  /* Add other styling properties as needed */
+  transition: opacity 0.5s;
+}
+
+.navbar.hidden {
+  opacity: 0;
 }
 
 .nav-title-link {
