@@ -1,6 +1,7 @@
 /* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: space-between; /* Add space between social icons, dark mode switch, and button menu */
   gap: 16px; /* Adjust as needed */
@@ -32,10 +33,13 @@
 }
 
 /* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px; /* Adjust the gap between icons */
+}
+
 .icon-link {
   transition: transform 200ms ease-in-out, color 0.3s;
-  display: inline-block; /* Display icons inline */
-  margin-right: 10px; /* Add margin between icons */
 }
 
 .icon-link:hover {
