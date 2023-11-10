@@ -1,14 +1,13 @@
-/* Mobile Menu Styles 
-
+/* Mobile Menu Styles */
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 60px; /* Adjust this value to leave space for the fixed navbar 
+  top: 60px; /* Adjust this value to leave space for the fixed navbar */
   right: 0;
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  z-index: 1001; /* Higher z-index to appear above other content 
+  z-index: 1001; /* Higher z-index to appear above other content */
 }
 
 .mobile-menu.show {
@@ -21,9 +20,23 @@
   font-size: 18px;
   color: #333;
   text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
-.mobile-menu-item:hover {
-  background-color: #f0f0f0;
+.mobile-menu-item:hover,
+.mobile-menu-item.active {
+  color: black;
+  border-bottom: 2px solid #000;
 }
-*/
+
+/* Social Icons */
+.icon-link {
+  transition: transform 200ms ease-in-out, color 0.3s;
+}
+
+.icon-link:hover {
+  cursor: pointer;
+  transform: rotate(15deg); /* Add a transform property */
+  color: black; /* Change color on hover */
+}
