@@ -215,7 +215,7 @@
     const navbarOpacity = 1 - scrollPosition / 200;
     navbar.style.opacity = navbarOpacity;
 
-    if (scrollPosition > navbar.clientHeight) {
+    if (scrollPosition > navbar.clientHeight + 40) {
       navbar.classList.add("hidden");
       buttons.forEach((button) => {
         button.style.pointerEvents = "none";
