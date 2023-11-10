@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/animations.css"> <!-- New CSS file for animations -->
+    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
 
     <style>
       /* Updated CSS for the initial state of the navbar */
@@ -192,6 +193,11 @@
           <img src="./assets/icons/mail.svg" class="footer-icon"/>
         </a>
       </div>
+      <!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
+    <div class="dark-mode-switch-container">
+    <input type="checkbox" id="dark-mode-switch">
+    <label for="dark-mode-switch" class="dark-mode-switch-label"></label>
+      </div>
     </div>
 
 <!-- Include your main content here -->
@@ -222,6 +228,14 @@
         buttons.forEach((button) => {
           button.style.pointerEvents = "auto";
         });
+         // Add dark mode toggle functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const darkModeSwitch = document.getElementById("dark-mode-switch");
+    const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
+
+    darkModeSwitch.addEventListener("change", () => {
+      darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
+    });
       }
     });
   });
