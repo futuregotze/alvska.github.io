@@ -15,14 +15,18 @@
 
     <style>
       /* Updated CSS for the initial state of the navbar */
-      .scroll-fade {
-        opacity: 1; /* Ensure the navbar is initially visible */
-        transition: opacity 0.5s; /* Adjust the duration as needed */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff; /* Adjust background color as needed */
+        /* Add other styling properties as needed */
+        transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
       }
 
-      /* CSS for the visible state of the navbar */
-      .scroll-fade.visible {
-        opacity: 0; /* Navbar will fade out as the user scrolls */
+      .navbar.hidden {
+        opacity: 0;
       }
 
       /* Add this style to your existing CSS */
@@ -113,99 +117,101 @@
                 <li>Intrusion Prevention Systems (IPS)</li>
                 <li>Virtual Private Networks (VPNs)</li>
                 <li>Network Segmentation</li>
-            <li>Firewall Administration</li>
-            <li>Wireless Network Security</li>
-            <li>VPN (Virtual Private Network)</li>
-            <li>Ports (network ports and protocols)</li>
-          </ul>
+                <li>Firewall Administration</li>
+                <li>Wireless Network Security</li>
+                <li>VPN (Virtual Private Network)</li>
+                <li>Ports (network ports and protocols)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <div class="skills-category">
+              <span class="skills-category-title">Endpoint Security and Protection</span>
+              <ul class="skills-list">
+                <li>Antivirus and Anti-malware</li>
+                <li>Host-based Intrusion Detection/Prevention (HIDS/HIPS)</li>
+                <li>Endpoint Detection and Response (EDR)</li>
+                <li>Mobile Device Management (MDM)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <div class="skills-category">
+              <span class="skills-category-title">Security Assessment and Testing</span>
+              <ul class="skills-list">
+                <li>Vulnerability Scanning</li>
+                <li>Penetration Testing</li>
+                <li>Web Application Testing</li>
+                <li>Social Engineering</li>
+                <li>Security Assessment Tools</li>
+                <li>Port Scanning</li>
+                <li>Enumeration Techniques</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <!-- Add more skills-columns as needed -->
+
       </div>
 
-      <div class="skills-column">
-        <div class="skills-category">
-          <span class="skills-category-title">Endpoint Security and Protection</span>
-          <ul class="skills-list">
-            <li>Antivirus and Anti-malware</li>
-            <li>Host-based Intrusion Detection/Prevention (HIDS/HIPS)</li>
-            <li>Endpoint Detection and Response (EDR)</li>
-            <li>Mobile Device Management (MDM)</li>
-          </ul>
-        </div>
-      </div>
+      <!-- FOOTER -->
+      <div id="footer">
+        <!-- Add your footer content here -->
+        <!-- 
+          TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
 
-      <div class="skills-column">
-        <div class="skills-category">
-          <span class="skills-category-title">Security Assessment and Testing</span>
-          <ul class="skills-list">
-            <li>Vulnerability Scanning</li>
-            <li>Penetration Testing</li>
-            <li>Web Application Testing</li>
-            <li>Social Engineering</li>
-            <li>Security Assessment Tools</li>
-            <li>Port Scanning</li>
-            <li>Enumeration Techniques</li>
-          </ul>
-        </div>
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
+          <img src="./assets/icons/instagram.svg" class="footer-icon"/>
+        </a>
+        <!-- 
+          TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+        
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
+          <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+        </a>
+        <!-- 
+          TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+        
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+          <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+        </a>    
+        <!-- 
+          TODO - Change the email after "mailto" to your contact email 
+        
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+          <img src="./assets/icons/mail.svg" class="footer-icon"/>
+        </a>
       </div>
     </div>
 
-    <!-- Add more skills-columns as needed -->
+    <!-- Include your main content here -->
 
-  </div>
+    <script>
+      // JavaScript for adding/removing 'hidden' class on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
 
-  <!-- FOOTER -->
-  <div id="footer">
-    <!-- Add your footer content here -->
-    <!-- 
-      TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+        window.addEventListener("scroll", () => {
+          const scrollPosition = window.scrollY;
 
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
-      <img src="./assets/icons/instagram.svg" class="footer-icon"/>
-    </a>
-    <!-- 
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
-      <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
-    </a>
-    <!-- 
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
-      <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
-    </a>    
-    <!-- 
-      TODO - Change the email after "mailto" to your contact email 
-    
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-      <img src="./assets/icons/mail.svg" class="footer-icon"/>
-    </a>
-  </div>
-  <!-- Include your main content here -->
-
-  <script>
-    // JavaScript for adding animation class to elements
-    document.addEventListener("DOMContentLoaded", function () {
-      const animatedElements = document.querySelectorAll(".animated"); // Add 'animated' class to elements you want to animate
-      animatedElements.forEach((element) => {
-        element.classList.add("animate"); // Add 'animate' class for animation
+          if (scrollPosition > navbar.clientHeight) {
+            navbar.classList.add("hidden");
+          } else {
+            navbar.classList.remove("hidden");
+          }
+        });
       });
-
-      const navbar = document.querySelector(".scroll-fade");
-      window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-        const navbarOpacity = 1 - scrollPosition / 200;
-        navbar.style.opacity = navbarOpacity;
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
