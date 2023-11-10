@@ -18,6 +18,36 @@ a.icon-link:hover {
   cursor: pointer;
   transform: rotate(15deg); /* Add a transform property */
 }
+/* Add this style to give some space between social icons and button menu */
+#footer {
+  display: flex;
+  flex-wrap: wrap; /* Allow the social icons and button menu to wrap on small screens */
+  gap: 16px; /* Adjust as needed */
+}
+
+/* Button Menu Styling */
+.button-menu-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the buttons to wrap on small screens */
+  gap: 10px; /* Adjust as needed */
+}
+
+.button-menu-item {
+  padding: 8px 16px;
+  border: 3px solid #141414;
+  border-radius: 50px;
+  color: black;
+  text-decoration: none;
+  width: fit-content;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.button-menu-item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
 
 /* Navbar Styling */
 .navbar {
