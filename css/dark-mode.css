@@ -1,43 +1,39 @@
-/* dark-mode.css */
-body {
-  background-color: #1e1e1e;
-  color: #ffffff;
+/* Dark Mode Switch Styling */
+.dark-mode-switch-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
 }
 
-/* Add this style to your existing CSS */
+.dark-mode-switch-container input {
+  display: none;
+}
+
 .dark-mode-switch-label {
-  position: relative;
-  display: inline-block;
+  display: block;
   width: 40px;
-  height: 24px;
-  background-color: #ddd; /* Set the background color for the switch */
-  border-radius: 12px; /* Make it round */
+  height: 20px;
+  background-color: #ccc; /* Background color of the switch */
+  border-radius: 10px; /* Make it round */
+  position: relative;
   cursor: pointer;
 }
 
-.moon-icon {
+.dark-mode-switch-label::before {
+  content: "";
+  display: block;
+  width: 18px; /* Size of the switch circle */
+  height: 18px;
+  background-color: white; /* Color of the switch circle */
+  border-radius: 50%; /* Make it round */
   position: absolute;
   top: 50%;
-  transform: translate(0%, -50%);
-  left: 4px; /* Adjust the left position as needed */
-  width: 16px;
-  height: 16px;
-  background-image: url('https://futuregotze.github.io/assets/icons/darkmoon.svg'); /* Replace with the path to your moon icon */
-  background-size: cover;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Style for the toggle */
-.toggle {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 16px;
-  height: 16px;
-  background-color: #fff; /* Set the color of the toggle button */
-  border-radius: 50%; /* Make it round */
-  transition: transform 0.3s ease;
-}
-
-input[type="checkbox"]:checked + .dark-mode-switch-label .toggle {
-  transform: translateX(16px);
+.dark-mode-switch-container input:checked + .dark-mode-switch-label::before {
+  transform: translateX(20px);
 }
