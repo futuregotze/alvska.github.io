@@ -201,33 +201,7 @@
   </label>
 </div>
 <script>
- document.addEventListener("DOMContentLoaded", function () {
-  const animatedElements = document.querySelectorAll(".animated");
-  animatedElements.forEach((element) => {
-    element.classList.add("animate");
-  });
-
-  const navbar = document.querySelector(".scroll-fade");
-  const buttons = document.querySelectorAll(".button");
-
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const navbarOpacity = 1 - scrollPosition / 200;
-    navbar.style.opacity = navbarOpacity;
-
-    if (scrollPosition > navbar.clientHeight + 40) {
-      navbar.classList.add("hidden");
-      buttons.forEach((button) => {
-        button.style.pointerEvents = "none";
-      });
-    } else {
-      navbar.classList.remove("hidden");
-      buttons.forEach((button) => {
-        button.style.pointerEvents = "auto";
-      });
-    }
-  });
-
+document.addEventListener("DOMContentLoaded", function () {
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
 
