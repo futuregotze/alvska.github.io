@@ -21,6 +21,14 @@ body.dark-mode {
   color: initial; /* Reset text color to default for the navbar button */
   filter: none; /* Remove the inversion filter for the navbar icon */
 }
+/* Adjust styling for icons */
+.dark-mode .footer-icon,
+.dark-mode .navbar .footer-icon,
+.dark-mode #dark-mode-switch-icon {
+  filter: invert(100%);
+  background-color: transparent; /* Remove any background color */
+  border-radius: 0; /* Remove any border radius */
+}
 
 
 
