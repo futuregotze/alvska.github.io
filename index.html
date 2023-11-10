@@ -259,12 +259,23 @@
     });
 // Add JavaScript to toggle the mobile menu visibility
     document.addEventListener("DOMContentLoaded", function () {
-      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
-      const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileMenuItems = document.querySelectorAll(".mobile-menu-item");
 
-      mobileMenuIcon.addEventListener("click", function () {
-        mobileMenu.classList.toggle("show");
-         });
+    mobileMenuIcon.addEventListener("click", function () {
+      mobileMenu.classList.toggle("show");
+    });
+      
+      mobileMenuItems.forEach(item => {
+      item.addEventListener("click", function () {
+        // Remove 'active' class from all items
+        mobileMenuItems.forEach(item => item.classList.remove("active"));
+        // Add 'active' class to the clicked item
+        this.classList.add("active");
+        // Close the mobile menu
+        mobileMenu.classList.remove("show");
+      });
     });
     // Add animation to elements with the 'animated' class
     const animatedElements = document.querySelectorAll(".animated");
