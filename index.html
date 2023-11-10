@@ -25,9 +25,6 @@
         background-color: #ffffff; /* Adjust background color as needed */
         /* Add other styling properties as needed */
         transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
-        display: flex;
-        justify-content: space-between; /* Align items on either side */
-        padding: 10px;
       }
 
       .navbar.hidden {
@@ -42,39 +39,6 @@
       /* Add this style to give some spacing between category titles and lists */
       .skills-category-title {
         margin-bottom: 10px;
-      }
-
-      /* Updated styles for mobile view */
-      @media (max-width: 768px) {
-        .nav-title-link {
-          order: -1; /* Move the title to the left */
-        }
-
-        .button-container {
-          display: flex;
-        }
-
-        .button-container .button {
-          display: none; /* Hide buttons initially */
-        }
-
-        .mobile-menu {
-          display: none; /* Hide the mobile menu initially */
-          flex-direction: column;
-          align-items: flex-end; /* Align menu items to the right */
-        }
-
-        .mobile-menu.show {
-          display: flex; /* Show mobile menu when toggled */
-        }
-
-        .mobile-menu-item {
-          margin-bottom: 10px; /* Add spacing between menu items */
-        }
-
-        .mobile-menu-icon {
-          display: block; /* Show the hamburger icon */
-        }
       }
     </style>
   </head>
@@ -98,12 +62,112 @@
         <a class="button" href="mailto:chupix13@gmail.com">
           <span class="button-text">Contact Me</span>
         </a>
-        <!-- Hamburger icon for mobile -->
-        <div class="mobile-menu-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+      </div>
+
+      <div class="mobile-menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <!-- Rest of your HTML content here -->
+      <!-- Add interactive and animated elements as needed -->
+      <!-- PORTFOLIO HEADER -->
+      <div id="portfolio-header">
+        <div id="portfolio-header-image-container">
+          <!-- 
+            TODO
+
+            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
+            - Change the number to point to your Unemployable & replace the OpenSea link with your own
+            - If you aren't using an Unemployable as your image, remove the entire "a" element
+          -->
+          <img src="./assets/images/IconJF-3.png" class="portfolio-header-image">
+          <!-- <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
+            <span class="image-caption">Unemployables #1311</span> -->    yup, that's me
+          </a>
         </div>
+       <!-- 
+          TODO
+          - Change the main-title to whatever you want
+          - Change the body-text after that to a quick introduction to what you do
+          - Edit the button text if you feel like it. It will link to the projects section below.
+        -->
+        <div id="portfolio-header-text-container">
+          <div class="header-text animated"> <!-- Added the 'animated' class -->
+            <span class="main-title">Hey, I'm Jose.</span>
+            <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, passionately safeguarding the digital realm while transitioning from cloud server administration. I bring a wide range of technical skills, including proficiency in Windows, Linux, Cloud Management, and threat modeling, backed by my CompTIA certification. Beyond tech, I'm a dedicated music producer and pianist. I'm currently seeking new opportunities in Cyber Security and eager to collaborate with like-minded professionals to make a meaningful impact.</div>
+          </div>
+          <a class="button" id="my-work-link animated"> <!-- Added the 'animated' class -->
+            <span class="button-text">Check out my projects</span> 
+            <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Skills section -->
+      <div class="skills-section">
+        <div class="center-title">
+          <span class="main-title">My Skills</span>
+        </div>
+
+        <div class="skills-columns">
+          <div class="skills-column">
+            <div class="skills-category">
+              <span class="skills-category-title">Network Security and Administration</span>
+              <ul class="skills-list">
+                <li>Firewalls</li>
+                <li>Intrusion Detection Systems (IDS)</li>
+                <li>Intrusion Prevention Systems (IPS)</li>
+                <li>Virtual Private Networks (VPNs)</li>
+                <li>Network Segmentation</li>
+                <li>Firewall Administration</li>
+                <li>Wireless Network Security</li>
+                <li>VPN (Virtual Private Network)</li>
+                <li>Ports (network ports and protocols)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <div class="skills-category">
+              <span class="skills-category-title">Endpoint Security and Protection</span>
+              <ul class="skills-list">
+                <li>Antivirus and Anti-malware</li>
+                <li>Host-based Intrusion Detection/Prevention (HIDS/HIPS)</li>
+                <li>Endpoint Detection and Response (EDR)</li>
+                <li>Mobile Device Management (MDM)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-column">
+            <div class="skills-category">
+              <span class="skills-category-title">Security Assessment and Testing</span>
+              <ul class="skills-list">
+                <li>Vulnerability Scanning</li>
+                <li>Penetration Testing</li>
+                <li>Web Application Testing</li>
+                <li>Social Engineering</li>
+                <li>Security Assessment Tools</li>
+                <li>Port Scanning</li>
+                <li>Enumeration Techniques</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more skills-columns as needed -->
+
+      </div>
+       <!-- Hamburger icon for mobile -->
+      <div class="mobile-menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
 
       <!-- Mobile menu -->
@@ -113,79 +177,124 @@
         <a class="mobile-menu-item" href="resume.html">Resume</a>
         <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
       </div>
-    </div>
 
-    <div id="main-content">
-      <!-- Rest of your HTML content here -->
-      <!-- Add interactive and animated elements as needed -->
-      <!-- PORTFOLIO HEADER -->
-      <!-- ... (your existing content) ... -->
-    </div>
+      <!-- Place this where you want the dark mode switch to appear -->
+      <!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
+      <style>
+        .dark-mode-switch-container {
+          display: inline-block;
+          margin-left: 2px; /* Adjust the margin to match the spacing of other icons */
+        }
 
-    <!-- Place this where you want the dark mode switch to appear -->
-    <!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
-    <div id="footer">
-      <!-- ... (your existing footer content) ... -->
-    </div>
+        .dark-mode-switch-label {
+          cursor: pointer;
+          display: inline-block;
+        }
 
-    <!-- Dark mode switch -->
-    <div class="dark-mode-switch-container">
-      <label for="dark-mode-switch" class="dark-mode-switch-label">
-        <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
-      </label>
-      <input type="checkbox" id="dark-mode-switch">
-    </div>
+        #dark-mode-switch {
+          display: none; /* Hide the checkbox */
+        }
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const darkModeSwitch = document.getElementById("dark-mode-switch");
-        const darkModeSwitchIcon = document.getElementById("dark-mode-switch-icon");
+        #dark-mode-switch-icon {
+          width: 16px; /* Adjust the width to your preference */
+          height: 16px; /* Adjust the height to your preference */
+          filter: grayscale(100%); /* Apply grey filter */
+        }
 
-        // Check the initial state of the dark mode switch and apply styles accordingly
-        document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+        #dark-mode-switch-label:hover #dark-mode-switch-icon {
+          filter: grayscale(0%); /* Remove grey filter on hover */
+        }
+      </style>
+      <!-- FOOTER -->
+      <div id="footer">
+        <!-- Add your footer content here -->
+        <!-- 
+          TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
+          <img src="./assets/icons/instagram.svg" class="footer-icon"/>
+        </a>
+        <!-- 
+          TODO - Change href to your LinkedIn account (can also delete entire "a" element if no LinkedIn) 
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
+          <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+        </a>
+        <!-- 
+          TODO - Change href to your GitHub account (can also delete entire "a" element if no GitHub) 
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+          <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+        </a>
+        <!-- 
+          TODO - Change the email after "mailto" to your contact email 
+          This should be the same across all pages.
+        -->
+        <a class="icon-link" href="mailto:chupix13@gmail.com">
+          <img src="./assets/icons/mail.svg" class="footer-icon"/>
+        </a>
 
-        darkModeSwitch.addEventListener("change", function () {
-          document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-        });
+        <!-- Dark mode switch -->
+        <div class="dark-mode-switch-container">
+          <label for="dark-mode-switch" class="dark-mode-switch-label">
+            <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
+          </label>
+          <input type="checkbox" id="dark-mode-switch">
+        </div>
+      </div>
 
-        // Add JavaScript to toggle the mobile menu visibility
+      <script>
         document.addEventListener("DOMContentLoaded", function () {
+          const darkModeSwitch = document.getElementById("dark-mode-switch");
+          const darkModeSwitchIcon = document.getElementById("dark-mode-switch-icon");
+
+          // Check the initial state of the dark mode switch and apply styles accordingly
+          document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+
+          darkModeSwitch.addEventListener("change", function () {
+            document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+          });
+
+          // Add JavaScript to toggle the mobile menu visibility
           const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
           const mobileMenu = document.querySelector(".mobile-menu");
 
           mobileMenuIcon.addEventListener("click", function () {
             mobileMenu.classList.toggle("show");
           });
+
+          // Add animation to elements with the 'animated' class
+          const animatedElements = document.querySelectorAll(".animated");
+          animatedElements.forEach((element) => {
+            element.classList.add("animate");
+          });
         });
 
-        // Add animation to elements with the 'animated' class
-        const animatedElements = document.querySelectorAll(".animated");
-        animatedElements.forEach((element) => {
-          element.classList.add("animate");
+        const navbar = document.querySelector(".scroll-fade");
+        const buttons = document.querySelectorAll(".button");
+
+        window.addEventListener("scroll", () => {
+          const scrollPosition = window.scrollY;
+          const navbarOpacity = 1 - scrollPosition / 200;
+          navbar.style.opacity = navbarOpacity;
+
+          // Toggle 'hidden' class on the navbar based on scroll position
+          if (scrollPosition > navbar.clientHeight) {
+            navbar.classList.add("hidden");
+            buttons.forEach((button) => {
+              button.style.pointerEvents = "none";
+            });
+          } else {
+            navbar.classList.remove("hidden");
+            buttons.forEach((button) => {
+              button.style.pointerEvents = "auto";
+            });
+          }
         });
-      });
-
-      const navbar = document.querySelector(".scroll-fade");
-      const buttons = document.querySelectorAll(".button");
-
-      window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-        const navbarOpacity = 1 - scrollPosition / 200;
-        navbar.style.opacity = navbarOpacity;
-
-        // Toggle 'hidden' class on the navbar based on scroll position
-        if (scrollPosition > navbar.clientHeight) {
-          navbar.classList.add("hidden");
-          buttons.forEach((button) => {
-            button.style.pointerEvents = "none";
-          });
-        } else {
-          navbar.classList.remove("hidden");
-          buttons.forEach((button) => {
-            button.style.pointerEvents = "auto";
-          });
-        }
-      });
-    </script>
+      </script>
+    </div>
   </body>
 </html>
