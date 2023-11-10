@@ -7,12 +7,10 @@
 }
 
 .dark-mode-switch-label {
-  position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  background-color: #2196F3; /* Change the background color as needed */
-  border-radius: 25px;
+  position: relative;
   cursor: pointer;
 }
 
