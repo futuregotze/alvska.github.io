@@ -14,5 +14,14 @@ body.dark-mode {
   filter: invert(100%); /* Invert the color of the icons in dark mode */
 }
 
+/* Exclude navbar and its icon from dark mode styling */
+.dark-mode .navbar .button,
+.dark-mode .navbar .footer-icon {
+  background-color: initial; /* Reset background color to default for the navbar button */
+  color: initial; /* Reset text color to default for the navbar button */
+  filter: none; /* Remove the inversion filter for the navbar icon */
+}
+
+
 
 /* Add dark mode styles for other elements as needed */
