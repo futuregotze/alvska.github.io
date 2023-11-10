@@ -15,54 +15,44 @@
 
     <style>
       /* Updated CSS for the initial state of the navbar */
-      .scroll-fade {
-        opacity: 1; /* Ensure the navbar is initially visible */
-        transition: opacity 0.5s; /* Adjust the duration as needed */
-      }
+    .scroll-fade {
+      opacity: 1; /* Ensure the navbar is initially visible */
+      transition: opacity 0.5s; /* Adjust the duration as needed */
+    }
 
-      /* CSS for the visible state of the navbar */
-      .scroll-fade.visible {
-        opacity: 0; /* Navbar will fade out as the user scrolls */
-      }
-
-      /* Add this style to your existing CSS */
-      .skills-list {
-        padding-left: 0;
-      }
-
-      /* Add this style to give some spacing between category titles and lists */
-      .skills-category-title {
-        margin-bottom: 10px;
-      }
+    /* CSS for the visible state of the navbar */
+    .scroll-fade.visible {
+      opacity: 0; /* Navbar will fade out as the user scrolls */
+    }
     </style>
   </head>
   <body>
-    <!-- Navbar (same structure as index.html) -->
-    <div class="navbar scroll-fade">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Jose's Portfolio</span>
-      </a>
+      <!-- Navbar (same structure as index.html) -->
+  <div class="navbar scroll-fade">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose's Portfolio</span>
+    </a>
 
-      <div class="button-container">
-        <a class="button" href="/project-pages/project-template.html">
-          <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="your_docs_link_here.pdf">
-          <span class="button-text">Documentation</span>
-        </a>
-        <a class="button" href="resume.html">
-          <span class="button-text">Resume</span>
-        </a>
-        <a class="button" href="mailto:chupix13@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </div>
+    <div class="button-container">
+      <a class="button" href="/project-pages/project-template.html">
+        <span class="button-text">Projects</span>
+      </a>
+      <a class="button" href="your_docs_link_here.pdf">
+        <span class="button-text">Documentation</span>
+      </a>
+      <a class="button" href="resume.html">
+        <span class="button-text">Resume</span>
+      </a>
+      <a class="button" href="mailto:chupix13@gmail.com">
+        <span class="button-text">Contact Me</span>
+      </a>
     </div>
+  </div>
 
     <div id="main-content">
       <!-- Rest of your HTML content here -->
       <!-- Add interactive and animated elements as needed -->
-      <!-- PORTFOLIO HEADER -->
+     <!-- PORTFOLIO HEADER -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
           <!-- 
@@ -78,38 +68,134 @@
           </a>
         </div>
 
-        <!-- 
-          TODO
+          <!-- 
+            TODO
 
-          - Change the main-title to whatever you want
-          - Change the body-text after that to a quick introduction to what you do
-          - Edit the button text if you feel like it. It will link to the projects section below.
-        -->
+            - Change the main-title to whatver you want
+            - Change the body-text after that to a quick introduction to what you do
+            - Edit the button text if you feel like it. It will link to the projects section below.
+          -->
         <div id="portfolio-header-text-container">
-          <div class="header-text animated"> <!-- Added the 'animated' class -->
-            <span class="main-title">Hey, I'm Jose.</span>
-            <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, passionately safeguarding the digital realm while transitioning from cloud server administration.I bring a wide range of technical skills, including proficiency in Windows, Linux, Cloud Management, and threat modeling, backed by my CompTIA certification. Beyond tech, I'm a dedicated music producer and pianist. I'm currently seeking new opportunities in Cyber Security and eager to collaborate with like-minded professionals to make a meaningful impact.</div>
-          </div>
-          <a class="button" id="my-work-link animated"> <!-- Added the 'animated' class -->
-            <span class="button-text">Check out my projects</span> 
-            <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-          </a>
+    <div class="header-text animated"> <!-- Added the 'animated' class -->
+              <span class="main-title">Hey, I'm Jose.</span>
+              <div class="body-text">I’m a cybersecurity enthusiast and a dedicated student at Springboard, passionately safeguarding the digital realm while transitioning from cloud server administration.I bring a wide range of technical skills, including proficiency in Windows, Linux, Cloud Management, and threat modeling, backed by my CompTIA certification. Beyond tech, I'm a dedicated music producer and pianist. I'm currently seeking new opportunities in Cyber Security and eager to collaborate with like-minded professionals to make a meaningful impact.</div>
+            </div>
+            <a class="button" id="my-work-link animated"> <!-- Added the 'animated' class -->
+              <span class="button-text">Check out my projects</span> 
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
         </div>
       </div>
 
-      <!-- Skills section -->
-      <div class="skills-section">
-        <div class="center-title">
-          <span class="main-title">My Skills</span>
-        </div>
+ <!-- Skills section -->
+<div class="skills-section">
+  <div class="center-title">
+    <span class="main-title">My Skills</span>
+  </div>
 
-        <div class="skills-columns">
-          <div class="skills-column">
-            <div class="skills-category">
-              <span class="skills-category-title">Network Security and Administration</span>
-              <ul class="skills-list">
-                <li>Firewalls</li>
-                <li>Intrusion Detection Systems (IDS)</li>
-                <li>Intrusion Prevention Systems (IPS)</li>
-                <li>Virtual Private Networks (VPNs)</li>
-                <li>
+  <div class="skills-columns">
+    <div class="skills-column">
+      <div class="skills-category">
+        <span class="skills-category-title">Network Security and Administration</span>
+        <ul class="skills-list">
+          <li>Firewalls</li>
+          <li>Intrusion Detection Systems (IDS)</li>
+          <li>Intrusion Prevention Systems (IPS)</li>
+          <li>Virtual Private Networks (VPNs)</li>
+          <li>Network Segmentation</li>
+          <li>Firewall Administration</li>
+          <li>Wireless Network Security</li>
+          <li>VPN (Virtual Private Network)</li>
+          <li>Ports (network ports and protocols)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="skills-column">
+      <div class="skills-category">
+        <span class="skills-category-title">Endpoint Security and Protection</span>
+        <ul class="skills-list">
+          <li>Antivirus and Anti-malware</li>
+          <li>Host-based Intrusion Detection/Prevention (HIDS/HIPS)</li>
+          <li>Endpoint Detection and Response (EDR)</li>
+          <li>Mobile Device Management (MDM)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="skills-column">
+      <div class="skills-category">
+        <span class="skills-category-title">Security Assessment and Testing</span>
+        <ul class="skills-list">
+          <li>Vulnerability Scanning</li>
+          <li>Penetration Testing</li>
+          <li>Web Application Testing</li>
+          <li>Social Engineering</li>
+          <li>Security Assessment Tools</li>
+          <li>Port Scanning</li>
+          <li>Enumeration Techniques</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more skills-columns as needed -->
+
+</div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- Add your footer content here -->
+            <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
+        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
+        <image src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+      </a>
+  <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+        <image src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+      </a>    
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+    <!-- Include your main content here -->
+
+    <script>
+      // JavaScript for adding animation class to elements
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements = document.querySelectorAll(".animated"); // Add 'animated' class to elements you want to animate
+        animatedElements.forEach((element) => {
+          element.classList.add("animate"); // Add 'animate' class for animation
+        });
+
+        const navbar = document.querySelector(".scroll-fade");
+        window.addEventListener("scroll", () => {
+          const scrollPosition = window.scrollY;
+          const navbarOpacity = 1 - scrollPosition / 200;
+          navbar.style.opacity = navbarOpacity;
+        });
+      });
+    </script>
+  </body>
+</html>
