@@ -156,7 +156,33 @@
         <!-- Add more skills-columns as needed -->
 
       </div>
+<!-- Place this where you want the dark mode switch to appear -->
+<!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
+<style>
+  .dark-mode-switch-container {
+    display: inline-block;
+    margin-left: 20px; /* Adjust the margin as needed */
+  }
 
+  .dark-mode-switch-label {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  #dark-mode-switch {
+    display: none; /* Hide the checkbox */
+  }
+
+  #dark-mode-switch-icon {
+    width: 20px; /* Adjust the width to your preference */
+    height: 20px; /* Adjust the height to your preference */
+    filter: grayscale(100%); /* Apply grey filter */
+  }
+
+  #dark-mode-switch-label:hover #dark-mode-switch-icon {
+    filter: grayscale(0%); /* Remove grey filter on hover */
+  }
+</style>
       <!-- FOOTER -->
       <div id="footer">
         <!-- Add your footer content here -->
@@ -189,42 +215,17 @@
         
           This should be the same across all pages.
         -->
-        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+        <a class="icon-link" href="mailto:chupix13@gmail.com">
           <img src="./assets/icons/mail.svg" class="footer-icon"/>
         </a>
       </div>
-<!-- Place this where you want the dark mode switch to appear -->
-<!-- Add this inside the <body> tag, preferably at the end before the closing </body> tag -->
-<style>
-  .dark-mode-switch-container {
-    display: inline-block;
-  }
-
-  .dark-mode-switch-label {
-    cursor: pointer;
-    display: inline-block;
-  }
-
-  #dark-mode-switch {
-    display: none; /* Hide the checkbox */
-  }
-
-  #dark-mode-switch-icon {
-    width: 20px; /* Adjust the width to your preference */
-    height: 20px; /* Adjust the height to your preference */
-    filter: grayscale(100%); /* Apply grey filter */
-  }
-
-  #dark-mode-switch-label:hover #dark-mode-switch-icon {
-    filter: grayscale(0%); /* Remove grey filter on hover */
-  }
-</style>
-
-<div class="dark-mode-switch-container">
-  <label for="dark-mode-switch" class="dark-mode-switch-label">
-    <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
-  </label>
-  <input type="checkbox" id="dark-mode-switch">
+        <!-- Dark mode switch -->
+  <div class="dark-mode-switch-container">
+    <label for="dark-mode-switch" class="dark-mode-switch-label">
+      <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
+    </label>
+    <input type="checkbox" id="dark-mode-switch">
+  </div>
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
