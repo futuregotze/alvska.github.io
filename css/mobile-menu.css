@@ -1,56 +1,28 @@
-/* Mobile Menu Styling */
+/* Mobile Menu Styles */
+
 .mobile-menu {
   display: none;
-  flex-direction: column;
-  background-color: #ffffff; /* Adjust background color as needed */
-  padding: 20px;
   position: fixed;
-  top: 60px; /* Adjust the top position to avoid overlapping with the navbar */
+  top: 60px; /* Adjust this value to leave space for the fixed navbar */
+  right: 0;
   width: 100%;
-  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Higher z-index to appear above other content */
 }
 
-.mobile-menu-item {
-  color: black;
-  text-decoration: none;
-  margin-bottom: 10px;
+.mobile-menu.show {
   display: block;
 }
 
+.mobile-menu-item {
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
 .mobile-menu-item:hover {
-  text-decoration: underline;
-}
-
-/* Hamburger Icon Styling */
-.mobile-menu-icon {
-  position: fixed;
-  top: 10px;
-  right: 10px; /* Adjust the right value to your preference */
-  cursor: pointer;
-  z-index: 1500;
-  display: flex;
-  flex-direction: column;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Display the mobile menu on small screens */
-@media only screen and (max-width: 800px) {
-  .mobile-menu-icon {
-    display: flex;
-  }
-
-  .navbar {
-    display: none; /* Hide the desktop navbar */
-  }
-
-  .mobile-menu.show {
-    display: flex;
-  }
+  background-color: #f0f0f0;
 }
