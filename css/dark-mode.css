@@ -1,5 +1,7 @@
 /* dark-mode.css */
-body {
-  background-color: #ffffff;
-  color: #1e1e1e;
+body.dark-mode {
+  background-color: #1e1e1e; /* Dark background color */
+  color: #ffffff; /* Light text color */
 }
+
+/* Add dark mode styles for other elements as needed */
