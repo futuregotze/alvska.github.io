@@ -1,3 +1,9 @@
+/* dark-mode.css */
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
 /* Add this style to your existing CSS */
 .dark-mode-switch-label {
   position: relative;
