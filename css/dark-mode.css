@@ -3,5 +3,45 @@ body {
   background-color: #1e1e1e;
   color: #ffffff;
 }
+/* Dark Mode Switch Styling */
+.dark-mode-switch-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-switch-container input {
+  display: none;
+}
+
+.dark-mode-switch-label {
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc; /* Background color of the switch */
+  border-radius: 10px; /* Make it round */
+  position: relative;
+  cursor: pointer;
+}
+
+.dark-mode-switch-label::before {
+  content: "";
+  display: block;
+  width: 18px; /* Size of the switch circle */
+  height: 18px;
+  background-color: white; /* Color of the switch circle */
+  border-radius: 50%; /* Make it round */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode-switch-container input:checked + .dark-mode-switch-label::before {
+  transform: translateX(20px);
+}
+
 
 /* Add dark mode styles for other elements as needed */
