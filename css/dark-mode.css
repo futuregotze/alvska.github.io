@@ -1,40 +1,5 @@
-/* Dark Mode Switch Styling */
-.dark-mode-switch-container {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.dark-mode-switch-container input {
-  display: none;
-}
-
-.moon-icon {
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -50%);
-  left: 4px; /* Adjust the left position as needed */
-  width: 16px;
-  height: 16px;
-  background-image: url('https://futuregotze.github.io/assets/icons/darkmoon.svg'); /* Replace with the path to your moon icon */
-  background-size: cover;
-}
-
-.dark-mode-switch-label::before {
-  content: "";
-  display: block;
-  width: 18px; /* Size of the switch circle */
-  height: 18px;
-  background-color: white; /* Color of the switch circle */
-  border-radius: 50%; /* Make it round */
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.dark-mode-switch-container input:checked + .dark-mode-switch-label::before {
-  transform: translateX(20px);
+/* dark-mode.css */
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
