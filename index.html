@@ -228,15 +228,16 @@
         buttons.forEach((button) => {
           button.style.pointerEvents = "auto";
         });
-         // Add dark mode toggle functionality
-  document.addEventListener("DOMContentLoaded", function () {
+      }
+    });
+
+    // Add dark mode toggle functionality
     const darkModeSwitch = document.getElementById("dark-mode-switch");
     const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
 
     darkModeSwitch.addEventListener("change", () => {
       darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
     });
-      }
   });
 </script>
 </body>
