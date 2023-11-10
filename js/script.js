@@ -4,9 +4,5 @@ if (document.getElementById('my-work-link')) {
   })
 }
 
-// Add this to your existing script.js or create a new one
-function toggleMobileMenu() {
-  var mobileMenu = document.querySelector('.mobile-menu');
-  mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
-}
+
 
