@@ -25,24 +25,6 @@ a.icon-link:hover {
   gap: 16px; /* Adjust as needed */
 }
 
-/* Button Menu Styling */
-.button-menu-container {
-  display: flex;
-  align-items: center; /* Align items vertically in the container */
-  gap: 10px; /* Adjust as needed */
-}
-
-.button-menu-item {
-  color: black;
-  text-decoration: none;
-  font-weight: bold; /* Make the text bold */
-  font-size: 16px; /* Adjust the font size as needed */
-}
-
-.button-menu-item:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 /* Navbar Styling */
 .navbar {
