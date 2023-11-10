@@ -1,0 +1,56 @@
+/* Mobile Menu Styling */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff; /* Adjust background color as needed */
+  padding: 20px;
+  position: fixed;
+  top: 60px; /* Adjust the top position to avoid overlapping with the navbar */
+  width: 100%;
+  z-index: 1000;
+}
+
+.mobile-menu-item {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.mobile-menu-item:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Icon Styling */
+.mobile-menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001; /* Ensure it's above the mobile menu */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+/* Display the mobile menu on small screens */
+@media only screen and (max-width: 800px) {
+  .mobile-menu-icon {
+    display: flex;
+  }
+
+  .navbar {
+    display: none; /* Hide the desktop navbar */
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
