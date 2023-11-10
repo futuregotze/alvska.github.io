@@ -32,6 +32,18 @@
   filter: grayscale(0%); /* Remove grey filter on hover */
 }
 
+/* Social Icons */
+.icon-link {
+  transition: transform 200ms ease-in-out, color 0.3s;
+  display: inline-block; /* Display icons inline */
+}
+
+.icon-link:hover {
+  cursor: pointer;
+  transform: rotate(15deg); /* Add a transform property */
+  color: black; /* Change color on hover */
+}
+
 /* Button Menu Styling */
 .button-menu-container {
   display: flex;
