@@ -233,8 +233,18 @@
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const darkModeStylesheet = document.getElementById("dark-mode-stylesheet");
 
+  // Load dark mode preference from local storage if available
+  const savedDarkMode = localStorage.getItem("darkMode");
+
+  if (savedDarkMode) {
+    darkModeSwitch.checked = savedDarkMode === "true";
+    darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
+  }
+
   darkModeSwitch.addEventListener("change", () => {
     darkModeStylesheet.href = darkModeSwitch.checked ? "./css/dark-mode.css" : "";
+    // Save dark mode preference to local storage
+    localStorage.setItem("darkMode", darkModeSwitch.checked);
    });
   });
 </script>
