@@ -276,15 +276,16 @@
       buttons.forEach((button) => {
         button.style.pointerEvents = "auto";
       });
-        // Add JavaScript to toggle the mobile menu visibility
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
-      const mobileMenu = document.querySelector(".mobile-menu");
+       // Add JavaScript to toggle the mobile menu visibility
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-      mobileMenuIcon.addEventListener("click", function () {
-        mobileMenu.classList.toggle("show");
-      });
+  mobileMenuIcon.addEventListener("click", function () {
+    mobileMenu.classList.toggle("show");
   });
+});
+
 </script>
 </body>
 </html>
