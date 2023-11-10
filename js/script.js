@@ -4,7 +4,9 @@ if (document.getElementById('my-work-link')) {
   })
 }
 
-function toggleMenu() {
-  var navMenu = document.querySelector('.nav-menu');
-  navMenu.style.display = (navMenu.style.display === 'block') ? 'none' : 'block';
+// Add this to your existing script.js or create a new one
+function toggleMobileMenu() {
+  var mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
 }
+
