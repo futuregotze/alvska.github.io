@@ -1,4 +1,3 @@
-/* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
   align-items: center; /* Center items horizontally */
@@ -50,4 +49,54 @@
 
 .icon-link:hover {
   cursor: pointer;
-  transform: rotate(15deg);
+  transform: rotate(15deg); /* Add a transform property */
+  color: black; /* Change color on hover */
+}
+
+/* Button Menu Styling */
+.button-menu-container {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Adjust as needed */
+}
+
+.button-menu-item {
+  color: black;
+  text-decoration: none;
+  font-weight: bold; /* Make the text bold */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Adjust styles on hover */
+.button-menu-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 800px) {
+  #footer {
+    flex-direction: column; /* Stack items vertically for small screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .social-dark-container {
+    flex-direction: row; /* Set social and dark mode icons side by side on small screens */
+  }
+
+  .button-menu-container {
+    flex-direction: row; /* Set bottom menu items side by side on small screens */
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 801px) {
+  #footer {
+    flex-direction: row; /* Set items side by side for larger screens */
+  }
+
+  .button-menu-container {
+    flex-grow: 1; /* Allow the bottom menu to take up the remaining space */
+  }
+}
