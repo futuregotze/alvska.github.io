@@ -81,7 +81,12 @@
     align-items: center; /* Center items horizontally */
   }
 
-  .social-dark-container, .button-menu-container {
-    flex-direction: column; /* Stack items vertically on small screens */
+  .social-dark-container {
+    flex-direction: row; /* Set social and dark mode icons side by side on small screens */
+  }
+
+  .button-menu-container {
+    flex-direction: row; /* Set bottom menu items side by side on small screens */
+    width: 100%; /* Full width for small screens */
   }
 }
