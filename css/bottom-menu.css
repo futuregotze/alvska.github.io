@@ -3,7 +3,6 @@
   align-items: center; /* Center items horizontally */
   justify-content: space-between; /* Add space between social icons, dark mode switch, and button menu */
   gap: 16px; /* Adjust as needed */
-  flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
 }
 
 /* Container for social icons and dark mode switch */
