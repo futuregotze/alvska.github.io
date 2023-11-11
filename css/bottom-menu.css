@@ -50,43 +50,4 @@
 
 .icon-link:hover {
   cursor: pointer;
-  transform: rotate(15deg); /* Add a transform property */
-  color: black; /* Change color on hover */
-}
-
-/* Button Menu Styling */
-.button-menu-container {
-  display: flex;
-  align-items: center; /* Center items horizontally */
-  gap: 10px; /* Adjust as needed */
-}
-
-.button-menu-item {
-  color: black;
-  text-decoration: none;
-  font-weight: bold; /* Make the text bold */
-  font-size: 16px; /* Adjust the font size as needed */
-}
-
-/* Adjust styles on hover */
-.button-menu-item:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Media query for small screens */
-@media only screen and (max-width: 800px) {
-  #footer {
-    flex-direction: column; /* Stack items vertically for small screens */
-    align-items: center; /* Center items horizontally */
-  }
-
-  .social-dark-container {
-    flex-direction: column; /* Stack social and dark mode icons vertically on small screens */
-    align-items: center; /* Center items horizontally */
-  }
-
-  .button-menu-container {
-    width: 100%; /* Full width for small screens */
-  }
-}
+  transform: rotate(15deg);
