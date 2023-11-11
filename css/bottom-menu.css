@@ -1,92 +1,42 @@
-/* Add this style to give some space between social icons, dark mode switch, and button menu */
-#footer {
+/* Button Menu Styles */
+.button-menu-container {
   display: flex;
-  align-items: center; /* Center items horizontally */
-  justify-content: space-between; /* Add space between social icons, dark mode switch, and button menu */
-  gap: 16px; /* Adjust as needed */
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Higher z-index to appear above other content */
 }
 
-/* Container for social icons and dark mode switch */
-.social-dark-container {
+.button-menu-item {
+  flex: 1;
   display: flex;
-  align-items: center; /* Center items horizontally */
-  gap: 10px; /* Adjust the gap between icons */
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-size: 12px; /* Adjust font size as needed */
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-/* Dark mode switch styling (adjust as needed) */
-.dark-mode-switch-container {
-  display: inline-block;
-  margin-left: 2px; /* Adjust the margin to match the spacing of other icons */
+.button-menu-item:hover {
+  color: black;
+  background-color: #f0f0f0;
 }
 
 .dark-mode-switch-label {
   cursor: pointer;
-  display: inline-block;
-}
-
-#dark-mode-switch {
-  display: none; /* Hide the checkbox */
-}
-
-#dark-mode-switch-icon {
-  width: 16px; /* Adjust the width to your preference */
-  height: 16px; /* Adjust the height to your preference */
-  filter: grayscale(100%); /* Apply grey filter */
-}
-
-#dark-mode-switch-label:hover #dark-mode-switch-icon {
-  filter: grayscale(0%); /* Remove grey filter on hover */
-}
-
-/* Social Icons */
-.social-icons {
   display: flex;
-  gap: 10px; /* Adjust the gap between icons */
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-.icon-link {
-  transition: transform 200ms ease-in-out, color 0.3s;
-}
-
-.icon-link:hover {
-  cursor: pointer;
-  transform: rotate(15deg); /* Add a transform property */
-  color: black; /* Change color on hover */
-}
-
-/* Button Menu Styling */
-.button-menu-container {
-  display: flex;
-  align-items: center; /* Center items horizontally */
-  gap: 10px; /* Adjust as needed */
-}
-
-.button-menu-item {
-  color: black;
-  text-decoration: none;
-  font-weight: bold; /* Make the text bold */
-  font-size: 16px; /* Adjust the font size as needed */
-}
-
-/* Adjust styles on hover */
-.button-menu-item:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Media query for small screens */
-@media only screen and (max-width: 800px) {
-  #footer {
-    flex-direction: column; /* Stack items vertically for small screens */
-    align-items: center; /* Center items horizontally */
-  }
-
-  .social-dark-container {
-    flex-direction: row; /* Set social and dark mode icons side by side on small screens */
-  }
-
-  .button-menu-container {
-    flex-direction: row; /* Set bottom menu items side by side on small screens */
-    width: 100%; /* Full width for small screens */
-  }
+.dark-mode-switch-label:hover {
+  background-color: #f0f0f0;
 }
