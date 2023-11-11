@@ -83,8 +83,7 @@
   }
 
   .social-dark-container {
-    flex-direction: column; /* Stack social and dark mode icons vertically on small screens */
-    align-items: center; /* Center items horizontally */
+    flex-direction: row; /* Set social and dark mode icons side by side on small screens */
   }
 
   .button-menu-container {
