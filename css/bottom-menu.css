@@ -86,6 +86,7 @@
   }
 
   .button-menu-container {
+    flex-direction: row; /* Set bottom menu items side by side on small screens */
     width: 100%; /* Full width for small screens */
   }
 }
