@@ -1,3 +1,4 @@
+/* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
   align-items: center; /* Center items horizontally */
@@ -58,7 +59,6 @@
   display: flex;
   align-items: center; /* Center items horizontally */
   gap: 10px; /* Adjust as needed */
-  flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
 }
 
 .button-menu-item {
@@ -88,16 +88,5 @@
   .button-menu-container {
     flex-direction: row; /* Set bottom menu items side by side on small screens */
     width: 100%; /* Full width for small screens */
-  }
-}
-
-/* Media query for larger screens */
-@media only screen and (min-width: 801px) {
-  #footer {
-    flex-direction: row; /* Set items side by side for larger screens */
-  }
-
-  .button-menu-container {
-    flex-grow: 1; /* Allow the bottom menu to take up the remaining space */
   }
 }
