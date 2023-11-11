@@ -1,4 +1,3 @@
-/* new code */
 /* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
@@ -83,7 +82,8 @@
   }
 
   .social-dark-container {
-    flex-direction: row; /* Set social and dark mode icons side by side on small screens */
+    flex-direction: column; /* Stack social and dark mode icons vertically on small screens */
+    align-items: center; /* Center items horizontally */
   }
 
   .button-menu-container {
