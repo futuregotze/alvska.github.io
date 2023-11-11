@@ -3,6 +3,7 @@
   align-items: center; /* Center items horizontally */
   justify-content: space-between; /* Add space between social icons, dark mode switch, and button menu */
   gap: 16px; /* Adjust as needed */
+  flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
 }
 
 /* Container for social icons and dark mode switch */
@@ -58,6 +59,7 @@
   display: flex;
   align-items: center; /* Center items horizontally */
   gap: 10px; /* Adjust as needed */
+  flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
 }
 
 .button-menu-item {
@@ -85,7 +87,6 @@
   }
 
   .button-menu-container {
-    flex-direction: row; /* Set bottom menu items side by side on small screens */
     width: 100%; /* Full width for small screens */
   }
 }
