@@ -1,8 +1,7 @@
 /* Add this style to give some space between social icons, dark mode switch, and button menu */
 #footer {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically in the container */
   gap: 16px; /* Adjust as needed */
 }
 
@@ -34,8 +33,7 @@
 /* Button Menu Styling */
 .button-menu-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically in the container */
   gap: 10px; /* Adjust as needed */
 }
 
