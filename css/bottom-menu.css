@@ -1,7 +1,7 @@
 /* Container for the entire footer */
 #footer {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: row; /* Stack items vertically */
   align-items: center;
   gap: 16px;
 }
