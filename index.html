@@ -200,59 +200,42 @@
   filter: grayscale(0%); /* Remove grey filter on hover */
 }
 </style>
- <!-- FOOTER -->
+<!-- FOOTER -->
 <div id="footer">
-  <!-- Add your footer content here -->
-  <!-- 
-    TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-    This should be the same across all pages.
-  -->
-  <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
-    <img src="./assets/icons/instagram.svg" class="footer-icon"/>
-  </a>
-  <!-- 
-    TODO - Change href to your LinkedIn account (can also delete entire "a" element if no LinkedIn) 
-    This should be the same across all pages.
-  -->
-  <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
-    <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
-  </a>
-  <!-- 
-    TODO - Change href to your GitHub account (can also delete entire "a" element if no GitHub) 
-    This should be the same across all pages.
-  -->
-  <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
-    <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
-  </a>
-  <!-- 
-    TODO - Change the email after "mailto" to your contact email 
-    This should be the same across all pages.
-  -->
-  <a class="icon-link" href="mailto:chupix13@gmail.com">
-    <img src="./assets/icons/mail.svg" class="footer-icon"/>
-  </a>
-
-
- <!-- Dark mode switch -->
-<div class="dark-mode-switch-container">
-  <label for="dark-mode-switch" class="dark-mode-switch-label">
-    <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
-  </label>
-  <input type="checkbox" id="dark-mode-switch">
-</div>
-     <!-- Mobile Bottom Menu -->
-  <div class="mobile-menu">
-    <a class="mobile-menu-item" href="/project-pages/project-template.html">Projects</a>
-    <a class="mobile-menu-item" href="your_docs_link_here.pdf">Documentation</a>
-    <a class="mobile-menu-item" href="resume.html">Resume</a>
-    <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
+  <!-- Row 1: Social icons and dark mode switch container -->
+  <div id="row-1-container">
+    <!-- Instagram -->
+    <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
+      <img src="./assets/icons/instagram.svg" class="footer-icon"/>
+    </a>
+    <!-- LinkedIn -->
+    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
+      <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+    </a>
+    <!-- GitHub -->
+    <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+      <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+    </a>
+    <!-- Email -->
+    <a class="icon-link" href="mailto:chupix13@gmail.com">
+      <img src="./assets/icons/mail.svg" class="footer-icon"/>
+    </a>
+    <!-- Dark mode switch -->
+    <div class="dark-mode-switch-container">
+      <label for="dark-mode-switch" class="dark-mode-switch-label">
+        <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
+      </label>
+      <input type="checkbox" id="dark-mode-switch">
+    </div>
   </div>
-<!-- Button Menu Container -->
-<div class="button-menu-container">
-  <a class="button-menu-item" href="/project-pages/project-template.html">Projects</a>
-  <a class="button-menu-item" href="your_docs_link_here.pdf">Documentation</a>
-  <a class="button-menu-item" href="resume.html">Resume</a>
-  <a class="button-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
+
+  <!-- Row 2: Button Menu Container -->
+  <div id="row-2-container" class="button-menu-container">
+    <a class="button-menu-item" href="/project-pages/project-template.html">Projects</a>
+    <a class="button-menu-item" href="your_docs_link_here.pdf">Documentation</a>
+    <a class="button-menu-item" href="resume.html">Resume</a>
+    <a class="button-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
+  </div>
 </div>
 <script>
   (function() {
