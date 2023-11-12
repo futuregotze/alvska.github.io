@@ -37,3 +37,9 @@
 .show-mobile-menu .mobile-menu {
   display: flex;
 }
+/* Inside mobile-menu.css */
+@media only screen and (max-width: 800px) {
+  .mobile-menu-icon {
+    display: flex; /* or display: block; */
+  }
+}
