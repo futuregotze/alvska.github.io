@@ -1,53 +1,27 @@
+/* mobile-menu.css */
+
 .mobile-menu {
-  display: none;
-  position: fixed;
-  top: 60px; /* Adjust the top position based on your header height */
-  left: 0;
-  width: 100%;
-  background-color: #fff; /* Adjust background color */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Add box shadow if desired */
-  z-index: 1001;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #ffffff;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #333; /* Adjust text color */
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
 }
- /* Add this inside the <head> tag or in your existing CSS file */
-  .mobile-menu-icon {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1100;
-  }
 
-  .bar {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  .mobile-menu-icon.open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-
-  .mobile-menu-icon.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu-icon.open .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-
-  /* Adjust this media query as needed to match your mobile breakpoint */
-  @media (max-width: 768px) {
-    .mobile-menu-icon {
-      display: block;
-    }
-  }
+/* Additional styles for active menu item if needed */
+.mobile-menu a.active {
+    background-color: #f0f0f0; /* Adjust the background color for the active state */
+    color: #555; /* Adjust the text color for the active state */
+}
