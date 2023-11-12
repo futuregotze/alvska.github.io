@@ -41,9 +41,9 @@
 /* Button Menu Styling */
 .button-menu-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
 }
 
 .button-menu-item {
