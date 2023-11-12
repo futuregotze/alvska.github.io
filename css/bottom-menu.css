@@ -1,13 +1,13 @@
 /* Container for the entire footer */
 #footer {
   display: flex;
-  flex-direction: row; /* Stack items vertically */
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the right */
   gap: 16px;
 }
 
-/* Social icons and dark mode switch container */
-#social-icons-container {
+/* Row 1: Social icons and dark mode switch container */
+#row-1-container {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -16,7 +16,6 @@
 /* Dark mode switch styling (adjust as needed) */
 .dark-mode-switch-container {
   display: inline-block;
-  margin-left: 2px;
 }
 
 .dark-mode-switch-label {
@@ -38,12 +37,11 @@
   filter: grayscale(0%);
 }
 
-/* Button Menu Styling */
-.button-menu-container {
+/* Row 2: Button Menu Styling */
+#row-2-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
 }
 
 .button-menu-item {
