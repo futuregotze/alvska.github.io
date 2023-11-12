@@ -2,7 +2,7 @@
 #footer {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align items to the right */
+  align-items: center; /* Align items to the right */
   gap: 16px;
 }
 
