@@ -1,42 +1,39 @@
-/* Mobile Menu Styles */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 60px; /* Adjust this value to leave space for the fixed navbar */
-  right: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  z-index: 1001; /* Higher z-index to appear above other content */
+/* Hamburger icon styling */
+.mobile-menu-icon {
+  display: none; /* Initially hide the icon on larger screens */
+  cursor: pointer;
 }
 
-.mobile-menu.show {
-  display: block;
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Mobile menu styling */
+.mobile-menu {
+  display: none; /* Initially hide the menu on larger screens */
+  flex-direction: column;
+  background-color: #f9f9f9; /* Adjust background color as needed */
+  position: absolute;
+  top: 60px; /* Adjust top position based on your header height */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu-item {
-  display: block;
-  padding: 15px;
-  font-size: 18px;
-  color: #333;
   text-decoration: none;
-  transition: color 0.3s, border-bottom 0.3s;
-  border-bottom: 2px solid transparent;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd; /* Add a border between menu items */
 }
 
-.mobile-menu-item:hover,
-.mobile-menu-item.active {
-  color: black;
-  border-bottom: 2px solid #000;
-}
-
-/* Social Icons */
-.icon-link {
-  transition: transform 200ms ease-in-out, color 0.3s;
-}
-
-.icon-link:hover {
-  cursor: pointer;
-  transform: rotate(15deg); /* Add a transform property */
-  color: black; /* Change color on hover */
+/* Show/hide mobile menu based on the hamburger icon state */
+.show-mobile-menu .mobile-menu {
+  display: flex;
 }
