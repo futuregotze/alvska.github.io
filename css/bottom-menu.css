@@ -55,3 +55,19 @@
   text-decoration: underline;
   cursor: pointer;
 }
+/* Dark mode styling for row 2 container */
+.dark-mode #row-2-container {
+  background-color: black; /* Change the background color to black or any other color suitable for dark mode */
+  color: white; /* Change the text color to white or any other color suitable for dark mode */
+}
+
+.dark-mode .button-menu-item {
+  color: white; /* Change the text color of menu items in dark mode */
+}
+
+.dark-mode .button-menu-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: yellow; /* Change the text color of menu items in dark mode when hovered */
+}
+
