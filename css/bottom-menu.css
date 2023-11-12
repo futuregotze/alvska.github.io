@@ -57,7 +57,7 @@
 }
 /* Dark mode styling for row 2 container */
 .dark-mode #row-2-container {
-  background-color: black; /* Change the background color to black or any other color suitable for dark mode */
+  background-color: transparent; /* Set background color to transparent */
   color: white; /* Change the text color to white or any other color suitable for dark mode */
 }
 
