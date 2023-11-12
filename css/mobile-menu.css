@@ -20,7 +20,7 @@
     display: block;
 }
 
-/* Additional styles for active menu item if needed */
+/* Additional styles for the active menu item if needed */
 .mobile-menu a.active {
     background-color: #f0f0f0; /* Adjust the background color for the active state */
     color: #555; /* Adjust the text color for the active state */
