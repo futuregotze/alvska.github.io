@@ -47,8 +47,8 @@
   top: 40px; /* Adjust the top position to center vertically */
   right: 40px; /* Adjust the right position to create space from the right */
   cursor: pointer;
-  width: 45px; /* Adjust the width as needed */
-  height: 45px; /* Adjust the height as needed */
+  width: 02px; /* Adjust the width as needed */
+  height: 02px; /* Adjust the height as needed */
 }
 
 /* Media query for mobile devices */
