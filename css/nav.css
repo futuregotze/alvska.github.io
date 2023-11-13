@@ -45,6 +45,7 @@
 .hamburger-icon {
   position: absolute;
   top: 15px; /* Adjust the top position to center vertically */
+  left: auto; /* Remove the left positioning */
   right: 15px; /* Adjust the right position to create space from the right */
   cursor: pointer;
 }
