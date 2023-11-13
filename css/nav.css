@@ -34,11 +34,17 @@
   .button-container {
     display: flex;
     justify-content: flex-end;
+    align-items: center; /* Align items vertically in the container */
     padding: 10px;
   }
 
   .button {
     margin-left: 15px;
+  }
+
+  /* Add margin to create space between nav title and buttons */
+  .nav-title {
+    margin-right: auto;
   }
 }
 
