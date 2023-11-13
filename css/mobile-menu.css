@@ -39,3 +39,26 @@
   background-color: #04AA6D;
   color: white;
 }
+
+/* Adjust styles for small screens */
+@media screen and (max-width: 600px) {
+  /* Show the mobile menu container */
+  .mobile-menu-container {
+    display: block;
+  }
+
+  /* Hide the regular topnav on small screens */
+  .topnav {
+    display: none;
+  }
+
+  /* Adjust the position of the mobile menu icon */
+  .topnav a.icon {
+    position: static;
+  }
+
+  /* Show the links inside the mobile menu */
+  .topnav #myLinks {
+    display: block;
+  }
+}
