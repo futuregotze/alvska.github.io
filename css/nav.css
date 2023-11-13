@@ -1,7 +1,8 @@
 /* nav.css */
 
 /* Updated CSS for the initial state of the navbar */
-.navbar {
+.navbar,
+.mobile-navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -22,6 +23,21 @@
   padding: 10px; /* Adjust padding as needed */
   background-color: #ffffff; /* Adjust background color as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
+  transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+}
+
+.mobile-navbar.hidden {
+  opacity: 0;
+}
+
+.nav-title-link {
+  text-decoration: none;
+  color: #333333; /* Adjust text color */
+}
+
+.nav-title {
+  font-size: 20px; /* Adjust font size */
+  font-weight: bold; /* Adjust font weight if needed */
 }
 
 .mobile-menu {
@@ -46,17 +62,17 @@
   /* Add other styling properties as needed */
 }
 
-
 .hamburger-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
   cursor: pointer;
+  transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
 }
-/* ... (other styles) ... */
-
 
 /* ... (other styles) ... */
-
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
