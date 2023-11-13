@@ -16,48 +16,54 @@
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/bottom-menu.css">
 
+<style>
+    /* Updated CSS for the initial state of the navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #ffffff; /* Adjust background color as needed */
+      /* Add other styling properties as needed */
+      transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+    }
 
-  
+    .navbar.hidden {
+      opacity: 0;
+    }
 
-    <style>
-      /* Updated CSS for the initial state of the navbar */
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: #ffffff; /* Adjust background color as needed */
-        /* Add other styling properties as needed */
-        transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+    /* Add this style to your existing CSS */
+    .skills-list {
+      padding-left: 0;
+    }
+
+    /* Add this style to give some spacing between category titles and lists */
+    .skills-category-title {
+      margin-bottom: 10px;
+    }
+
+    /* Add this style for the mobile menu icon */
+    .mobile-menu-icon {
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Add this style to show the mobile menu when the 'show' class is applied */
+    .mobile-menu.show {
+      display: block;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* Adjust the max-width as needed for your mobile breakpoint */
+      .navbar .button-container {
+        display: none;
       }
 
-      .navbar.hidden {
-        opacity: 0;
+      .mobile-menu-icon {
+        display: block;
       }
-
-      /* Add this style to your existing CSS */
-      .skills-list {
-        padding-left: 0;
-      }
-
-      /* Add this style to give some spacing between category titles and lists */
-      .skills-category-title {
-        margin-bottom: 10px;
-      }
-      
-    </style>
-    
-    <style>
-  /* Add this style to hide the mobile menu by default */
-  .mobile-menu {
-    display: none;
-  }
-
-  /* Add this style to show the mobile menu when the 'show' class is applied */
-  .mobile-menu.show {
-    display: block;
-  }
-</style>
+    }
+  </style
 
    <!-- ... (your existing head content) ... -->
 
