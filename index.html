@@ -282,43 +282,33 @@
   </div>
 </div>
  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const darkModeSwitch = document.getElementById("dark-mode-switch");
-  const mobileMenuIcon = document.getElementById("mobileMenuIcon");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const desktopNavbar = document.querySelector('.navbar.scroll-fade');
+  document.addEventListener("DOMContentLoaded", function () {
+    const darkModeSwitch = document.getElementById("dark-mode-switch");
+    const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-  // Check the initial state of the dark mode switch and apply styles accordingly
-  if (darkModeSwitch) {
-    document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-
-    darkModeSwitch.addEventListener("change", function () {
+    // Check the initial state of the dark mode switch and apply styles accordingly
+    if (darkModeSwitch) {
       document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-    });
-  }
 
-  // Add JavaScript to toggle the mobile menu visibility
-  if (mobileMenuIcon) {
-    mobileMenuIcon.addEventListener("click", function () {
-      mobileMenu.classList.toggle("show");
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(item => {
-      item.addEventListener("click", function () {
-        mobileMenu.querySelectorAll('a').forEach(item => item.classList.remove("active"));
-        this.classList.add("active");
-        mobileMenu.classList.remove("show");
+      darkModeSwitch.addEventListener("change", function () {
+        document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
       });
-    });
-  }
+    }
 
-  // Hide the mobile menu when clicking on a link in desktop mode
-  desktopNavbar.querySelectorAll('a').forEach(item => {
-    item.addEventListener("click", function () {
-      mobileMenu.classList.remove("show");
-    });
+    // Add JavaScript to toggle the mobile menu visibility
+    if (mobileMenuIcon) {
+      mobileMenuIcon.addEventListener("click", function () {
+        mobileMenu.classList.toggle("show");
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(item => {
+        item.addEventListener("click", function () {
+          mobileMenu.classList.remove("show");
+        });
+      });
+    }
   });
-});
 </script>
   </body>
 </html>
