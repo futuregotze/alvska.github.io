@@ -277,7 +277,6 @@
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const mobileMenuIcon = document.getElementById("mobileMenuIcon");
   const mobileMenu = document.getElementById("mobileMenu");
-  const mobileMenuItems = document.querySelectorAll(".mobile-menu a");
 
   // Check the initial state of the dark mode switch and apply styles accordingly
   if (darkModeSwitch) {
@@ -294,9 +293,9 @@
       mobileMenu.classList.toggle("show");
     });
 
-    mobileMenuItems.forEach(item => {
+    mobileMenu.forEach(item => {
       item.addEventListener("click", function () {
-        mobileMenuItems.forEach(item => item.classList.remove("active"));
+        mobileMenu.forEach(item => item.classList.remove("active"));
         this.classList.add("active");
         mobileMenu.classList.remove("show");
       });
