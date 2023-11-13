@@ -39,8 +39,8 @@
     right: 15px;
     cursor: pointer;
     transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
-    width: 15px; /* Adjust the width as needed */
-    height: 15px; /* Adjust the height as needed */
+    width: 10px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
   }
 }
 
