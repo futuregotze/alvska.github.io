@@ -44,14 +44,15 @@
 
     /* Add this style for the mobile menu icon */
     .mobile-menu-icon {
-      cursor: pointer;
-      display: none;
-      padding: 10px;
-      background-color: #ffffff; /* Adjust background color as needed */
-      border: 1px solid #000000; /* Adjust border color as needed */
-      border-radius: 5px;
-      float: right; /* Align to the right */
-    }
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+  background-color: #ffffff; /* Adjust background color as needed */
+  border: 1px solid #000000; /* Adjust border color as needed */
+  border-radius: 5px;
+  float: right; /* Align to the right */
+  margin-top: 10px; /* Adjust margin-top as needed */
+}
 
     .bar {
       width: 25px;
@@ -294,13 +295,9 @@
       mobileMenu.classList.toggle("show");
     });
 
-    mobileMenu.forEach(item => {
-      item.addEventListener("click", function () {
-        mobileMenu.forEach(item => item.classList.remove("active"));
-        this.classList.add("active");
-        mobileMenu.classList.remove("show");
-      });
-    });
+    mobileMenu.addEventListener("click", function () {
+  mobileMenu.classList.remove("show");
+});
   }
 });
 </script>
