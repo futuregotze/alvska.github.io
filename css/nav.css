@@ -45,9 +45,10 @@
 .hamburger-icon {
   position: absolute;
   top: 15px; /* Adjust the top position to center vertically */
-  left: auto; /* Remove the left positioning */
   right: 15px; /* Adjust the right position to create space from the right */
   cursor: pointer;
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
 }
 
 /* Media query for mobile devices */
