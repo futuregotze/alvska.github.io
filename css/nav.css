@@ -1,36 +1,92 @@
-/* Media query for mobile devices */
-@media screen and (max-width: 768px) {
-  .navbar {
-    display: none; /* Hide desktop navbar on mobile */
-    opacity: 0; /* Ensure desktop navbar is not visible on mobile */
-    pointer-events: none; /* Disable interaction with desktop buttons on mobile */
-  }
+/* Common styles for both desktop and mobile */
+.navbar,
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  transition: opacity 0.5s;
+}
 
+.navbar.hidden {
+  opacity: 0;
+}
+
+.nav-title-link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.nav-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
   .mobile-navbar {
-    display: block; /* Show mobile navbar on mobile */
+    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .button-container {
-    display: none; /* Hide desktop buttons on mobile */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
   }
 
-  .mobile-menu {
-    display: block; /* Show mobile menu on mobile */
+  .button {
+    margin-left: 15px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  /* Additional styles specific to mobile */
   .mobile-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; /* Adjust padding as needed */
-    background-color: #ffffff; /* Adjust background color as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
-    transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s;
   }
 
   .mobile-navbar.hidden {
     opacity: 0;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .mobile-menu-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .hamburger-icon {
@@ -38,17 +94,8 @@
     top: 50%;
     right: 15px;
     cursor: pointer;
-    transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
-    width: 10px; /* Adjust the width as needed */
-    height: 10px; /* Adjust the height as needed */
-  }
-}
-
-/* Media query for mobile devices */
-@media screen and (min-width: 768px) {
-  .mobile-navbar {
-    display: none; /* Hide mobile navbar on desktop */
-    opacity: 0; /* Ensure mobile navbar is not visible on desktop */
-    pointer-events: none; /* Disable interaction with mobile buttons on desktop */
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
   }
 }
