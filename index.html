@@ -294,16 +294,16 @@
 
   // Add JavaScript to toggle the mobile menu visibility
   if (mobileMenuIcon) {
-    mobileMenuIcon.addEventListener("click", function () {
-      mobileMenu.classList.toggle("show");
-    });
+  mobileMenuIcon.addEventListener("click", function () {
+    mobileMenu.classList.toggle("show");
+  });
 
-    document.addEventListener("click", function (event) {
-      if (!mobileMenu.contains(event.target) && !mobileMenuIcon.contains(event.target)) {
-        mobileMenu.classList.remove("show");
-      }
-    });
-  }
+  document.addEventListener("click", function (event) {
+    if (!mobileMenu.contains(event.target) && !mobileMenuIcon.contains(event.target)) {
+      mobileMenu.classList.remove("show");
+    }
+  });
+}
 });
 
 </script>
