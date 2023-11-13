@@ -247,6 +247,16 @@
           const navbar = document.querySelector(".scroll-fade");
           const buttons = document.querySelectorAll(".button");
           const animatedElements = document.querySelectorAll(".animated");
+          var topnav = document.querySelector(".topnav");
+          var navbar = document.querySelector(".navbar");
+          var mobileMenuContainer = document.querySelector(".mobile-menu-container");
+
+          topnav.style.display = topnav.style.display === "none" ? "block" : "none";
+          navbar.style.display = navbar.style.display === "none" ? "block" : "none";
+          mobileMenuContainer.style.display =
+          mobileMenuContainer.style.display === "none" ? "block" : "none";
+          }
+
 
           // Check the initial state of the dark mode switch and apply styles accordingly
           if (darkModeSwitch) {
