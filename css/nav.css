@@ -1,8 +1,7 @@
 /* nav.css */
 
 /* Updated CSS for the initial state of the navbar */
-.navbar,
-.mobile-navbar {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
