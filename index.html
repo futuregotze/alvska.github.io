@@ -74,11 +74,11 @@
       display: block;
     }
 
-    @media only screen and (max-width: 600px) {
-      /* Adjust the max-width as needed for your mobile breakpoint */
-      .navbar .button-container {
-        display: none;
-      }
+    @media only screen and (min-width: 601px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 
       .mobile-menu-icon {
   margin-top: 70px; /* Adjust the margin to create space between the icon and navbar */
@@ -282,10 +282,11 @@
   </div>
 </div>
  <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const mobileMenuIcon = document.getElementById("mobileMenuIcon");
   const mobileMenu = document.getElementById("mobileMenu");
+  const desktopNavbar = document.querySelector('.navbar.scroll-fade');
 
   // Check the initial state of the dark mode switch and apply styles accordingly
   if (darkModeSwitch) {
@@ -302,10 +303,21 @@
       mobileMenu.classList.toggle("show");
     });
 
-    mobileMenu.addEventListener("click", function () {
-  mobileMenu.classList.remove("show");
-});
+    mobileMenu.querySelectorAll('a').forEach(item => {
+      item.addEventListener("click", function () {
+        mobileMenu.querySelectorAll('a').forEach(item => item.classList.remove("active"));
+        this.classList.add("active");
+        mobileMenu.classList.remove("show");
+      });
+    });
   }
+
+  // Hide the mobile menu when clicking on a link in desktop mode
+  desktopNavbar.querySelectorAll('a').forEach(item => {
+    item.addEventListener("click", function () {
+      mobileMenu.classList.remove("show");
+    });
+  });
 });
 </script>
   </body>
