@@ -1,4 +1,5 @@
 <!-- index.html ./ -->
+<!-- index.html ./ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,105 +16,70 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/bottom-menu.css">
+    <link rel="stylesheet" href="./css/mobile-menu.css">
 
-<style>
-    /* Updated CSS for the initial state of the navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: #ffffff; /* Adjust background color as needed */
-      /* Add other styling properties as needed */
-      transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
-    }
-
-    .navbar.hidden {
-      opacity: 0;
-    }
-
-    /* Add this style to your existing CSS */
-    .skills-list {
-      padding-left: 0;
-    }
-
-    /* Add this style to give some spacing between category titles and lists */
-    .skills-category-title {
-      margin-bottom: 10px;
-    }
-
-    /* Add this style for the mobile menu icon */
-    .mobile-menu-icon {
-  cursor: pointer;
-  display: none;
-  padding: 10px;
-  background-color: #ffffff; /* Adjust background color as needed */
-  border: 1px solid #000000; /* Adjust border color as needed */
-  border-radius: 5px;
-  float: right; /* Align to the right */
-  margin-top: 10px; /* Adjust margin-top as needed */
-  z-index: 1100; /* Higher z-index than the navbar */
-}
-  body {
-  padding-top: 60px; /* Adjust the padding to match your navbar height */
-}
-
-
-
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #000000; /* Adjust bar color as needed */
-      margin: 6px 0;
-      transition: 0.4s;
-    }
   
 
-    .mobile-menu {
-  display: none;
-}
+    <style>
+      /* Updated CSS for the initial state of the navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff; /* Adjust background color as needed */
+        /* Add other styling properties as needed */
+        transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+      }
 
-.mobile-menu.show {
-  display: block;
+      .navbar.hidden {
+        opacity: 0;
+      }
 
-      .mobile-menu-icon {
-  margin-top: 70px; /* Adjust the margin to create space between the icon and navbar */
-}
+      /* Add this style to your existing CSS */
+      .skills-list {
+        padding-left: 0;
+      }
 
-  </style>
+      /* Add this style to give some spacing between category titles and lists */
+      .skills-category-title {
+        margin-bottom: 10px;
+      }
+      
+    </style>
 
    <!-- ... (your existing head content) ... -->
 
   </head>
   <body>
-<!-- Mobile Menu Icon -->
+  <!-- Mobile Menu Icon -->
   <div class="mobile-menu-icon" id="mobileMenuIcon">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
   </div>
 
-  <!-- Navbar (same structure as index.html) -->
-  <div class="navbar scroll-fade">
-    <a class="nav-title-link" href="./index.html">
-      <span class="nav-title">Jose's Portfolio</span>
-    </a>
+    <!-- Navbar (same structure as index.html) -->
+    <div class="navbar scroll-fade">
+      <a class="nav-title-link" href="./index.html">
+        <span class="nav-title">Jose's Portfolio</span>
+      </a>
 
-    <div class="button-container">
-      <a class="button" href="/project-pages/project-template.html">
-        <span class="button-text">Projects</span>
-      </a>
-      <a class="button" href="your_docs_link_here.pdf">
-        <span class="button-text">Documentation</span>
-      </a>
-      <a class="button" href="resume.html">
-        <span class="button-text">Resume</span>
-      </a>
-      <a class="button" href="mailto:chupix13@gmail.com">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="button-container">
+        <a class="button" href="/project-pages/project-template.html">
+          <span class="button-text">Projects</span>
+        </a>
+        <a class="button" href="your_docs_link_here.pdf">
+          <span class="button-text">Documentation</span>
+        </a>
+        <a class="button" href="resume.html">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button" href="mailto:chupix13@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
     </div>
-  </div>
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="/project-pages/project-template.html">Projects</a>
@@ -278,34 +244,65 @@
   </div>
 </div>
  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const darkModeSwitch = document.getElementById("dark-mode-switch");
-  const mobileMenuIcon = document.getElementById("mobileMenuIcon");
-  const mobileMenu = document.getElementById("mobileMenu");
+      (function() {
+        document.addEventListener("DOMContentLoaded", function () {
+          const darkModeSwitch = document.getElementById("dark-mode-switch");
+          const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+          const mobileMenuItems = document.querySelectorAll(".mobile-menu a"); // Corrected this line
+          const navbar = document.querySelector(".scroll-fade");
+          const buttons = document.querySelectorAll(".button");
+          const animatedElements = document.querySelectorAll(".animated");
 
-  // Check the initial state of the dark mode switch and apply styles accordingly
-  if (darkModeSwitch) {
-    document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+          // Check the initial state of the dark mode switch and apply styles accordingly
+          if (darkModeSwitch) {
+            document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
 
-    darkModeSwitch.addEventListener("change", function () {
-      document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-    });
-  }
+            darkModeSwitch.addEventListener("change", function () {
+              document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+            });
+          }
 
-  // Add JavaScript to toggle the mobile menu visibility
-  if (mobileMenuIcon) {
-  mobileMenuIcon.addEventListener("click", function () {
-    mobileMenu.classList.toggle("show");
-  });
+          // Add JavaScript to toggle the mobile menu visibility
+          if (mobileMenuIcon) {
+            mobileMenuIcon.addEventListener("click", function () {
+              document.querySelector(".mobile-menu").classList.toggle("show");
+            });
 
-  document.addEventListener("click", function (event) {
-    if (!mobileMenu.contains(event.target) && !mobileMenuIcon.contains(event.target)) {
-      mobileMenu.classList.remove("show");
-    }
-  });
-}
-});
+            mobileMenuItems.forEach(item => {
+              item.addEventListener("click", function () {
+                mobileMenuItems.forEach(item => item.classList.remove("active"));
+                this.classList.add("active");
+                document.querySelector(".mobile-menu").classList.remove("show");
+              });
+            });
+          }
 
-</script>
+          // Add animation to elements with the 'animated' class
+          animatedElements.forEach((element) => {
+            element.classList.add("animate");
+          });
+
+          window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY;
+            const SCROLL_THRESHOLD = 200;
+            const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
+            navbar.style.opacity = navbarOpacity;
+
+            // Toggle 'hidden' class on the navbar based on scroll position
+            if (scrollPosition > navbar.clientHeight) {
+              navbar.classList.add("hidden");
+              buttons.forEach((button) => {
+                button.style.pointerEvents = "none";
+              });
+            } else {
+              navbar.classList.remove("hidden");
+              buttons.forEach((button) => {
+                button.style.pointerEvents = "auto";
+              });
+            }
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
