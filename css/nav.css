@@ -17,7 +17,12 @@
 }
 
 .mobile-navbar {
-  display: none; /* Initially hide the mobile navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; /* Adjust padding as needed */
+  background-color: #ffffff; /* Adjust background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
 }
 
 .mobile-menu {
@@ -44,15 +49,10 @@
 
 
 .hamburger-icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
   cursor: pointer;
-  transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
 }
-
 /* ... (other styles) ... */
 
 
