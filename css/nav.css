@@ -95,9 +95,11 @@
 
 /* Media query for mobile devices */
 @media screen and (min-width: 768px) {
-.mobile-navbar {
+  .mobile-navbar {
     display: none; /* Hide mobile navbar on desktop */
-    opacity: 0; /* Ensure mobile navbar is not visible on desktopmobile */
+    opacity: 0; /* Ensure mobile navbar is not visible on desktop */
     pointer-events: none; /* Disable interaction with mobile buttons on desktop */
+  }
 }
+
 
