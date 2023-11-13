@@ -52,7 +52,13 @@
   border-radius: 5px;
   float: right; /* Align to the right */
   margin-top: 10px; /* Adjust margin-top as needed */
+  z-index: 1100; /* Higher z-index than the navbar */
 }
+  body {
+  padding-top: 60px; /* Adjust the padding to match your navbar height */
+}
+
+
 
     .bar {
       width: 25px;
@@ -61,6 +67,7 @@
       margin: 6px 0;
       transition: 0.4s;
     }
+  
 
     /* Add this style to show the mobile menu when the 'show' class is applied */
     .mobile-menu.show {
@@ -74,8 +81,8 @@
       }
 
       .mobile-menu-icon {
-        display: block;
-      }
+  margin-top: 70px; /* Adjust the margin to create space between the icon and navbar */
+}
     }
   </style>
 
