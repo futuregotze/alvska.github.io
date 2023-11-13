@@ -42,14 +42,19 @@
   /* Add other styling properties as needed */
 }
 
+/* nav.css */
+
 .hamburger-icon {
   position: absolute;
   top: 50%; /* Adjust the top position to center vertically */
   right: 15px; /* Adjust the right position to create space from the right */
   cursor: pointer;
-  width: 12px; /* Adjust the width as needed */
-  height: 12px; /* Adjust the height as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
 }
+
+/* ... (other styles) ... */
+
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
