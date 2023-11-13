@@ -44,11 +44,11 @@
 
 .hamburger-icon {
   position: absolute;
-  top: 40px; /* Adjust the top position to center vertically */
-  right: 40px; /* Adjust the right position to create space from the right */
+  top: 50%; /* Adjust the top position to center vertically */
+  right: 15px; /* Adjust the right position to create space from the right */
   cursor: pointer;
-  width: 02px; /* Adjust the width as needed */
-  height: 02px; /* Adjust the height as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
 }
 
 /* Media query for mobile devices */
