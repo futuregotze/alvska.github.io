@@ -81,6 +81,11 @@
     box-sizing: border-box;
     text-align: center;
   }
+  
+.hamburger-icon {
+    width: 15px !important;
+    height: 15px !important;
+}
 
   /* ... (rest of the styles) ... */
 }
