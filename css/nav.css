@@ -82,10 +82,13 @@
     text-align: center;
   }
   
-.hamburger-icon {
-    width: 15px !important;
-    height: 15px !important;
-}
-
+ .hamburger-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
   /* ... (rest of the styles) ... */
 }
