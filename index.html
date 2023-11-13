@@ -252,8 +252,9 @@
 
         topnav.style.display = topnav.style.display === "none" ? "block" : "none";
         navbarElement.style.display = navbarElement.style.display === "none" ? "block" : "none";
-        mobileMenuContainer.style.display =
-            mobileMenuContainer.style.display === "none" ? "block" : "none";
+        if (mobileMenuContainer) {
+  mobileMenuContainer.style.display = mobileMenuContainer.style.display === "none" ? "block" : "none";
+}
 
         // Check the initial state of the dark mode switch and apply styles accordingly
         if (darkModeSwitch) {
