@@ -241,18 +241,17 @@
   </div>
 </div>
   <script>
-          (function() {
+  (function() {
     document.addEventListener("DOMContentLoaded", function () {
         const darkModeSwitch = document.getElementById("dark-mode-switch");
-        const navbar = document.querySelector(".scroll-fade");
+        const navbarElement = document.querySelector(".scroll-fade"); // Change the variable name
         const buttons = document.querySelectorAll(".button");
         const animatedElements = document.querySelectorAll(".animated");
         var topnav = document.querySelector(".topnav");
-        var navbar = document.querySelector(".navbar");
         var mobileMenuContainer = document.querySelector(".mobile-menu-container");
 
         topnav.style.display = topnav.style.display === "none" ? "block" : "none";
-        navbar.style.display = navbar.style.display === "none" ? "block" : "none";
+        navbarElement.style.display = navbarElement.style.display === "none" ? "block" : "none";
         mobileMenuContainer.style.display =
             mobileMenuContainer.style.display === "none" ? "block" : "none";
 
@@ -274,16 +273,16 @@
             const scrollPosition = window.scrollY;
             const SCROLL_THRESHOLD = 200;
             const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
-            navbar.style.opacity = navbarOpacity;
+            navbarElement.style.opacity = navbarOpacity;
 
             // Toggle 'hidden' class on the navbar based on scroll position
-            if (scrollPosition > navbar.clientHeight) {
-                navbar.classList.add("hidden");
+            if (scrollPosition > navbarElement.clientHeight) {
+                navbarElement.classList.add("hidden");
                 buttons.forEach((button) => {
                     button.style.pointerEvents = "none";
                 });
             } else {
-                navbar.classList.remove("hidden");
+                navbarElement.classList.remove("hidden");
                 buttons.forEach((button) => {
                     button.style.pointerEvents = "auto";
                 });
