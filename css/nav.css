@@ -71,7 +71,7 @@
   }
 
   .mobile-menu {
-    display: block;
+    display: none; /* Add this line to initially hide the mobile menu */
     position: fixed;
     top: 60px;
     width: 100%;
@@ -82,22 +82,5 @@
     text-align: center;
   }
 
-  .mobile-menu-item {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .hamburger-icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px;
-  }
+  /* ... (rest of the styles) ... */
 }
