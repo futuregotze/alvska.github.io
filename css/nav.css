@@ -1,77 +1,3 @@
-/* nav.css */
-
-/* Updated CSS for the initial state of the navbar */
-.navbar,
-.mobile-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #ffffff; /* Adjust background color as needed */
-  /* Add other styling properties as needed */
-  transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
-}
-
-.navbar.hidden {
-  opacity: 0;
-}
-
-.mobile-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px; /* Adjust padding as needed */
-  background-color: #ffffff; /* Adjust background color as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
-  transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
-}
-
-.mobile-navbar.hidden {
-  opacity: 0;
-}
-
-.nav-title-link {
-  text-decoration: none;
-  color: #333333; /* Adjust text color */
-}
-
-.nav-title {
-  font-size: 20px; /* Adjust font size */
-  font-weight: bold; /* Adjust font weight if needed */
-}
-
-.mobile-menu {
-  display: none; /* Initially hide the mobile menu */
-  position: fixed;
-  top: 60px; /* Adjust the top position to match your desktop navbar height */
-  width: 100%;
-  background-color: #ffffff; /* Adjust background color as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center; /* Center the content in the mobile menu */
-}
-
-.mobile-menu-item {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #333333; /* Adjust text color */
-  font-size: 16px; /* Adjust font size */
-  margin-bottom: 10px; /* Add some space between menu items */
-  /* Add other styling properties as needed */
-}
-
-.hamburger-icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  cursor: pointer;
-  transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
-  width: 15px; /* Adjust the width as needed */
-  height: 15px; /* Adjust the height as needed */
-}
-
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .navbar {
@@ -91,6 +17,31 @@
   .mobile-menu {
     display: block; /* Show mobile menu on mobile */
   }
+
+  /* Additional styles specific to mobile */
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding as needed */
+    background-color: #ffffff; /* Adjust background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
+    transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+  }
+
+  .mobile-navbar.hidden {
+    opacity: 0;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+    transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
+    width: 15px; /* Adjust the width as needed */
+    height: 15px; /* Adjust the height as needed */
+  }
 }
 
 /* Media query for mobile devices */
@@ -101,5 +52,3 @@
     pointer-events: none; /* Disable interaction with mobile buttons on desktop */
   }
 }
-
-
