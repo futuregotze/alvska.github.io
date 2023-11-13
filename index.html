@@ -276,9 +276,10 @@
 
             // Mobile menu toggle function
             function toggleMobileMenu() {
+                const mobileMenu = document.querySelector('.mobile-menu');
                 mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-                mobileNavbar.style.opacity = mobileMenu.style.display === 'none' ? 1 : 0;
             }
+
 
             // Attach the toggleMobileMenu function to the hamburger icon click event
             if (hamburgerIcon) {
