@@ -42,16 +42,19 @@
   /* Add other styling properties as needed */
 }
 
-/* nav.css */
 
 .hamburger-icon {
   position: absolute;
-  top: 50%; /* Adjust the top position to center vertically */
-  right: 15px; /* Adjust the right position to create space from the right */
+  top: 50%;
+  right: 15px;
   cursor: pointer;
-  width: 20px; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
+  transform: translate(-50%, -50%); /* Center the icon vertically and horizontally */
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
 }
+
+/* ... (other styles) ... */
+
 
 /* ... (other styles) ... */
 
