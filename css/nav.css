@@ -74,10 +74,10 @@
 
 /* ... (other styles) ... */
 
-/* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .navbar {
-    display: none; /* Hide desktop navbar on mobile */
+    opacity: 1; /* Ensure desktop navbar is visible on mobile */
+    pointer-events: auto; /* Allow interaction with desktop buttons on mobile */
   }
 
   .mobile-navbar {
