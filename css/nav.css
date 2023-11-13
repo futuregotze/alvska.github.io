@@ -1,3 +1,5 @@
+/* nav.css */
+
 /* Updated CSS for the initial state of the navbar */
 .navbar,
 .mobile-navbar {
@@ -9,8 +11,9 @@
   /* Add other styling properties as needed */
   transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
 }
-  .navbar.hidden {
-        opacity: 0;
+
+.navbar.hidden {
+  opacity: 0;
 }
 
 .mobile-navbar {
