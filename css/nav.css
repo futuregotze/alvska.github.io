@@ -1,0 +1,55 @@
+/* Updated CSS for the initial state of the navbar */
+.navbar,
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff; /* Adjust background color as needed */
+  /* Add other styling properties as needed */
+  transition: opacity 0.5s; /* Add transition for smooth appearance/disappearance */
+}
+
+.mobile-navbar {
+  display: none; /* Initially hide the mobile navbar */
+}
+
+.mobile-menu {
+  display: none; /* Initially hide the mobile menu */
+  position: fixed;
+  top: 60px; /* Adjust the top position to match your desktop navbar height */
+  width: 100%;
+  background-color: #ffffff; /* Adjust background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a nice effect */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.mobile-menu-item {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #333333; /* Adjust text color */
+  font-size: 16px; /* Adjust font size */
+  /* Add other styling properties as needed */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none; /* Hide desktop navbar on mobile */
+  }
+
+  .mobile-navbar {
+    display: block; /* Show mobile navbar on mobile */
+  }
+
+  .button-container {
+    display: none; /* Hide desktop buttons on mobile */
+  }
+
+  .mobile-menu {
+    display: block; /* Show mobile menu on mobile */
+  }
+}
