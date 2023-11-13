@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/bottom-menu.css">
-    <link rel="stylesheet" href="./css/mobile-menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
 
@@ -52,20 +50,7 @@
 
   </head>
   <body>
-    <!-- Top Navigation Menu -->
-<div class="topnav">
-  <a href="#home" class="active">Logo</a>
-  <!-- Navigation links (hidden by default) -->
-  <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+
     <!-- Navbar (same structure as index.html) -->
     <div class="navbar scroll-fade">
       <a class="nav-title-link" href="./index.html">
@@ -240,57 +225,49 @@
     <a class="button-menu-item" href="resume.html">Resume</a>
   </div>
 </div>
-  <script>
-  (function() {
-    document.addEventListener("DOMContentLoaded", function () {
-        const darkModeSwitch = document.getElementById("dark-mode-switch");
-        const navbarElement = document.querySelector(".scroll-fade"); // Change the variable name
-        const buttons = document.querySelectorAll(".button");
-        const animatedElements = document.querySelectorAll(".animated");
-        var topnav = document.querySelector(".topnav");
-        var mobileMenuContainer = document.querySelector(".mobile-menu-container");
+ <script>
+      (function() {
+        document.addEventListener("DOMContentLoaded", function () {
+          const darkModeSwitch = document.getElementById("dark-mode-switch");
+          const navbar = document.querySelector(".scroll-fade");
+          const buttons = document.querySelectorAll(".button");
+          const animatedElements = document.querySelectorAll(".animated");
 
-        topnav.style.display = topnav.style.display === "none" ? "block" : "none";
-        navbarElement.style.display = navbarElement.style.display === "none" ? "block" : "none";
-        if (mobileMenuContainer) {
-  mobileMenuContainer.style.display = mobileMenuContainer.style.display === "none" ? "block" : "none";
-}
-
-        // Check the initial state of the dark mode switch and apply styles accordingly
-        if (darkModeSwitch) {
+          // Check the initial state of the dark mode switch and apply styles accordingly
+          if (darkModeSwitch) {
             document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
 
             darkModeSwitch.addEventListener("change", function () {
-                document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+              document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
             });
-        }
+          }
 
-        // Add animation to elements with the 'animated' class
-        animatedElements.forEach((element) => {
+          // Add animation to elements with the 'animated' class
+          animatedElements.forEach((element) => {
             element.classList.add("animate");
-        });
+          });
 
-        window.addEventListener("scroll", () => {
+          window.addEventListener("scroll", () => {
             const scrollPosition = window.scrollY;
             const SCROLL_THRESHOLD = 200;
             const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
-            navbarElement.style.opacity = navbarOpacity;
+            navbar.style.opacity = navbarOpacity;
 
             // Toggle 'hidden' class on the navbar based on scroll position
-            if (scrollPosition > navbarElement.clientHeight) {
-                navbarElement.classList.add("hidden");
-                buttons.forEach((button) => {
-                    button.style.pointerEvents = "none";
-                });
+            if (scrollPosition > navbar.clientHeight) {
+              navbar.classList.add("hidden");
+              buttons.forEach((button) => {
+                button.style.pointerEvents = "none";
+              });
             } else {
-                navbarElement.classList.remove("hidden");
-                buttons.forEach((button) => {
-                    button.style.pointerEvents = "auto";
-                });
+              navbar.classList.remove("hidden");
+              buttons.forEach((button) => {
+                button.style.pointerEvents = "auto";
+              });
             }
+          });
         });
-    });
-})();
-        </script>
-    </body>
+      })();
+    </script>
+  </body>
 </html>
