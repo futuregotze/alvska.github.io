@@ -1,12 +1,29 @@
 /* Common styles for both desktop and mobile */
+:root {
+  --primary-text-color: #333333;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
+  --button-background: #4CAF50;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  --primary-text-color: #ffffff;
+  --background-color: #333333;
+  --navbar-background: #222222;
+  --button-background: #2E7D32;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 .navbar,
 .mobile-navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: var(--navbar-background);
   transition: opacity 0.5s;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 .navbar.hidden {
@@ -15,7 +32,7 @@
 
 .nav-title-link {
   text-decoration: none;
-  color: #333333;
+  color: var(--primary-text-color);
 }
 
 .nav-title {
@@ -34,7 +51,7 @@
   .button-container {
     display: flex;
     justify-content: flex-end;
-    align-items: center; /* Align items vertically in the container */
+    align-items: center;
     padding: 10px;
   }
 
@@ -42,7 +59,6 @@
     margin-left: 15px;
   }
 
-  /* Add margin to create space between nav title and buttons */
   .nav-title {
     margin-right: auto;
   }
@@ -61,8 +77,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     opacity: 1;
   }
 
@@ -71,31 +87,20 @@
   }
 
   .mobile-menu {
-    display: none; /* Add this line to initially hide the mobile menu */
+    display: none;
     position: fixed;
     top: 60px;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
   }
-  
-/* .hamburger-icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px; 
-} */
 
   .hamburger-icon {
-    font-size: 24px; /* Adjust the size as needed */
-    color: #333333; /* Adjust the color as needed */
+    font-size: 24px;
+    color: var(--primary-text-color);
     cursor: pointer;
-    /* Additional styles if necessary */
+  }
 }
-
