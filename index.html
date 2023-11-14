@@ -259,15 +259,31 @@
 
     window.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
+      const SCROLL_THRESHOLD = 200;
+      const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
+      navbar.style.opacity = navbarOpacity;
 
-      // Toggle 'hidden' class on the navbar based on scroll direction
+      // Toggle 'hidden' class on the navbar based on scroll position
+      if (scrollPosition > navbar.clientHeight) {
+        navbar.classList.add("hidden");
+        buttons.forEach((button) => {
+          button.style.pointerEvents = "none";
+        });
+      } else {
+        navbar.classList.remove("hidden");
+        buttons.forEach((button) => {
+          button.style.pointerEvents = "auto";
+        });
+      }
+
+      // Toggle 'hidden' class on the mobile navbar based on scroll direction
       if (scrollPosition > lastScrollPosition) {
         // Scrolling down
-        mobileNavbar.style.transition = 'opacity 1.5s';
+        mobileNavbar.style.transition = 'opacity 0.5s';
         mobileNavbar.style.opacity = '0';
       } else {
         // Scrolling up
-        mobileNavbar.style.transition = 'opacity 1.5s';
+        mobileNavbar.style.transition = 'opacity 0.5s';
         mobileNavbar.style.opacity = '1';
       }
 
