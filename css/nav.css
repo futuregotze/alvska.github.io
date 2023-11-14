@@ -1,18 +1,18 @@
 /* Common styles for both desktop and mobile */
 :root {
-  --primary-text-color: #000000;
+  --primary-text-color: #333333;
   --background-color: #ffffff;
   --navbar-background: #ffffff;
-  --button-background: #000000;
+  --button-background: #4CAF50;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
   --primary-text-color: #ffffff;
   --background-color: #333333;
-  --navbar-background: #333333;
-  --button-background: #ffffff;
-  --box-shadow-color: #ffffff;
+  --navbar-background: #222222;
+  --button-background: #2E7D32;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar,
@@ -60,7 +60,6 @@ body.dark-mode {
 
   .button {
     margin-left: 15px;
-    color: var(--primary-text-color); /* Use variable for text color */
   }
 
   .nav-title {
