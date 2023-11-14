@@ -18,14 +18,17 @@ body.dark-mode {
 }
 
 /* Common styles for both desktop and mobile */
-.navbar,
-.mobile-navbar {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background-color: var(--navbar-background);
   transition: opacity 1.0s;
+}
+
+.mobile-navbar {
+  display: none; /* Hide mobile navbar by default on larger screens */
 }
 
 .navbar.hidden {
@@ -71,6 +74,12 @@ body.dark-mode {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .mobile-navbar {
     display: flex;
     align-items: center;
