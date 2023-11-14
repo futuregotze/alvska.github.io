@@ -231,7 +231,7 @@
   </div>
 </div>
  <script>
-   (function () {
+  (function () {
   document.addEventListener("DOMContentLoaded", function () {
     const darkModeSwitch = document.getElementById("dark-mode-switch");
     const navbar = document.querySelector(".scroll-fade");
@@ -240,8 +240,7 @@
     const mobileNavbar = document.querySelector('.mobile-navbar');
     const mobileMenu = document.querySelector('.mobile-menu');
     const hamburgerIcon = document.querySelector('.hamburger-icon');
-
-    let lastScrollPosition = 0;
+    const firstElement = document.getElementById('portfolio-header'); // Adjust the ID
 
     // Check the initial state of the dark mode switch and apply styles accordingly
     if (darkModeSwitch) {
@@ -257,6 +256,8 @@
       element.classList.add("animate");
     });
 
+    let isMobileNavbarHidden = false;
+
     window.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
       const SCROLL_THRESHOLD = 200;
@@ -269,29 +270,31 @@
         buttons.forEach((button) => {
           button.style.pointerEvents = "none";
         });
+
+        // Hide the mobile navbar with a smooth transition
+        if (!isMobileNavbarHidden && scrollPosition > firstElement.offsetTop) {
+          isMobileNavbarHidden = true;
+          mobileNavbar.style.transition = 'opacity 0.5s';
+          mobileNavbar.style.opacity = '0';
+        }
       } else {
         navbar.classList.remove("hidden");
         buttons.forEach((button) => {
           button.style.pointerEvents = "auto";
         });
-      }
 
-      // Toggle 'hidden' class on the mobile navbar based on scroll direction
-      if (scrollPosition > lastScrollPosition) {
-        // Scrolling down
-        mobileNavbar.style.transition = 'opacity 2.0s'; // Adjust the duration as needed
-        mobileNavbar.style.opacity = '0';
-      } else {
-        // Scrolling up
-        mobileNavbar.style.transition = 'opacity 2.0s'; // Adjust the duration as needed
-        mobileNavbar.style.opacity = '1';
+        // Show the mobile navbar with a smooth transition
+        if (isMobileNavbarHidden) {
+          isMobileNavbarHidden = false;
+          mobileNavbar.style.transition = 'opacity 1.0s';
+          mobileNavbar.style.opacity = '1';
+        }
       }
-
-      lastScrollPosition = scrollPosition;
     });
 
     // Mobile menu toggle function
     function toggleMobileMenu() {
+      const mobileMenu = document.querySelector('.mobile-menu');
       mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
     }
 
