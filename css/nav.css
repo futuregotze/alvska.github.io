@@ -2,8 +2,8 @@
 :root {
   --primary-text-color: #333333;
   --background-color: #ffffff;
-  --navbar-background: #ffffff;
-  --button-background: #4CAF50;
+  --navbar-background: #222222;
+  --button-background: #2E7D32;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
