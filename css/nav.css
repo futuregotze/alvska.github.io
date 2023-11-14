@@ -50,6 +50,7 @@ body.dark-mode {
     opacity: 0;
     pointer-events: none;
   }
+}
 
   .button-container {
     display: flex;
@@ -84,6 +85,7 @@ body.dark-mode {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
   }
+}
 
   .button-container {
     display: none;
