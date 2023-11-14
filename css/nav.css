@@ -60,6 +60,7 @@ body.dark-mode {
 
   .button {
     margin-left: 15px;
+    color: var(--primary-text-color); /* Use variable for text color */
   }
 
   .nav-title {
