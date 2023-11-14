@@ -23,7 +23,7 @@ body.dark-mode {
   width: 100%;
   z-index: 1000;
   background-color: #ffffff;
-  transition: opacity 2.0s;
+  transition: opacity 1.0s;
 }
 
 .navbar.hidden {
