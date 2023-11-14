@@ -230,63 +230,68 @@
   </div>
 </div>
  <script>
-    (function () {
-        document.addEventListener("DOMContentLoaded", function () {
-            const darkModeSwitch = document.getElementById("dark-mode-switch");
-            const navbar = document.querySelector(".scroll-fade");
-            const buttons = document.querySelectorAll(".button");
-            const animatedElements = document.querySelectorAll(".animated");
-            const mobileNavbar = document.querySelector('.mobile-navbar');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const hamburgerIcon = document.querySelector('.hamburger-icon');
+   (function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    const darkModeSwitch = document.getElementById("dark-mode-switch");
+    const navbar = document.querySelector(".scroll-fade");
+    const buttons = document.querySelectorAll(".button");
+    const animatedElements = document.querySelectorAll(".animated");
+    const mobileNavbar = document.querySelector('.mobile-navbar');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
 
-            // Check the initial state of the dark mode switch and apply styles accordingly
-            if (darkModeSwitch) {
-                document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+    // Check the initial state of the dark mode switch and apply styles accordingly
+    if (darkModeSwitch) {
+      document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
 
-                darkModeSwitch.addEventListener("change", function () {
-                    document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-                });
-            }
+      darkModeSwitch.addEventListener("change", function () {
+        document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+      });
+    }
 
-            // Add animation to elements with the 'animated' class
-            animatedElements.forEach((element) => {
-                element.classList.add("animate");
-            });
+    // Add animation to elements with the 'animated' class
+    animatedElements.forEach((element) => {
+      element.classList.add("animate");
+    });
 
-            window.addEventListener("scroll", () => {
-                const scrollPosition = window.scrollY;
-                const SCROLL_THRESHOLD = 200;
-                const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
-                navbar.style.opacity = navbarOpacity;
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const SCROLL_THRESHOLD = 200;
+      const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
+      navbar.style.opacity = navbarOpacity;
 
-                // Toggle 'hidden' class on the navbar based on scroll position
-                if (scrollPosition > navbar.clientHeight) {
-                    navbar.classList.add("hidden");
-                    buttons.forEach((button) => {
-                        button.style.pointerEvents = "none";
-                    });
-                } else {
-                    navbar.classList.remove("hidden");
-                    buttons.forEach((button) => {
-                        button.style.pointerEvents = "auto";
-                    });
-                }
-            });
-
-            // Mobile menu toggle function
-            function toggleMobileMenu() {
-                const mobileMenu = document.querySelector('.mobile-menu');
-                mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-            }
-
-
-            // Attach the toggleMobileMenu function to the hamburger icon click event
-            if (hamburgerIcon) {
-                hamburgerIcon.addEventListener('click', toggleMobileMenu);
-            }
+      // Toggle 'hidden' class on the navbar based on scroll position
+      if (scrollPosition > navbar.clientHeight) {
+        navbar.classList.add("hidden");
+        buttons.forEach((button) => {
+          button.style.pointerEvents = "none";
         });
-    })();
+
+        // Hide the mobile navbar when scrolling
+        mobileNavbar.style.display = 'none';
+      } else {
+        navbar.classList.remove("hidden");
+        buttons.forEach((button) => {
+          button.style.pointerEvents = "auto";
+        });
+
+        // Show the mobile navbar when not scrolling
+        mobileNavbar.style.display = 'flex';
+      }
+    });
+
+    // Mobile menu toggle function
+    function toggleMobileMenu() {
+      const mobileMenu = document.querySelector('.mobile-menu');
+      mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Attach the toggleMobileMenu function to the hamburger icon click event
+    if (hamburgerIcon) {
+      hamburgerIcon.addEventListener('click', toggleMobileMenu);
+    }
+  });
+})();
 </script>
   </body>
 </html>
