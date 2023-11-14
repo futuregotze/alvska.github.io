@@ -68,3 +68,39 @@ body.dark-mode {
 .nav-title {
   margin-right: auto;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none; /* Add this line to initially hide the mobile menu */
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hamburger-icon {
+    font-size: 30px; /* Adjust the size as needed */
+    color: var(--primary-text-color); /* Adjust the color as needed */
+    cursor: pointer;
+    /* Additional styles if necessary */
+  }
+}
