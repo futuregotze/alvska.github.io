@@ -1,17 +1,17 @@
 /* Common styles for both desktop and mobile */
 :root {
-  --text-color: #ffffff;
-  --background-color: #333333;
-  --navbar-background: #000000;
-  --button-background: #ffffff;
-  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --primary-text-color: #333333;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
+  --button-background: #4CAF50;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
-  --text-color: #ffffff;
+  --primary-text-color: #ffffff;
   --background-color: #333333;
   --navbar-background: #222222;
-  --button-background: #ffffff;
+  --button-background: #2E7D32;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -32,7 +32,7 @@ body.dark-mode {
 .nav-title-link,
 .mobile-menu a {
   text-decoration: none;
-  color: var(--text-color); /* Use variable for text color */
+  color: var(--primary-text-color); /* Use variable for text color */
   font-family: inherit;
   font-size: 20px; /* Adjust font size as needed */
   font-weight: bold;
@@ -44,7 +44,7 @@ body.dark-mode {
 }
 
 /* Desktop styles */
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 768px) {
   .mobile-navbar {
     display: none;
     opacity: 0;
@@ -55,8 +55,6 @@ body.dark-mode {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    text-decoration: none;
-    color: var(--text-color); /* Use variable for text color */
     padding: 10px;
   }
 
@@ -70,7 +68,7 @@ body.dark-mode {
 }
 
 /* Mobile styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .navbar {
     display: none;
     opacity: 0;
@@ -105,7 +103,7 @@ body.dark-mode {
 
   .hamburger-icon {
     font-size: 30px;
-    color: var(--text-color); /* Use variable for text color */
+    color: var(--primary-text-color); /* Use variable for text color */
     cursor: pointer;
   }
 }
