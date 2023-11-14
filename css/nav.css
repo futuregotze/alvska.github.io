@@ -55,6 +55,7 @@ body.dark-mode {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    color: var(--primary-text-color); /* Use variable for text color */
     padding: 10px;
   }
 
