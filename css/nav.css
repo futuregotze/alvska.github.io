@@ -1,17 +1,17 @@
 /* Common styles for both desktop and mobile */
 :root {
-  --primary-text-color: #ffffff;
-  --background-color: #000000;
-  --navbar-background: #000000;
-  --button-background: #ffffff;
+  --primary-text-color: #000000;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
+  --button-background: #000000;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
   --primary-text-color: #ffffff;
   --background-color: #333333;
-  --navbar-background: #222222;
-  --button-background: #2E7D32;
+  --navbar-background: #333333;
+  --button-background: #ffffff;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
