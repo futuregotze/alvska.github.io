@@ -254,6 +254,8 @@
       element.classList.add("animate");
     });
 
+    let isMobileNavbarHidden = false;
+
     window.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
       const SCROLL_THRESHOLD = 200;
@@ -267,16 +269,24 @@
           button.style.pointerEvents = "none";
         });
 
-        // Hide the mobile navbar when scrolling
-        mobileNavbar.style.display = 'none';
+        // Hide the mobile navbar with a smooth transition
+        if (!isMobileNavbarHidden) {
+          isMobileNavbarHidden = true;
+          mobileNavbar.style.transition = 'opacity 0.5s';
+          mobileNavbar.style.opacity = '0';
+        }
       } else {
         navbar.classList.remove("hidden");
         buttons.forEach((button) => {
           button.style.pointerEvents = "auto";
         });
 
-        // Show the mobile navbar when not scrolling
-        mobileNavbar.style.display = 'flex';
+        // Show the mobile navbar with a smooth transition
+        if (isMobileNavbarHidden) {
+          isMobileNavbarHidden = false;
+          mobileNavbar.style.transition = 'opacity 0.5s';
+          mobileNavbar.style.opacity = '1';
+        }
       }
     });
 
