@@ -2,7 +2,7 @@
 :root {
   --primary-text-color: #ffffff;
   --background-color: #000000;
-  --navbar-background: #222222;
+  --navbar-background: #000000;
   --button-background: #ffffff;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
