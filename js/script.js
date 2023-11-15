@@ -10,11 +10,15 @@
     const firstElement = document.getElementById('portfolio-header'); // Adjust the ID
 
     // Check the initial state of the dark mode switch and apply styles accordingly
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    document.body.classList.toggle("dark-mode", isDarkMode);
     if (darkModeSwitch) {
-      document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+      darkModeSwitch.checked = isDarkMode;
 
       darkModeSwitch.addEventListener("change", function () {
-        document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+        const isDarkMode = darkModeSwitch.checked;
+        document.body.classList.toggle("dark-mode", isDarkMode);
+        localStorage.setItem("darkMode", isDarkMode);
       });
     }
 
