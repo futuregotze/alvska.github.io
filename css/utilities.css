@@ -97,14 +97,17 @@ a.icon-link:hover {
 /* Button Styling */
 a.button {
   padding: 8px 16px;
-  border: 3px var(--button-border);
+  border: var(--button-border);
   border-radius: 50px;
-  color: black;
+  color: var(--button-text-color);
   text-decoration: none;
   width: fit-content;
-  display: inline-block; /* Change display to inline-block */
-  margin: 0 10px; /* Add some margin for spacing */
+  display: inline-block;
+  margin: 0 10px;
 }
+
+/* ... Other existing styles ... */
+
 
 a.button:hover {
   text-decoration: underline;
