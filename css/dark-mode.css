@@ -10,7 +10,7 @@ body.dark-mode {
 .dark-mode #dark-mode-switch-icon {
   background-color: #333; /* Change to your desired background color in dark mode */
   color: #fff; /* Change to your desired text color in dark mode */
-  filter: invert(100%); /* Invert colors for the dark mode moon icon */
+  /* filter: invert(100%); /* Invert colors for the dark mode moon icon */
 }
 
 /* Add dark mode styles for the my-work-link button */
