@@ -9,8 +9,8 @@
 
 body.dark-mode {
   --primary-text-color: #ffffff; /* Invert text color for dark mode */
-  --background-color: #333333; /* Invert background color for dark mode */
-  --navbar-background: #333333; /* Invert navbar background color for dark mode */
+  --background-color: #2E2E38; /* Invert background color for dark mode */
+  --navbar-background: #2E2E38; /* Invert navbar background color for dark mode */
   --button-background: #4CAF50;
   --box-shadow-color: rgba(255, 255, 255, 0.1); /* Invert box shadow color for dark mode */
 }
