@@ -3,18 +3,17 @@
   --background-color: #ffffff;
   --navbar-background: #ffffff;
   --button-background: #4CAF50;
+  --button-outline-color: #4CAF50; /* Specify the button outline color */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
   --primary-text-color: #ffffff;
-  --background-color: #2E2E38;
-}
-
-body {
-  --navbar-background: var(--background-color);
+  --background-color: #333333;
+  --navbar-background: #333333;
   --button-background: #4CAF50;
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --button-outline-color: #ffffff; /* Specify the button outline color for dark mode */
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Common styles for both desktop and mobile */
@@ -44,6 +43,13 @@ body {
 .mobile-menu a {
   display: block;
   margin-bottom: 10px;
+}
+
+/* Button styles */
+.button {
+  background-color: var(--button-background);
+  border: 2px solid var(--button-outline-color); /* Specify button outline color */
+  color: var(--primary-text-color);
 }
 
 /* Desktop styles */
