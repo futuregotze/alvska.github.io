@@ -15,7 +15,8 @@ body.dark-mode {
 
 /* Add dark mode styles for the my-work-link button */
 .dark-mode .my-work-link.animated {
-  color: /* Your desired color for the my-work-link button in dark mode */;
+  ackground-color: #2E2E38; /* Dark background color #1e1e1e */
+  color: #ffffff; /* Light text color */
 }
 
 /* Exclude navbar and its icon from dark mode styling */
