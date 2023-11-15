@@ -2,16 +2,16 @@
   --primary-text-color: #333333;
   --background-color: #ffffff;
   --navbar-background: #ffffff;
-  --button-background: #4CAF50;
-  --button-outline-color: #4CAF50; /* Specify the button outline color */
+  --button-background: #ffffff;
+  --button-outline-color: #333333; /* Specify the button outline color */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
   --primary-text-color: #ffffff;
-  --background-color: #333333;
-  --navbar-background: #333333;
-  --button-background: #4CAF50;
+  --background-color: #2E2E38;
+  --navbar-background: #2E2E38;
+  --button-background: #2E2E38;
   --button-outline-color: #ffffff; /* Specify the button outline color for dark mode */
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
