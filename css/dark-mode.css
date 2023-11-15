@@ -1,32 +1,39 @@
 /* dark-mode.css */
- body.dark-mode {
-   background-color: #2E2E38; /* Dark background color #1e1e1e */ 
-   color: #ffffff; /* Light text color */
+body.dark-mode {
+  background-color: #2E2E38; /* Dark background color #1e1e1e */
+  color: #ffffff; /* Light text color */
+}
 
- }
- /* Add this style to your existing CSS */
- .dark-mode .button,
- .dark-mode .footer-icon,
- .dark-mode #dark-mode-switch-icon {
-   background-color: #333; /* Change to your desired background color in dark mode */
-   color: #fff; /* Change to your desired text color in dark mode */
-   filter: invert(100%); /* Invert colors for the dark mode moon icon */
- }
+/* Add this style to your existing dark mode CSS */
+.dark-mode .button,
+.dark-mode .footer-icon,
+.dark-mode #dark-mode-switch-icon {
+  background-color: #333; /* Change to your desired background color in dark mode */
+  color: #fff; /* Change to your desired text color in dark mode */
+  filter: invert(100%); /* Invert colors for the dark mode moon icon */
+}
 
- /* Exclude navbar and its icon from dark mode styling */
- .dark-mode .navbar .button,
- .dark-mode .navbar .footer-icon,
- .dark-mode .navbar #dark-mode-switch-icon {
-   background-color: initial; /* Reset background color to default for the navbar button */
-   color: initial; /* Reset text color to default for the navbar button */
-   filter: none; /* Remove the inversion filter for the navbar icon */
- }
- /* Adjust styling for icons */
- .dark-mode .footer-icon,
- .dark-mode .navbar .footer-icon,
- .dark-mode #dark-mode-switch-icon {
-   filter: invert(100%);
-   background-color: transparent; /* Remove any background color */
-   border-radius: 0; /* Remove any border radius */
- }
- /* Add dark mode styles for other elements as needed */
+/* Add dark mode styles for the my-work-link button */
+.dark-mode .my-work-link.animated {
+  color: /* Your desired color for the my-work-link button in dark mode */;
+}
+
+/* Exclude navbar and its icon from dark mode styling */
+.dark-mode .navbar .button,
+.dark-mode .navbar .footer-icon,
+.dark-mode .navbar #dark-mode-switch-icon {
+  background-color: initial; /* Reset background color to default for the navbar button */
+  color: initial; /* Reset text color to default for the navbar button */
+  filter: none; /* Remove the inversion filter for the navbar icon */
+}
+
+/* Adjust styling for icons */
+.dark-mode .footer-icon,
+.dark-mode .navbar .footer-icon,
+.dark-mode #dark-mode-switch-icon {
+  filter: invert(100%);
+  background-color: transparent; /* Remove any background color */
+  border-radius: 0; /* Remove any border radius */
+}
+
+/* Add dark mode styles for other elements as needed */
