@@ -53,7 +53,7 @@
         // Show the mobile navbar with a smooth transition
         if (isMobileNavbarHidden) {
           isMobileNavbarHidden = false;
-          mobileNavbar.style.transition = 'opacity 0.5s'; // Adjust the transition speed
+          mobileNavbar.style.transition = 'opacity 1.0s';
           mobileNavbar.style.opacity = '1';
         }
       }
@@ -61,8 +61,9 @@
 
     // Mobile menu toggle function
     function toggleMobileMenu() {
-      const displayValue = window.getComputedStyle(mobileMenu, null).getPropertyValue('display');
-      mobileMenu.style.display = displayValue === 'none' ? 'block' : 'none';
+      console.log("Toggle Mobile Menu function called");
+      const mobileMenu = document.querySelector('.mobile-menu');
+      mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
     }
 
     // Attach the toggleMobileMenu function to the hamburger icon click event
