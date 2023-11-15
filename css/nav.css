@@ -50,6 +50,10 @@ body.dark-mode {
     opacity: 0;
     pointer-events: none;
   }
+  
+  .mobile-menu-items {
+        display: none; /* hide mobile menu items on desktop */
+  }
 
   .button-container {
     display: flex;
