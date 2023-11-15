@@ -98,6 +98,7 @@ a.icon-link:hover {
 a.button {
   padding: 8px 16px;
   border: var(--button-border);
+  outline: 2px solid var(--button-outline-color)
   border-radius: 50px;
   color: var(--button-text-color);
   text-decoration: none;
