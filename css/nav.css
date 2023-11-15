@@ -8,11 +8,11 @@
 }
 
 body.dark-mode {
-  --primary-text-color: #ffffff; /* Invert text color for dark mode */
-  --background-color: #2E2E38; /* Invert background color for dark mode */
-  --navbar-background: #2E2E38; /* Invert navbar background color for dark mode */
+  --primary-text-color: #333333;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
   --button-background: #4CAF50;
-  --box-shadow-color: rgba(255, 255, 255, 0.1); /* Invert box shadow color for dark mode */
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar,
@@ -21,36 +21,38 @@ body.dark-mode {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--navbar-background);
-  transition: opacity 1.5s;
+  background-color: var(--navbar-background); /* Use variable for background color */
+  transition: opacity 1.5s; /* Adjust transition speed */
 }
 
-/* ... (rest of your styles) */
+.navbar.hidden {
+  opacity: 0;
+}
 
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-  .navbar {
+.nav-title-link,
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--primary-text-color); /* Use variable for text color */
+  font-family: inherit;
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+.mobile-menu a {
+  display: block;
+  margin-bottom: 10px; /* Adjust the margin as needed for spacing between items */
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .mobile-navbar {
     display: none;
     opacity: 0;
     pointer-events: none;
   }
 
-  .mobile-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 1;
-  }
-
-  .button-container {
-    display: none;
-  }
-
   .mobile-menu {
-    display: none;
+    display: none; /* hide mobile menu on desktop */
     position: fixed;
     top: 60px;
     width: 100%;
@@ -59,8 +61,8 @@ body.dark-mode {
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    
-}
+  }
+
   .button-container {
     display: flex;
     justify-content: flex-end;
