@@ -1,35 +1,129 @@
-/* dark-mode.css */
+:root {
+  --primary-text-color: #333333;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
+  --button-background: #4CAF50;
+  --button-outline-color: #4CAF50; /* Specify the button outline color */
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 body.dark-mode {
-  background-color: #2E2E38; /* Dark background color #1e1e1e */ 
-  color: #ffffff; /* Light text color */
-
-}
-/* Add this style to your existing CSS */
-.dark-mode .button,
-.dark-mode .footer-icon,
-.dark-mode #dark-mode-switch-icon {
-  background-color: #333; /* Change to your desired background color in dark mode */
-  color: #fff; /* Change to your desired text color in dark mode */
-  filter: invert(100%); /* Invert colors for the dark mode moon icon */
+  --primary-text-color: #ffffff;
+  --background-color: #333333;
+  --navbar-background: #333333;
+  --button-background: #4CAF50;
+  --button-outline-color: #ffffff; /* Specify the button outline color for dark mode */
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Exclude navbar and its icon from dark mode styling */
-.dark-mode .navbar .button,
-.dark-mode .navbar .footer-icon,
-.dark-mode .navbar #dark-mode-switch-icon {
-  background-color: initial; /* Reset background color to default for the navbar button */
-  color: initial; /* Reset text color to default for the navbar button */
-  filter: none; /* Remove the inversion filter for the navbar icon */
-}
-/* Adjust styling for icons */
-.dark-mode .footer-icon,
-.dark-mode .navbar .footer-icon,
-.dark-mode #dark-mode-switch-icon {
-  filter: invert(100%);
-  background-color: transparent; /* Remove any background color */
-  border-radius: 0; /* Remove any border radius */
+/* Common styles for both desktop and mobile */
+.navbar,
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--navbar-background);
+  transition: opacity 1.5s;
 }
 
+.navbar.hidden {
+  opacity: 0;
+}
 
+.nav-title-link,
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-/* Add dark mode styles for other elements as needed */
+.mobile-menu a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+.button {
+  background-color: var(--button-background);
+  border: 2px solid var(--button-outline-color); /* Specify button outline color */
+  color: var(--primary-text-color);
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .mobile-navbar {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--primary-text-color);
+    padding: 10px;
+  }
+
+  .button {
+    margin-left: 15px;
+  }
+
+  .nav-title {
+    margin-right: auto;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .navbar,
+  .mobile-navbar {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    opacity: 1;
+  }
+
+  .button-container,
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hamburger-icon {
+    font-size: 30px;
+    color: var(--primary-text-color);
+    cursor: pointer;
+  }
+}
