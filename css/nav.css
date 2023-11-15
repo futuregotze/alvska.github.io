@@ -9,9 +9,9 @@
 
 body.dark-mode {
   --primary-text-color: #000000;
-  --background-color: #2E2E38;
-  --navbar-background: #2E2E38;
-  --button-background: #2E2E38;
+  --background-color: #333333;
+  --navbar-background: #333333;
+  --button-background: #333333;
   --box-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
