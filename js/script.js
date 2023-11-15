@@ -1,6 +1,5 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Select elements
   const darkModeSwitch = document.getElementById("dark-mode-switch");
   const navbar = document.querySelector(".scroll-fade");
   const buttons = document.querySelectorAll(".button");
@@ -10,13 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburgerIcon = document.querySelector('.hamburger-icon');
   const firstElement = document.getElementById('portfolio-header'); // Adjust the ID
 
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+  }
+
   // Check the initial state of the dark mode switch and apply styles accordingly
   if (darkModeSwitch) {
-    document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-
-    darkModeSwitch.addEventListener("change", function () {
-      document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
-    });
+    toggleDarkMode();
+    darkModeSwitch.addEventListener("change", toggleDarkMode);
   }
 
   // Add animation to elements with the 'animated' class
@@ -62,22 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Mobile menu toggle function
   function toggleMobileMenu() {
-    console.log("Toggle Mobile Menu function called");
-    const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    const displayValue = mobileMenu.style.display === 'none' ? 'block' : 'none';
+    mobileMenu.style.display = displayValue;
   }
 
   // Attach the toggleMobileMenu function to the hamburger icon click event
   if (hamburgerIcon) {
     hamburgerIcon.addEventListener('click', toggleMobileMenu);
   }
+
+  // Scroll to 'my work' section when the corresponding link is clicked
+  const myWorkLink = document.getElementById('my-work-link');
+  const myWorkSection = document.getElementById('my-work-section');
+
+  if (myWorkLink) {
+    myWorkLink.addEventListener('click', () => {
+      myWorkSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 });
-
-if (document.getElementById('my-work-link')) {
-  document.getElementById('my-work-link').addEventListener('click', () => {
-    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
-  })
-}
-
-
-
