@@ -4,6 +4,11 @@ body.dark-mode {
   color: #ffffff; /* Light text color */
 }
 
+/* Invert the color of the right arrow icon */
+.dark-mode .right-arrow-icon {
+  filter: invert(100%);
+}
+
 /* Add this style to your existing dark mode CSS */
 .dark-mode .button,
 .dark-mode .footer-icon,
