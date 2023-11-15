@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/styles.css">
 
+  <!-- Include the common CSS files -->
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/bottom-menu.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Add your inline styles or additional styles specific to the resume page -->
   <style>
     /* CSS for the initial state of the navbar */
     .scroll-fade {
@@ -59,12 +71,25 @@
     <iframe src="/assets/Jose Fernandez Resume 2023.pdf" width="100%" height="800px"></iframe>
   </div>
 
-  <!-- Include your footer if needed -->
+  <!-- Include the common footer -->
   <footer>
-    <!-- Your footer content here -->
+    <!-- ... (footer content) ... -->
   </footer>
 
- <!-- resume.html -->
-<script src="./js/script.js"></script>
+  <!-- Include the common script for functionality -->
+  <script src="./js/script.js"></script>
+  <!-- Script to handle the navbar fade (same as in index.html) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbar = document.querySelector(".scroll-fade");
+
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+
+        navbar.style.opacity = navbarOpacity;
+      });
+    });
+  </script>
 </body>
 </html>
