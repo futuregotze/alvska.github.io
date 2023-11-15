@@ -1,4 +1,3 @@
-/* Common styles for both desktop and mobile */
 :root {
   --primary-text-color: #333333;
   --background-color: #ffffff;
@@ -8,21 +7,25 @@
 }
 
 body.dark-mode {
-  --primary-text-color: #333333;
-  --background-color: #ffffff;
-  --navbar-background: #ffffff;
+  --primary-text-color: #ffffff;
+  --background-color: #333333;
+}
+
+body {
+  --navbar-background: var(--background-color);
   --button-background: #4CAF50;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Common styles for both desktop and mobile */
 .navbar,
 .mobile-navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--navbar-background); /* Use variable for background color */
-  transition: opacity 1.5s; /* Adjust transition speed */
+  background-color: var(--navbar-background);
+  transition: opacity 1.5s;
 }
 
 .navbar.hidden {
@@ -32,15 +35,15 @@ body.dark-mode {
 .nav-title-link,
 .mobile-menu a {
   text-decoration: none;
-  color: var(--primary-text-color); /* Use variable for text color */
+  color: var(--primary-text-color);
   font-family: inherit;
-  font-size: 20px; /* Adjust font size as needed */
+  font-size: 20px;
   font-weight: bold;
 }
 
 .mobile-menu a {
   display: block;
-  margin-bottom: 10px; /* Adjust the margin as needed for spacing between items */
+  margin-bottom: 10px;
 }
 
 /* Desktop styles */
@@ -52,12 +55,12 @@ body.dark-mode {
   }
 
   .mobile-menu {
-    display: none; /* hide mobile menu on desktop */
+    display: none;
     position: fixed;
     top: 60px;
     width: 100%;
     background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -82,7 +85,8 @@ body.dark-mode {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
-  .navbar {
+  .navbar,
+  .mobile-navbar {
     display: none;
     opacity: 0;
     pointer-events: none;
@@ -93,22 +97,19 @@ body.dark-mode {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: var(--navbar-background); /* Use variable for background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     opacity: 1;
   }
 
-  .button-container {
-    display: none;
-  }
-
+  .button-container,
   .mobile-menu {
     display: none;
     position: fixed;
     top: 60px;
     width: 100%;
-    background-color: var(--navbar-background); /* Use variable for background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -116,7 +117,7 @@ body.dark-mode {
 
   .hamburger-icon {
     font-size: 30px;
-    color: var(--primary-text-color); /* Use variable for text color */
+    color: var(--primary-text-color);
     cursor: pointer;
   }
 }
