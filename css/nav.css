@@ -1,30 +1,28 @@
+/* Common styles for both desktop and mobile */
 :root {
   --primary-text-color: #333333;
   --background-color: #ffffff;
   --navbar-background: #ffffff;
-  --button-background: #ffffff;
-  --button-outline-color: #333333; /* Specify the button outline color */
+  --button-background: #4CAF50;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode {
-  --primary-text-color: #ffffff;
-  --background-color: #2E2E38;
-  --navbar-background: #2E2E38;
-  --button-background: #2E2E38;
-  --button-outline-color: #ffffff; /* Specify the button outline color for dark mode */
-  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --primary-text-color: #333333;
+  --background-color: #ffffff;
+  --navbar-background: #ffffff;
+  --button-background: #4CAF50;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Common styles for both desktop and mobile */
 .navbar,
 .mobile-navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--navbar-background);
-  transition: opacity 1.5s;
+  background-color: var(--navbar-background); /* Use variable for background color */
+  transition: opacity 1.5s; /* Adjust transition speed */
 }
 
 .navbar.hidden {
@@ -34,22 +32,15 @@ body.dark-mode {
 .nav-title-link,
 .mobile-menu a {
   text-decoration: none;
-  color: var(--primary-text-color);
+  color: var(--primary-text-color); /* Use variable for text color */
   font-family: inherit;
-  font-size: 20px;
+  font-size: 20px; /* Adjust font size as needed */
   font-weight: bold;
 }
 
 .mobile-menu a {
   display: block;
-  margin-bottom: 10px;
-}
-
-/* Button styles */
-.button {
-  background-color: var(--button-background);
-  border: 2px solid var(--button-outline-color); /* Specify button outline color */
-  color: var(--primary-text-color);
+  margin-bottom: 10px; /* Adjust the margin as needed for spacing between items */
 }
 
 /* Desktop styles */
@@ -61,12 +52,12 @@ body.dark-mode {
   }
 
   .mobile-menu {
-    display: none;
+    display: none; /* hide mobile menu on desktop */
     position: fixed;
     top: 60px;
     width: 100%;
     background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px var(--box-shadow-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -91,34 +82,33 @@ body.dark-mode {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
-  .navbar,
-  .mobile-navbar {
+  .navbar {
     display: none;
     opacity: 0;
     pointer-events: none;
   }
-  
-  .mobile-menu.visible {
-    display: block;
-  }
+
   .mobile-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px var(--box-shadow-color);
+    background-color: var(--navbar-background); /* Use variable for background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
   }
 
-  .button-container,
+  .button-container {
+    display: none;
+  }
+
   .mobile-menu {
     display: none;
     position: fixed;
     top: 60px;
     width: 100%;
-    background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px var(--box-shadow-color);
+    background-color: var(--navbar-background); /* Use variable for background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -126,7 +116,7 @@ body.dark-mode {
 
   .hamburger-icon {
     font-size: 30px;
-    color: var(--primary-text-color);
+    color: var(--primary-text-color); /* Use variable for text color */
     cursor: pointer;
   }
 }
