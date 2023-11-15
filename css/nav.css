@@ -97,7 +97,10 @@ body.dark-mode {
     opacity: 0;
     pointer-events: none;
   }
-
+  
+  .mobile-menu.visible {
+    display: block;
+  }
   .mobile-navbar {
     display: flex;
     align-items: center;
