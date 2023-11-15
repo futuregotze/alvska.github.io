@@ -13,18 +13,12 @@ body.dark-mode {
   /* filter: invert(100%); /* Invert colors for the dark mode moon icon */
 }
 
-/* Add dark mode styles for the my-work-link button */
-.dark-mode .my-work-link.animated {
-  background-color: #2E2E38; /* Dark background color #1e1e1e */
-  color: #ffffff; /* Light text color */
-}
-
 /* Exclude navbar and its icon from dark mode styling */
 .dark-mode .navbar .button,
 .dark-mode .navbar .footer-icon,
 .dark-mode .navbar #dark-mode-switch-icon {
   background-color: initial; /* Reset background color to default for the navbar button */
-  color: initial; /* Reset text color to default for the navbar button */
+  color: #ffffff; /* Reset text color to default for the navbar button */
   filter: none; /* Remove the inversion filter for the navbar icon */
 }
 
