@@ -2,6 +2,7 @@
 body.dark-mode {
   background-color: #2E2E38; /* Dark background color #1e1e1e */
   color: #ffffff; /* Light text color */
+  --button-border: 3px solid white; /* Specify the button border color for dark mode */
 }
 
 /* Invert the color of the right arrow icon */
