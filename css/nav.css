@@ -75,7 +75,7 @@ body.dark-mode {
 
   .button {
     margin-left: 15px;
-    outline: 2px solid var(--button-outline-color); /* Add this line for button outline */
+   /* outline: 2px solid var(--button-outline-color); /* Add this line for button outline */
   }
 
   .nav-title {
