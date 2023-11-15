@@ -8,8 +8,8 @@ body.dark-mode {
 .dark-mode .button,
 .dark-mode .footer-icon,
 .dark-mode #dark-mode-switch-icon {
-  background-color: #333; /* Change to your desired background color in dark mode */
-  color: #fff; /* Change to your desired text color in dark mode */
+  background-color: #2E2E38; /* Change to your desired background color in dark mode */
+  color: #ffffff; /* Change to your desired text color in dark mode */
   /* filter: invert(100%); /* Invert colors for the dark mode moon icon */
 }
 
