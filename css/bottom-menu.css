@@ -54,6 +54,7 @@
 .button-menu-item:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: #669bbc; 
 }
 /* Dark mode styling for row 2 container */
 .dark-mode #row-2-container {
