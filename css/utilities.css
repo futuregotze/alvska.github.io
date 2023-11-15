@@ -97,7 +97,7 @@ a.icon-link:hover {
 /* Button Styling */
 a.button {
   padding: 8px 16px;
-  border: 3px solid; /*color*/
+/* border: 3px solid; /*color*/
   border-radius: 50px;
   color: black;
   text-decoration: none;
