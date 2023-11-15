@@ -37,7 +37,41 @@ document.addEventListener("DOMContentLoaded", function () {
     element.classList.add("animate");
   });
 
-  // ... (rest of your existing code)
+  let isMobileNavbarHidden = false;
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const SCROLL_THRESHOLD = 200;
+    const navbarOpacity = 1 - scrollPosition / SCROLL_THRESHOLD;
+    navbar.style.opacity = navbarOpacity;
+
+    // Toggle 'hidden' class on the navbar based on scroll position
+    if (scrollPosition > navbar.clientHeight) {
+      navbar.classList.add("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "none";
+      });
+
+      // Hide the mobile navbar with a smooth transition
+      if (!isMobileNavbarHidden && scrollPosition > firstElement.offsetTop) {
+        isMobileNavbarHidden = true;
+        mobileNavbar.style.transition = 'opacity 0.5s';
+        mobileNavbar.style.opacity = '0';
+      }
+    } else {
+      navbar.classList.remove("hidden");
+      buttons.forEach((button) => {
+        button.style.pointerEvents = "auto";
+      });
+
+      // Show the mobile navbar with a smooth transition
+      if (isMobileNavbarHidden) {
+        isMobileNavbarHidden = false;
+        mobileNavbar.style.transition = 'opacity 1.0s';
+        mobileNavbar.style.opacity = '1';
+      }
+    }
+  });
 
   // Mobile menu toggle function
   function toggleMobileMenu() {
