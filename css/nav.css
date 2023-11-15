@@ -12,6 +12,7 @@ body.dark-mode {
   --background-color: #ffffff;
   --navbar-background: #ffffff;
   --button-background: #4CAF50;
+  --button-outline-color: #ffffff; /* Specify the button outline color for dark mode */
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
