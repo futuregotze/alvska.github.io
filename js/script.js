@@ -73,16 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Mobile menu toggle function
-  function toggleMobileMenu() {
-    const displayValue = mobileMenu.style.display === 'none' ? 'block' : 'none';
-    mobileMenu.style.display = displayValue;
-  }
+ // Mobile menu toggle function
+function toggleMobileMenu() {
+  mobileMenu.classList.toggle('visible');
+}
 
-  // Attach the toggleMobileMenu function to the hamburger icon click event
-  if (hamburgerIcon) {
-    hamburgerIcon.addEventListener('click', toggleMobileMenu);
-  }
+// Attach the toggleMobileMenu function to the hamburger icon click event
+if (hamburgerIcon) {
+  hamburgerIcon.addEventListener('click', toggleMobileMenu);
+}
 
   // Scroll to 'my work' section when the corresponding link is clicked
   const myWorkLink = document.getElementById('my-work-link');
