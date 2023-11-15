@@ -68,6 +68,6 @@
 .dark-mode .button-menu-item:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: yellow; /* Change the text color of menu items in dark mode when hovered */
+  color: #669bbc; /* Change the text color of menu items in dark mode when hovered */
 }
 
