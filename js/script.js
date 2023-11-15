@@ -12,12 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to toggle dark mode
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode", darkModeSwitch.checked);
+    // Update the dark mode icon based on the user's preference
+    darkModeIcon.src = darkModeSwitch.checked
+      ? "https://futuregotze.github.io/assets/icons/darkmoon.svg"
+      : "https://futuregotze.github.io/assets/icons/lightmoon.svg";
   }
 
   // Check the initial state of the dark mode switch and apply styles accordingly
   if (darkModeSwitch) {
+    // Check if the user has a preference saved in localStorage
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    darkModeSwitch.checked = isDarkMode;
     toggleDarkMode();
-    darkModeSwitch.addEventListener("change", toggleDarkMode);
+
+    darkModeSwitch.addEventListener("change", function () {
+      const isDarkMode = darkModeSwitch.checked;
+      localStorage.setItem("darkMode", isDarkMode);
+      toggleDarkMode();
+    });
   }
 
   // Add animation to elements with the 'animated' class
