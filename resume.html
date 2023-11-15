@@ -27,7 +27,7 @@
     /* CSS for the initial state of the navbar */
     .scroll-fade {
       opacity: 1; /* Ensure the navbar is initially visible */
-      transition: opacity 0.5s; /* Adjust the duration as needed */
+      transition: opacity 0.2s; /* Adjust the duration as needed */
     }
 
     /* CSS for the visible state of the navbar */
@@ -121,7 +121,7 @@
 
       window.addEventListener("scroll", () => {
         const scrollPosition = window.scrollY;
-        const navbarOpacity = 1 - scrollPosition / 200; // Adjust the number to control the speed of fade
+        const navbarOpacity = 1 - scrollPosition / 100; // Adjust the number to control the speed of fade
 
         navbar.style.opacity = navbarOpacity;
       });
