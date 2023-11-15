@@ -50,16 +50,24 @@ body.dark-mode {
     opacity: 0;
     pointer-events: none;
   }
-  
-  .mobile-menu-items {
-        display: none; /* hide mobile menu items on desktop */
+
+  .mobile-menu {
+    display: none; /* hide mobile menu on desktop */
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
   .button-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: var(--primary-text-color); /* Use variable for text color */
+    color: var(--primary-text-color);
     padding: 10px;
   }
 
