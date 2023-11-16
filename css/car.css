@@ -48,6 +48,7 @@
 
 /* Styles for the featured post */
 .featured-post {
+  margin-top: 50px; /* Adjust spacing between navbar and featured post */
   margin: 50px; /* Adjust spacing between navbar and featured post */
   text-align: center;
   padding: 20px;
