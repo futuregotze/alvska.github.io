@@ -7,18 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const postsPerPage = 5;
     let currentPage = 1;
 
-    function displayPost(container, content, postId, isFeatured = false) {
-        const postCard = document.createElement("a");
-        postCard.classList.add("post-card");
-        postCard.href = `./doc-posts/post${postId}.html`; // Link to the full content HTML file
-        postCard.innerHTML = content;
+    function displayPost(container, content) {
+    const postCard = document.createElement("div");
+    postCard.classList.add("post-card");
+    postCard.innerText = content; // Use innerText instead of innerHTML
 
-        if (isFeatured) {
-            postCard.classList.add("featured-post-preview");
-        }
-
-        container.appendChild(postCard);
-    }
+    container.appendChild(postCard);
+}
 
     function loadMorePosts() {
         // Use a fetch function to load posts dynamically
