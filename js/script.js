@@ -73,5 +73,23 @@
     if (hamburgerIcon) {
       hamburgerIcon.addEventListener('click', toggleMobileMenu);
     }
+
+    // Initialize the Slick Carousel for the blog post carousel
+    $('.post-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
   });
 })();
