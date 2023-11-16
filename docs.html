@@ -173,12 +173,12 @@
     // Function to fetch documentation posts from JSON files
     async function fetchDocsPosts() {
       try {
-        const response = await fetch('./doc-posts'); // Assuming your JSON files are in "doc-posts" directory
+        const response = await fetch("./doc-posts"); // Assuming your JSON files are in "doc-posts" directory
         if (!response.ok) {
           throw new Error(`Failed to fetch documentation posts: ${response.status} ${response.statusText}`);
         }
         const files = await response.json();
-        const promises = files.map(file => fetch(`./doc-posts/${file}`).then(response => response.json()));
+        const promises = files.map(file => fetch("./doc-posts/${file}").then(response => response.json()));
         return Promise.all(promises);
       } catch (error) {
         console.error('Error fetching documentation posts:', error.message);
