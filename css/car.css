@@ -11,7 +11,7 @@
 /* Individual post cards in the carousel */
 .post-card {
   flex: 0 0 auto;
-  width: 300px; /* Adjust card width as needed */
+  width: 200px; /* Adjust card width as needed */
   margin-right: 20px; /* Adjust spacing between cards as needed */
   scroll-snap-align: start;
   background-color: #f0f0f0; /* Set background color */
@@ -22,13 +22,19 @@
 
 /* Styling for post titles */
 .post-card h2 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
-/* Styling for post content */
-.post-card p {
-  font-size: 14px;
+/* Styling for post date */
+.post-card .date {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Styling for post tags */
+.post-card .tags {
+  font-size: 12px;
   color: #555;
 }
 
