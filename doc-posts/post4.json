@@ -1,5 +1,8 @@
 {
-  "title": "Post 4 Title",
-  "date": "Published on: November 11, 2023",
-  "content": "This is the content of the fourth blog post."
+  "title": "Biometric Authentication: A Key Player in Modern Security",
+  "content": "Biometric authentication has emerged as a reliable and secure method for verifying individuals' identities. This post explores the advancements in biometric technology, its applications in various industries, and the implications for bolstering overall security measures.",
+  "date": "2023-11-27",
+  "author": "Michael Davis",
+  "tags": ["biometrics", "authentication", "security"],
+  "featured": false
 }
