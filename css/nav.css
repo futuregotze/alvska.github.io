@@ -95,7 +95,7 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: none;
+    padding: 10px;
     background-color: var(--navbar-background); /* Use variable for background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
