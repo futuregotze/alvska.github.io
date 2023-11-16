@@ -1,1 +1,27 @@
 
+/* Styles for the featured blog post */
+.featured-post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.post-date {
+  color: #888;
+}
+
+/* Styles for the blog post carousel */
+.post-carousel {
+  margin-top: 20px;
+}
+
+.carousel-item {
+  background-color: #fff;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
