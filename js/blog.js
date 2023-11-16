@@ -16,16 +16,15 @@
       container.appendChild(postCard);
     }
 
-    function loadMorePosts() {
-      // Use a fetch function to load posts dynamically
-      fetchPost(`./doc-posts/post${currentPage}.html`)
-        .then((postContent) => {
+    async function loadMorePosts(start, end) {
+      for (let i = start; i <= end; i++) {
+        try {
+          const postContent = await fetchPost(`./doc-posts/post${i}.html`);
           displayPost(carouselContainer, postContent);
-          currentPage++;
-        })
-        .catch((error) => {
+        } catch (error) {
           console.error("Error loading post:", error);
-        });
+        }
+      }
     }
 
     // Function to fetch and display blog posts
@@ -41,10 +40,16 @@
         });
 
       // Load more posts when the button is clicked
-      loadMoreButton.addEventListener("click", loadMorePosts);
+      loadMoreButton.addEventListener("click", () => {
+        const start = currentPage * postsPerPage + 1;
+        const end = (currentPage + 1) * postsPerPage;
+        loadMorePosts(start, end);
+        currentPage++;
+      });
 
       // Initial load of posts
-      loadMorePosts();
+      loadMorePosts(1, postsPerPage);
+      currentPage++;
     }
 
     // Function to fetch a single post from an HTML file
