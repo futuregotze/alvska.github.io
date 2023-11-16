@@ -1,46 +1,11 @@
-/* Styles for the blog post carousel */
-.post-carousel {
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-top: 20px;
-  text-align: center; /* Center the carousel items */
+/* Add your styles for the carousel here */
+.carousel-container {
+    display: flex;
+    overflow-x: scroll;
+    /* Add any additional styles as needed */
 }
 
-.carousel-item {
-  display: inline-block;
-  background-color: #fff;
-  padding: 10px;
-  margin: 0 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Styles for the featured post */
-.featured-post {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin: 20px auto; /* Center the featured post */
-}
-
-.post-date {
-  color: #888;
-}
-
-/* Optional: Add a scrollbar for better user experience */
-.post-carousel::-webkit-scrollbar {
-  height: 8px;
-}
-
-.post-carousel::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-.post-carousel::-webkit-scrollbar-track {
-  background-color: #ddd;
-  border-radius: 4px;
+/* Style for individual post cards in the carousel */
+.post-card {
+    /* Add styles for the post cards in the carousel */
 }
