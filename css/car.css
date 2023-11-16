@@ -48,17 +48,18 @@
 
 /* Styles for the featured post */
 .featured-post {
-  margin: 50px; /* Adjust spacing between navbar and featured post */
-  text-align: center;
+  margin: 50px auto; /* Adjust spacing between navbar and featured post */
   padding: 20px;
-  background-color: #f0f0f0; /* Set background color */
-  border: 1px solid #ddd; /* Add a border */
-  border-radius: 8px; /* Add border-radius for rounded corners */
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 800px; /* Limit the width of the featured post */
 }
 
 .featured-content {
-  max-width: 600px; /* Limit the width of the featured post content */
+  max-width: 600px;
   margin: 0 auto; /* Center the content horizontally */
+  text-align: center; /* Center text within the container */
 }
 
 .featured-post h2 {
