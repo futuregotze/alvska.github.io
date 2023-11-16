@@ -1,11 +1,40 @@
-/* Add your styles for the carousel here */
+/* car.css */
+
+/* Container for the carousel */
 .carousel-container {
-    display: flex;
-    overflow-x: scroll;
-    /* Add any additional styles as needed */
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin-top: 20px; /* Adjust spacing as needed */
 }
 
-/* Style for individual post cards in the carousel */
+/* Individual post cards in the carousel */
 .post-card {
-    /* Add styles for the post cards in the carousel */
+  flex: 0 0 auto;
+  width: 300px; /* Adjust card width as needed */
+  margin-right: 20px; /* Adjust spacing between cards as needed */
+  scroll-snap-align: start;
+  background-color: #f0f0f0; /* Set background color */
+  border: 1px solid #ddd; /* Add a border */
+  padding: 15px; /* Adjust padding as needed */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Styling for post titles */
+.post-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Styling for post content */
+.post-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Optional: Add hover effects or additional styling as desired */
+.post-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
