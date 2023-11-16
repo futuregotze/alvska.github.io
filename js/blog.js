@@ -80,11 +80,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    vertical: false, // Ensure horizontal layout on smaller screens
+                    verticalSwiping: false // Disable vertical swiping
                 }
             }
         ]
     });
+
 
     // Add any additional script code specific to your blog page
 });
