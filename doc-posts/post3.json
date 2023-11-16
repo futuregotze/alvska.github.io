@@ -1,5 +1,8 @@
 {
-  "title": "Post 3 Title",
-  "date": "Published on: November 12, 2023",
-  "content": "This is the content of the third blog post."
+  "title": "Demystifying Blockchain: A Primer for Cybersecurity Professionals",
+  "content": "Blockchain technology has gained significant attention in recent years, not only for its applications in cryptocurrencies but also for its potential in enhancing cybersecurity. This post offers a comprehensive overview of blockchain, its underlying principles, and its role in fortifying digital security.",
+  "date": "2023-11-26",
+  "author": "Eva Williams",
+  "tags": ["blockchain", "cybersecurity", "digital security"],
+  "featured": false
 }
