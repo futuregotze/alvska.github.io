@@ -2,39 +2,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to fetch and display blog posts
     function fetchAndDisplayBlogPosts() {
         // Your logic to fetch blog post data (e.g., using fetch API)
-        // Once you have the data, update the HTML to display blog posts in the carousel
         // Example: You can use the fetch API to get JSON data from your server
         fetch('doc-posts/post1.json')
             .then(response => response.json())
             .then(data => {
-                // Assuming data is an object with properties like "name", "content", etc.
-                // You can dynamically create HTML elements to display the blog post
-                const featuredPostSection = document.querySelector('.featured-post');
-                const otherPostsContainer = document.querySelector('.other-posts .carousel-container');
+                // Assuming data is an array of blog posts
+                // Filter the posts to find the featured post
+                const featuredPost = data.find(post => post.featured === true);
 
-                // Display the featured post
-                const featuredPostHTML = `
-                    <div class="post-card">
-                        <h2>${data.name}</h2>
-                        <p>${data.content}</p>
-                        <!-- Add more content as needed -->
-                    </div>
-                `;
-                featuredPostSection.innerHTML = featuredPostHTML;
+                if (featuredPost) {
+                    // Display the featured post
+                    const featuredPostSection = document.querySelector('.featured-post');
+                    const featuredPostHTML = `
+                        <div class="post-card">
+                            <h2>${featuredPost.name}</h2>
+                            <p>${featuredPost.content}</p>
+                            <!-- Add more content as needed -->
+                        </div>
+                    `;
+                    featuredPostSection.innerHTML = featuredPostHTML;
+                }
 
                 // Display other posts in a horizontal carousel
+                const otherPostsContainer = document.querySelector('.other-posts .carousel-container');
+                const otherPosts = data.filter(post => post.featured !== true);
+
                 // You may want to loop through multiple posts and create HTML dynamically
-                const otherPostsHTML = `
+                const otherPostsHTML = otherPosts.map(post => `
                     <div class="post-card">
-                        <!-- Other post content -->
+                        <h2>${post.name}</h2>
+                        <p>${post.content}</p>
+                        <!-- Add more content as needed -->
                     </div>
-                    <!-- Add more post cards as needed -->
-                `;
+                `).join('');
+
                 otherPostsContainer.innerHTML = otherPostsHTML;
             })
             .catch(error => console.error('Error fetching blog posts:', error));
     }
 
-    // Call the function to display blog posts when the page loads
+    // Initial call to fetch and display blog posts when the page loads
     fetchAndDisplayBlogPosts();
+
+    // Set up periodic refresh (every 5 minutes)
+    setInterval(fetchAndDisplayBlogPosts, 4 * 60 * 1000);
 });
