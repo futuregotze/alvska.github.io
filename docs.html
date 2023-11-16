@@ -146,7 +146,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".scroll-fade");
-  const blogContainer = document.getElementById("blog-container");
+  const docContainer = document.getElementById("doc-container");
 
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
@@ -156,27 +156,27 @@
   });
 
   // Load blog posts from JSON files
-  fetchBlogPosts()
+  fetchdocsPost()
     .then(posts => {
       posts.forEach(post => {
-        const blogPostElement = createBlogPostElement(post);
-        blogContainer.appendChild(blogPostElement);
+        const docsPostElement = createdocsPostElement(post);
+        docsContainer.appendChild(docsPostElement);
       });
     })
     .catch(error => console.error('Error fetching blog posts:', error));
 
   // Function to fetch blog posts from JSON files
-  async function fetchBlogPosts() {
-    const response = await fetch('./blog-posts');
+  async function fetchdocsPosts() {
+    const response = await fetch('./docs-posts');
     const files = await response.json();
-    const promises = files.map(file => fetch(`./blog-posts/${file}`).then(response => response.json()));
+    const promises = files.map(file => fetch(`./docs-posts/${file}`).then(response => response.json()));
     return Promise.all(promises);
   }
 
   // Function to create HTML element for a blog post
-  function createBlogPostElement(post) {
-    const blogPostElement = document.createElement("div");
-    blogPostElement.classList.add("blog-post");
+  function createdocsPostElement(post) {
+    const docsPostElement = document.createElement("div");
+    docsPostElement.classList.add("docs-post");
 
     const titleElement = document.createElement("h2");
     titleElement.textContent = post.title;
@@ -187,11 +187,11 @@
     const contentElement = document.createElement("p");
     contentElement.textContent = post.content;
 
-    blogPostElement.appendChild(titleElement);
-    blogPostElement.appendChild(dateElement);
-    blogPostElement.appendChild(contentElement);
+    docsPostElement.appendChild(titleElement);
+    docsPostElement.appendChild(dateElement);
+    docsPosttElement.appendChild(contentElement);
 
-    return blogPostElement;
+    return docsPostElement;
   }
 });
   </script>
