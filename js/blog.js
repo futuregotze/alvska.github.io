@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const featuredPostContainer = document.querySelector(".featured-post .featured-content");
-    const carouselContainer = document.getElementById("other-posts-carousel");
+    const carouselContainer = document.getElementById("documentation-container"); // Updated container ID
     const loadMoreButton = document.getElementById("load-more-button");
 
     // Number of posts to load at a time
     const postsPerPage = 5;
     let currentPage = 1;
 
-    function displayPost(container, content) {
-        const postCard = document.createElement("div");
+    function displayPost(container, content, postId) {
+        const postCard = document.createElement("a");
         postCard.classList.add("post-card");
+        postCard.href = `./doc-posts/post${postId}.html`; // Link to the full content HTML file
         postCard.innerHTML = content;
 
         container.appendChild(postCard);
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Use a fetch function to load posts dynamically
         fetchPost(`./doc-posts/post${currentPage}.html`)
             .then((postContent) => {
-                displayPost(carouselContainer, postContent);
+                displayPost(carouselContainer, postContent, currentPage);
                 currentPage++;
             })
             .catch((error) => {
