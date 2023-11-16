@@ -1,134 +1,70 @@
-<!-- index.html ./ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./assets/images/IconJF-3.png" />
-    <title>Jose's Portfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
-    <link rel="stylesheet" href="./css/utilities.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/animations.css">
-    <link rel="stylesheet" href="./css/bottom-menu.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Include any additional stylesheets as needed -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/blog.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./assets/images/IconJF-3.png" />
+  <title>Jose's Documentation</title>
+  <meta name="description" content="Documentation for Jose's portfolio">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/bottom-menu.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include any additional stylesheets as needed -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/blog.js"></script>
 </head>
+
 <body>
-   <!-- Navbar (same structure as index.html) -->
+  <!-- Navbar (same structure as index.html) -->
   <div class="navbar scroll-fade">
-    <a class="nav-title-link" href="./index.html">
-      <span class="nav-title">Jose's Portfolio</span>
-    </a>
-
-    <div class="button-container">
-      <a class="button" href="/project-pages/project-template.html">
-        <span class="button-text">Projects</span>
-      </a>
-      <a class="button" href="docs.html">
-        <span class="button-text">Documentation</span>
-      </a>
-      <a class="button" href="resume.html">
-        <span class="button-text">Resume</span>
-      </a>
-      <a class="button" href="mailto:chupix13@gmail.com">
-        <span class="button-text">Contact Me</span>
-      </a>
-    </div>
-  </div>
-   <!-- Mobile Navbar -->
-  <div class="mobile-navbar">
-    <a class="nav-title-link" href="./index.html">
-      <span class="nav-title">Jose's Portfolio</span>
-    </a>
-    <div class="hamburger-icon" onclick="toggleMobileMenu()">
-      <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
-    </div>
+    <!-- Navbar content goes here -->
   </div>
 
-  <!-- Mobile Menu (initially hidden) -->
-  <div class="mobile-menu">
-    <a class="mobile-menu-item" href="/project-pages/project-template.html">Projects</a>
-    <a class="mobile-menu-item" href="docs.html">Documentation</a>
-    <a class="mobile-menu-item" href="resume.html">Resume</a>
-    <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
-  </div>
-   </div>
+  <!-- Space -->
+  <div class="space"></div>
+
+  <!-- Featured Post -->
+  <section class="featured-post">
+    <div class="featured-content">
+      <!-- Featured post content goes here -->
     </div>
-   <!-- Space -->
-    <div class="space"></div>
+  </section>
 
-    <!-- Featured Post -->
-    <section class="featured-post">
-        <div class="featured-content">
-            <!-- Content goes here -->
-        </div>
-    </section>
-   <!-- Space -->
-   <div class="space"></div>
+  <!-- Space -->
+  <div class="space"></div>
 
-   <!-- Post Carousel -->
-<section class="other-posts">
-   <!-- Carousel container -->
-   <div class="carousel-container" id="other-posts-carousel">
+  <!-- Post Carousel -->
+  <section class="post-carousel">
+    <div class="carousel-container" id="post-carousel">
       <!-- Slick Carousel -->
-      <div class="post-carousel" id="documentation-container">
-         <!-- Blog post previews will be dynamically loaded here -->
+      <div class="post-card">
+        <!-- Post content for post1 goes here -->
       </div>
-   </div>
+      <!-- Repeat the above post-card structure for post2, post3, and so on -->
+    </div>
 
-   <!-- Load More Button -->
-   <button id="load-more-button">Load More</button>
-</section>
+    <!-- Load More Button (if needed) -->
+    <button id="load-more-button">Load More</button>
+  </section>
 
-   <!-- Space -->
-   <div class="space"></div>
+  <!-- Space -->
+  <div class="space"></div>
+
   <!-- Include the common footer -->
   <footer>
     <!-- FOOTER -->
     <div id="footer">
-      <!-- Row 1: Social icons and dark mode switch container -->
-      <div id="row-1-container">
-        <!-- Instagram -->
-        <a class="icon-link" target="_blank" href="https://www.instagram.com/alvska_/">
-          <img src="./assets/icons/instagram.svg" class="footer-icon"/>
-        </a>
-        <!-- LinkedIn -->
-        <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jose-fernandez-az/">
-          <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
-        </a>
-        <!-- GitHub -->
-        <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
-          <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
-        </a>
-        <!-- Email -->
-        <a class="icon-link" href="mailto:chupix13@gmail.com">
-          <img src="./assets/icons/mail.svg" class="footer-icon"/>
-        </a>
-        <!-- Dark mode switch -->
-        <div class="dark-mode-switch-container">
-          <label for="dark-mode-switch" class="dark-mode-switch-label">
-            <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
-          </label>
-          <input type="checkbox" id="dark-mode-switch">
-        </div>
-      </div>
-
-      <!-- Row 2: Button Menu Container -->
-      <div id="row-2-container" class="button-menu-container">
-        <a class="button-menu-item" href="/project-pages/project-template.html">Projects</a>
-        <a class="button-menu-item" href="docs.html">Documentation</a>
-        <a class="button-menu-item" href="resume.html">Resume</a>
-      </div>
+      <!-- Footer content goes here -->
     </div>
   </footer>
 </body>
+
 </html>
