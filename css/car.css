@@ -3,6 +3,7 @@
 /* Container for the carousel */
 .carousel-container {
   display: flex;
+  flex-direction: row; /* Set flex-direction to row for horizontal layout */
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   margin-top: 20px; /* Adjust spacing as needed */
