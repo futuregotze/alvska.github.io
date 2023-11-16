@@ -6,14 +6,14 @@
       const carouselContainer = document.querySelector(".carousel-container");
 
       // Fetch featured post HTML
-      const featuredPostResponse = await fetch("path/to/featured-post.html");
+      const featuredPostResponse = await fetch("./doc-posts/featured-post.html");
       const featuredPostHTML = await featuredPostResponse.text();
       featuredPostContainer.innerHTML = featuredPostHTML;
 
       // Fetch and display other posts in the carousel
       const postIDs = ["post1", "post2", "post3", "post4"];
       for (const postID of postIDs) {
-        const postResponse = await fetch(`path/to/${postID}.html`);
+        const postResponse = await fetch(`./docs-posts/${postID}.html`);
         const postHTML = await postResponse.text();
 
         const postCard = document.createElement("div");
