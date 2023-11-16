@@ -44,3 +44,27 @@
   transform: scale(1.02);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+/* Styles for the featured post */
+.featured-post {
+  margin-top: 40px; /* Adjust spacing between navbar and featured post */
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Set background color */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+.featured-post h2 {
+  font-size: 24px;
+}
+
+.featured-post .date {
+  font-size: 14px;
+  color: #888;
+}
+
+.featured-post .tags {
+  font-size: 14px;
+  color: #555;
+}
