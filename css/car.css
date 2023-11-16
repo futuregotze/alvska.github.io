@@ -80,3 +80,13 @@
   height: auto;
   margin-bottom: 10px;
 }
+/* Add this style to differentiate the featured post preview */
+.featured-post-preview {
+  border: 2px solid #3498db; /* Border color for featured post */
+}
+
+/* Additional style for the post-card in the carousel */
+.post-card.featured-post-preview {
+  /* Adjust styles as needed */
+  border: 2px solid #3498db; /* Border color for featured post in the carousel */
+}
