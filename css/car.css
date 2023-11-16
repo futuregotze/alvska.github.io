@@ -32,10 +32,11 @@
   color: #888;
 }
 
-/* Styling for post tags */
-.post-card .tags {
-  font-size: 12px;
-  color: #555;
+/* Styling for post images */
+.post-card img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  height: auto;
+  margin-bottom: 10px;
 }
 
 /* Optional: Add hover effects or additional styling as desired */
@@ -55,6 +56,11 @@
   border-radius: 8px; /* Add border-radius for rounded corners */
 }
 
+.featured-content {
+  max-width: 600px; /* Limit the width of the featured post content */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
 .featured-post h2 {
   font-size: 24px;
 }
@@ -67,4 +73,10 @@
 .featured-post .tags {
   font-size: 14px;
   color: #555;
+}
+
+.featured-post img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  height: auto;
+  margin-bottom: 10px;
 }
