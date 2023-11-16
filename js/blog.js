@@ -9,18 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 // Assuming data is an object with properties like "name", "content", etc.
                 // You can dynamically create HTML elements to display the blog post
-                const postContainer = document.querySelector('.post-carousel'); // Adjust the selector
-                const postCard = document.createElement('div');
-                postCard.classList.add('post-card');
+                const featuredPostSection = document.querySelector('.featured-post');
+                const otherPostsContainer = document.querySelector('.other-posts .carousel-container');
 
-                // Customize the HTML structure based on your post data
-                postCard.innerHTML = `
-                    <h2>${data.name}</h2>
-                    <p>${data.content}</p>
-                    <!-- Add more content as needed -->
+                // Display the featured post
+                const featuredPostHTML = `
+                    <div class="post-card">
+                        <h2>${data.name}</h2>
+                        <p>${data.content}</p>
+                        <!-- Add more content as needed -->
+                    </div>
                 `;
+                featuredPostSection.innerHTML = featuredPostHTML;
 
-                postContainer.appendChild(postCard);
+                // Display other posts in a horizontal carousel
+                // You may want to loop through multiple posts and create HTML dynamically
+                const otherPostsHTML = `
+                    <div class="post-card">
+                        <!-- Other post content -->
+                    </div>
+                    <!-- Add more post cards as needed -->
+                `;
+                otherPostsContainer.innerHTML = otherPostsHTML;
             })
             .catch(error => console.error('Error fetching blog posts:', error));
     }
