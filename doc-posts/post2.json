@@ -1,5 +1,8 @@
 {
-  "title": "Post 2 Title",
-  "date": "Published on: November 13, 2023",
-  "content": "This is the content of the second blog post."
+  "title": "The Rise of Ransomware Attacks: How to Stay Protected",
+  "content": "Ransomware attacks have become increasingly prevalent, targeting individuals and organizations alike. This post delves into the anatomy of ransomware attacks, discusses prevention strategies, and provides practical tips on staying protected in the digital landscape.",
+  "date": "2023-11-25",
+  "author": "Bob Smith",
+  "tags": ["ransomware", "cybersecurity", "data protection"],
+  "featured": false
 }
