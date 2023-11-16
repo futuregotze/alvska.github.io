@@ -1,21 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Function to fetch and display blog posts
     function fetchAndDisplayBlogPosts() {
-        // Your logic to fetch blog post data (e.g., using fetch API)
-        // Example: You can use the fetch API to get JSON data from your server
-        fetch('doc-posts/post1.json')
-            .then(response => response.json())
-            .then(data => {
+        // Assuming you have posts from post1.json to post5.json
+        const postPromises = Array.from({ length: 5 }, (_, index) => {
+            const postNumber = index + 1;
+            return fetch(`doc-posts/post${postNumber}.json`)
+                .then(response => response.json());
+        });
+
+        Promise.all(postPromises)
+            .then(posts => {
                 // Assuming data is an array of blog posts
                 // Filter the posts to find the featured post
-                const featuredPost = data.find(post => post.featured === true);
+                const featuredPost = posts.find(post => post.featured === true);
 
                 if (featuredPost) {
                     // Display the featured post
                     const featuredPostSection = document.querySelector('.featured-post');
                     const featuredPostHTML = `
                         <div class="post-card">
-                            <h2>${featuredPost.name}</h2>
+                            <h2>${featuredPost.title}</h2>
                             <p>${featuredPost.content}</p>
                             <!-- Add more content as needed -->
                         </div>
@@ -25,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Display other posts in a horizontal carousel
                 const otherPostsContainer = document.querySelector('.other-posts .carousel-container');
-                const otherPosts = data.filter(post => post.featured !== true);
+                const otherPosts = posts.filter(post => post.featured !== true);
 
                 // You may want to loop through multiple posts and create HTML dynamically
                 const otherPostsHTML = otherPosts.map(post => `
                     <div class="post-card">
-                        <h2>${post.name}</h2>
+                        <h2>${post.title}</h2>
                         <p>${post.content}</p>
                         <!-- Add more content as needed -->
                     </div>
@@ -45,5 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchAndDisplayBlogPosts();
 
     // Set up periodic refresh (every 5 minutes)
-    setInterval(fetchAndDisplayBlogPosts, 4 * 60 * 1000);
+    setInterval(fetchAndDisplayBlogPosts, 5 * 60 * 1000);
 });
