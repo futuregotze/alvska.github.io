@@ -1,64 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to fetch and display blog posts
-  function fetchAndDisplayPosts() {
-    // Assuming you have an array of post filenames
-    const postFilenames = ["post1.json", "post2.json", "post3.json", "post4.json"];
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to fetch and display blog posts
+    async function fetchBlogPosts() {
+      const featuredPostContainer = document.querySelector(".featured-post");
+      const carouselContainer = document.querySelector(".carousel-container");
 
-    // Reference to the carousel container
-    const carouselContainer = document.getElementById("other-posts-carousel");
+      // Fetch featured post HTML
+      const featuredPostResponse = await fetch("path/to/featured-post.html");
+      const featuredPostHTML = await featuredPostResponse.text();
+      featuredPostContainer.innerHTML = featuredPostHTML;
 
-    // Function to fetch the full content of a post
-    function fetchPostContent(filename) {
-      return fetch(`doc-posts/${filename}`)
-        .then((response) => response.json())
-        .then((post) => {
-          return `
-            <h2>${post.name}</h2>
-            <p class="date">Published on: ${post.date}</p>
-            <img src="${post.image}" alt="${post.name} Image">
-            <p class="tags">Tags: ${post.tags.join(", ")}</p>
-            <div class="full-content">${post.content}</div>
-          `;
-        })
-        .catch((error) => {
-          console.error("Error fetching post:", error);
-          return "Error loading post content.";
-        });
+      // Fetch and display other posts in the carousel
+      const postIDs = ["post1", "post2", "post3", "post4"];
+      for (const postID of postIDs) {
+        const postResponse = await fetch(`path/to/${postID}.html`);
+        const postHTML = await postResponse.text();
+
+        const postCard = document.createElement("div");
+        postCard.classList.add("post-card");
+        postCard.innerHTML = postHTML;
+
+        carouselContainer.appendChild(postCard);
+      }
+
+      // Initialize the Slick Carousel
+      $('.post-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
     }
 
-    // Fetch and display each post
-    postFilenames.forEach((filename) => {
-      fetch(`doc-posts/${filename}`)
-        .then((response) => response.json())
-        .then((post) => {
-          // Create a post card
-          const postCard = document.createElement("div");
-          postCard.classList.add("post-card");
-
-          // Populate the post card with data from the JSON
-          postCard.innerHTML = `
-            <h2>${post.name}</h2>
-            <p class="date">Published on: ${post.date}</p>
-            <img src="${post.image}" alt="${post.name} Image">
-            <p class="tags">Tags: ${post.tags.join(", ")}</p>
-            <!-- Add a link to the full post content -->
-            <a href="#" class="read-more-link" onclick="loadPostContent('${filename}')">Read More</a>
-          `;
-
-          // Append the post card to the carousel container
-          carouselContainer.appendChild(postCard);
-        })
-        .catch((error) => console.error("Error fetching post:", error));
-    });
-
-    // Function to load and display the full content of a post
-    window.loadPostContent = async function (filename) {
-      const fullContent = await fetchPostContent(filename);
-      // Display the full content in a modal or any desired way
-      alert(fullContent);
-    };
-  }
-
-  // Call the function to fetch and display posts
-  fetchAndDisplayPosts();
-});
+    // Call the function to fetch and display blog posts
+    fetchBlogPosts();
+  });
+})();
