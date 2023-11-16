@@ -1,17 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const featuredPostContainer = document.querySelector(".featured-post .featured-content");
-    const carouselContainer = document.getElementById("documentation-container"); // Updated container ID
+    const carouselContainer = document.getElementById("documentation-container");
     const loadMoreButton = document.getElementById("load-more-button");
 
     // Number of posts to load at a time
     const postsPerPage = 5;
     let currentPage = 1;
 
-    function displayPost(container, content, postId) {
+    function displayPost(container, content, postId, isFeatured = false) {
         const postCard = document.createElement("a");
         postCard.classList.add("post-card");
         postCard.href = `./doc-posts/post${postId}.html`; // Link to the full content HTML file
         postCard.innerHTML = content;
+
+        if (isFeatured) {
+            postCard.classList.add("featured-post-preview");
+        }
 
         container.appendChild(postCard);
     }
@@ -20,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Use a fetch function to load posts dynamically
         fetchPost(`./doc-posts/post${currentPage}.html`)
             .then((postContent) => {
-                displayPost(carouselContainer, postContent, currentPage);
+                const isFeatured = currentPage === 1;
+                displayPost(carouselContainer, postContent, currentPage, isFeatured);
                 currentPage++;
             })
             .catch((error) => {
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetchPost("./doc-posts/featured-post.html")
             .then((featuredPostContent) => {
                 // Display the featured post
-                displayPost(featuredPostContainer, featuredPostContent);
+                displayPost(featuredPostContainer, featuredPostContent, 1, true);
             })
             .catch((error) => {
                 console.error("Error loading featured post:", error);
