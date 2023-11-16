@@ -1,45 +1,63 @@
 (function () {
   document.addEventListener("DOMContentLoaded", function () {
+    const featuredPostContainer = document.querySelector(".featured-post");
+    const carouselContainer = document.querySelector(".carousel-container");
+    const loadMoreButton = document.querySelector("#load-more-button");
+
+    // Number of posts to load at a time
+    const postsPerPage = 5;
+    let currentPage = 1;
+
+    function displayPost(content) {
+      const postCard = document.createElement("div");
+      postCard.classList.add("post-card");
+      postCard.innerHTML = content;
+
+      carouselContainer.appendChild(postCard);
+    }
+
+    function loadMorePosts() {
+      // Use a fetch function to load posts dynamically
+      fetchPost(`./doc-posts/post${currentPage}.html`)
+        .then((postContent) => {
+          displayPost(postContent);
+          currentPage++;
+        })
+        .catch((error) => {
+          console.error("Error loading post:", error);
+        });
+    }
+
     // Function to fetch and display blog posts
-    async function fetchBlogPosts() {
-      const featuredPostContainer = document.querySelector(".featured-post");
-      const carouselContainer = document.querySelector(".carousel-container");
-
+    function fetchBlogPosts() {
       // Fetch featured post HTML
-      const featuredPostResponse = await fetch("./doc-posts/featured-post.html");
-      const featuredPostHTML = await featuredPostResponse.text();
-      featuredPostContainer.innerHTML = featuredPostHTML;
+      fetchPost("./doc-posts/featured-post.html")
+        .then((featuredPostContent) => {
+          // Display the featured post
+          displayFeaturedPost(featuredPostContent);
+        })
+        .catch((error) => {
+          console.error("Error loading featured post:", error);
+        });
 
-      // Fetch and display other posts in the carousel
-      const postIDs = ["post1", "post2", "post3", "post4"];
-      for (const postID of postIDs) {
-        const postResponse = await fetch(`./docs-posts/${postID}.html`);
-        const postHTML = await postResponse.text();
+      // Load more posts when the button is clicked
+      loadMoreButton.addEventListener("click", loadMorePosts);
+    }
 
-        const postCard = document.createElement("div");
-        postCard.classList.add("post-card");
-        postCard.innerHTML = postHTML;
-
-        carouselContainer.appendChild(postCard);
+    // Function to fetch a single post from an HTML file
+    async function fetchPost(url) {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch post: ${response.status} ${response.statusText}`);
       }
 
-      // Initialize the Slick Carousel
-      $('.post-carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
+      const postContent = await response.text();
+      return postContent;
+    }
+
+    // Function to display the featured post
+    function displayFeaturedPost(featuredPostContent) {
+      featuredPostContainer.innerHTML = featuredPostContent;
     }
 
     // Call the function to fetch and display blog posts
