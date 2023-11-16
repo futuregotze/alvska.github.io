@@ -11,12 +11,12 @@
 /* Individual post cards in the carousel */
 .post-card {
   flex: 0 0 auto;
-  width: 200px; /* Adjust card width as needed */
-  margin-right: 20px; /* Adjust spacing between cards as needed */
+  width: 230px; /* Adjust card width as needed */
+  margin: 15px; /* Adjust spacing between cards as needed */
   scroll-snap-align: start;
   background-color: #f0f0f0; /* Set background color */
   border: 1px solid #ddd; /* Add a border */
-  padding: 15px; /* Adjust padding as needed */
+  padding: 20px; /* Adjust padding as needed */
   border-radius: 8px; /* Add border-radius for rounded corners */
 }
 
@@ -48,7 +48,7 @@
 
 /* Styles for the featured post */
 .featured-post {
-  margin-top: 40px; /* Adjust spacing between navbar and featured post */
+  margin: 50px; /* Adjust spacing between navbar and featured post */
   text-align: center;
   padding: 20px;
   background-color: #f0f0f0; /* Set background color */
