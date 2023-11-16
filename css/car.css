@@ -3,8 +3,7 @@
 /* Container for the carousel */
 .carousel-container {
   display: flex;
-  flex-direction: row; /* Set flex-direction to row for horizontal layout */
-  overflow-x: scroll;
+  overflow-x: auto; /* Change from scroll to auto for horizontal scroll */
   scroll-snap-type: x mandatory;
   margin-top: 20px; /* Adjust spacing as needed */
 }
@@ -13,7 +12,7 @@
 .post-card {
   flex: 0 0 auto;
   width: 230px; /* Adjust card width as needed */
-  margin: 15px; /* Adjust spacing between cards as needed */
+  margin-right: 15px; /* Adjust spacing between cards as needed */
   scroll-snap-align: start;
   background-color: #f0f0f0; /* Set background color */
   border: 1px solid #ddd; /* Add a border */
@@ -45,51 +44,4 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: scale(1.02);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Styles for the featured post */
-.featured-post {
-  margin: 50px auto; /* Adjust spacing between navbar and featured post */
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  max-width: 800px; /* Limit the width of the featured post */
-}
-
-.featured-content {
-  max-width: 600px;
-  margin: 0 auto; /* Center the content horizontally */
-  text-align: center; /* Center text within the container */
-}
-
-.featured-post h2 {
-  font-size: 24px;
-}
-
-.featured-post .date {
-  font-size: 14px;
-  color: #888;
-}
-
-.featured-post .tags {
-  font-size: 14px;
-  color: #555;
-}
-
-.featured-post img {
-  max-width: 100%; /* Ensure images don't exceed the container width */
-  height: auto;
-  margin-bottom: 10px;
-}
-
-/* Add this style to differentiate the featured post preview */
-.featured-post-preview {
-  border: 2px solid #3498db; /* Border color for featured post */
-}
-
-/* Additional style for the post-card in the carousel */
-.post-card.featured-post-preview {
-  /* Adjust styles as needed */
-  border: 2px solid #3498db; /* Border color for featured post in the carousel */
 }
