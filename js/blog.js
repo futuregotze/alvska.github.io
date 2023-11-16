@@ -1,26 +1,26 @@
 (function () {
   document.addEventListener("DOMContentLoaded", function () {
-    const featuredPostContainer = document.querySelector(".featured-post");
-    const carouselContainer = document.querySelector(".carousel-container");
-    const loadMoreButton = document.querySelector("#load-more-button");
+    const featuredPostContainer = document.querySelector(".featured-post .featured-content");
+    const carouselContainer = document.getElementById("other-posts-carousel");
+    const loadMoreButton = document.getElementById("load-more-button");
 
     // Number of posts to load at a time
     const postsPerPage = 5;
     let currentPage = 1;
 
-    function displayPost(content) {
+    function displayPost(container, content) {
       const postCard = document.createElement("div");
       postCard.classList.add("post-card");
       postCard.innerHTML = content;
 
-      carouselContainer.appendChild(postCard);
+      container.appendChild(postCard);
     }
 
     function loadMorePosts() {
       // Use a fetch function to load posts dynamically
       fetchPost(`./doc-posts/post${currentPage}.html`)
         .then((postContent) => {
-          displayPost(postContent);
+          displayPost(carouselContainer, postContent);
           currentPage++;
         })
         .catch((error) => {
@@ -34,7 +34,7 @@
       fetchPost("./doc-posts/featured-post.html")
         .then((featuredPostContent) => {
           // Display the featured post
-          displayFeaturedPost(featuredPostContent);
+          displayPost(featuredPostContainer, featuredPostContent);
         })
         .catch((error) => {
           console.error("Error loading featured post:", error);
@@ -42,6 +42,9 @@
 
       // Load more posts when the button is clicked
       loadMoreButton.addEventListener("click", loadMorePosts);
+
+      // Initial load of posts
+      loadMorePosts();
     }
 
     // Function to fetch a single post from an HTML file
@@ -53,11 +56,6 @@
 
       const postContent = await response.text();
       return postContent;
-    }
-
-    // Function to display the featured post
-    function displayFeaturedPost(featuredPostContent) {
-      featuredPostContainer.innerHTML = featuredPostContent;
     }
 
     // Call the function to fetch and display blog posts
