@@ -151,6 +151,11 @@ ul{
 .blog-author-text strong{
     color: #252525;
     font-weight: 800;
+ 
+}
+.blog-heading{
+        margin-top: 50;
+
 }
 .blog-author-text span{
     color: #797979;
@@ -171,4 +176,6 @@ ul{
     .blog-box-container{
         grid-template-columns: 1fr;
     }
+    
 }
+
