@@ -1,5 +1,73 @@
 /* dark-mode.css */
 body.dark-mode {
+    background-color: #2E2E38; /* Dark background color #1e1e1e */
+    color: #ffffff; /* Light text color */
+    /* --button-border: 3px solid white; /* Specify the button border color for dark mode */
+}
+
+/* Invert the color of the right arrow icon */
+.dark-mode .right-arrow-icon {
+    filter: invert(100%);
+}
+
+/* Add this style to your existing dark mode CSS */
+.dark-mode .button,
+.dark-mode .footer-icon,
+.dark-mode #dark-mode-switch-icon {
+    background-color: #2E2E38; /* Change to your desired background color in dark mode */
+    color: #ffffff; /* Change to your desired text color in dark mode */
+    /* filter: invert(100%); /* Invert colors for the dark mode moon icon */
+}
+
+/* Exclude navbar and its icon from dark mode styling */
+.dark-mode .navbar .button,
+.dark-mode .navbar .footer-icon,
+.dark-mode .navbar #dark-mode-switch-icon {
+    background-color: initial; /* Reset background color to default for the navbar button */
+    color: #ffffff; /* Reset text color to default for the navbar button */
+    filter: none; /* Remove the inversion filter for the navbar icon */
+}
+
+/* Adjust styling for icons */
+.dark-mode .footer-icon,
+.dark-mode .navbar .footer-icon,
+.dark-mode #dark-mode-switch-icon {
+    filter: invert(100%);
+    background-color: transparent; /* Remove any background color */
+    border-radius: 0; /* Remove any border radius */
+}
+
+/* Dark mode styles for the blog page */
+body.dark-mode a {
+    color: #ffffff; /* Change link color in dark mode */
+}
+
+body.dark-mode .blog-box {
+    background-color: #2E2E38; /* Change blog box background color in dark mode */
+    color: #ffffff; /* Change blog box text color in dark mode */
+}
+
+body.dark-mode .blog-box:hover {
+    box-shadow: 16px 20px 50px rgba(255, 255, 255, 0.12);
+    background-color: #ffffff;
+}
+
+body.dark-mode .blog-box-text strong,
+body.dark-mode .blog-box-text p {
+    color: #797979;
+}
+
+body.dark-mode .blog-author-text strong {
+    color: #ffffff;
+}
+
+body.dark-mode .blog-author-text span {
+    color: #797979;
+}
+
+/* Add dark mode styles for other elements as needed */
+/* dark-mode.css */
+body.dark-mode {
   background-color: #2E2E38; /* Dark background color #1e1e1e */
   color: #ffffff; /* Light text color */
  /* --button-border: 3px solid white; /* Specify the button border color for dark mode */
