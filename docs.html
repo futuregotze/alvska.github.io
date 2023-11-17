@@ -18,7 +18,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-  
+  <!-- Mobile Navbar -->
+  <div class="mobile-navbar">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose's Portfolio</span>
+    </a>
+    <div class="hamburger-icon" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
+    </div>
+  </div>
+
+  <!-- Mobile Menu (initially hidden) -->
+  <div class="mobile-menu">
+    <a class="mobile-menu-item" href="/project-pages/project-template.html">Projects</a>
+    <a class="mobile-menu-item" href="docs.html">Documentation</a>
+    <a class="mobile-menu-item" href="resume.html">Resume</a>
+    <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
+  </div>
+
+  <!-- Navbar (same structure as index.html) -->
+  <div class="navbar scroll-fade">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose's Portfolio</span>
+    </a>
+
+    <div class="button-container">
+      <a class="button" href="/project-pages/project-template.html">
+        <span class="button-text">Projects</span>
+      </a>
+      <a class="button" href="docs.html">
+        <span class="button-text">Documentation</span>
+      </a>
+      <a class="button" href="resume.html">
+        <span class="button-text">Resume</span>
+      </a>
+      <a class="button" href="mailto:chupix13@gmail.com">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </div>
+  </div>
     <!--==Blog================================-->
     <section id="blog">
 
@@ -131,46 +169,6 @@
   <script src="js/script.js"></script>
 </head>
 
-<body>
-  <!-- Mobile Navbar -->
-  <div class="mobile-navbar">
-    <a class="nav-title-link" href="./index.html">
-      <span class="nav-title">Jose's Portfolio</span>
-    </a>
-    <div class="hamburger-icon" onclick="toggleMobileMenu()">
-      <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
-    </div>
-  </div>
-
-  <!-- Mobile Menu (initially hidden) -->
-  <div class="mobile-menu">
-    <a class="mobile-menu-item" href="/project-pages/project-template.html">Projects</a>
-    <a class="mobile-menu-item" href="docs.html">Documentation</a>
-    <a class="mobile-menu-item" href="resume.html">Resume</a>
-    <a class="mobile-menu-item" href="mailto:chupix13@gmail.com">Contact Me</a>
-  </div>
-
-  <!-- Navbar (same structure as index.html) -->
-  <div class="navbar scroll-fade">
-    <a class="nav-title-link" href="./index.html">
-      <span class="nav-title">Jose's Portfolio</span>
-    </a>
-
-    <div class="button-container">
-      <a class="button" href="/project-pages/project-template.html">
-        <span class="button-text">Projects</span>
-      </a>
-      <a class="button" href="docs.html">
-        <span class="button-text">Documentation</span>
-      </a>
-      <a class="button" href="resume.html">
-        <span class="button-text">Resume</span>
-      </a>
-      <a class="button" href="mailto:chupix13@gmail.com">
-        <span class="button-text">Contact Me</span>
-      </a>
-    </div>
-  </div>
   <!-- Include the common footer -->
   <footer>
     <!-- FOOTER -->
