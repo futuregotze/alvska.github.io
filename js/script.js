@@ -43,7 +43,7 @@
                 });
 
                 // Hide the mobile navbar with a smooth transition
-                if (!isMobileNavbarHidden && scrollPosition > firstElement.offsetTop) {
+                if (firstElement && !isMobileNavbarHidden && scrollPosition > firstElement.offsetTop) {
                     isMobileNavbarHidden = true;
                     mobileNavbar.style.transition = 'opacity 0.5s';
                     mobileNavbar.style.opacity = '0';
