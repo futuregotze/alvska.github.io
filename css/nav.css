@@ -93,12 +93,13 @@ body.dark-mode {
 
   .mobile-navbar {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     padding: 10px;
     background-color: var(--navbar-background); /* Use variable for background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
+    margin-left: -20px;
   }
 
   .button-container {
