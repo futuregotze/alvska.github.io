@@ -17,7 +17,7 @@ ul{
     justify-content: center;
     align-items: center;
     padding: 50px 0px;
-    background-color: #f9f8ff;
+    background-color: #ffffff;
     margin-bottom: 50px; /* Add this line for space between blog and navbar */
 
 }
@@ -52,7 +52,7 @@ ul{
 }
 .blog-box:hover{
     box-shadow:16px 20px 50px rgba(0,0,0,0.12);
-    background-color: #ffffff;
+    background-color: #f9f8ff;
 }
 .blog-box-img{
     width: 100%;
