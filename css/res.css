@@ -1,0 +1,6 @@
+  /* Style the resume container with some space at the top */
+    .resume-container {
+      margin: 50px 20px 20px; /* Adjust the top margin as needed */
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
