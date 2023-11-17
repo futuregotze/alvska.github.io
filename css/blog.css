@@ -37,7 +37,7 @@ ul{
 .blog-box-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 50px;
+    margin-top: 100px;
     max-width: 1050px;
     width: 90%;
 }
