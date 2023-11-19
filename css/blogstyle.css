@@ -103,7 +103,8 @@
     100%{
         opacity: 1;
     }
-}
+}  
+
 .blog-box-text p{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -143,3 +144,19 @@
     font-size: 0.8rem;
     
 }
+@media(max-width:920px){
+    .blog-box-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 0px;
+    }
+}
+@media(max-width:600px){
+    .blog-heading h3{
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+    .blog-box-container{
+        grid-template-columns: 1fr;
+    }
+}
+  
