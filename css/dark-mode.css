@@ -48,8 +48,8 @@ body.dark-mode .blog-box {
     color: #ffffff; /* Change blog box text color in dark mode */
 }
 
-.dark-mode .blog-heading [
-    color: #797979;
+.dark-mode .blog-heading h3 {
+    color: #ffffff;
 }
 body.dark-mode .blog-box:hover {
     box-shadow: 16px 20px 50px rgba(255, 255, 255, 0.12);
