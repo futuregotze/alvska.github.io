@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const postHTML = createPostHTML(post);
         blogContainer.insertAdjacentHTML('beforeend', postHTML);
       });
+
+      // Add event listeners to the post links after they are added to the DOM
+      addPostLinkListeners();
     } catch (error) {
       console.error('Error fetching blog posts:', error);
     }
@@ -22,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function createPostHTML(post) {
     // Create HTML for each blog post with a link to the individual post page
-    return `
+    const postHTML = `
       <div class="blog-box">
         <div class="blog-box-img">
           <img alt="blog" src="${post.image}">
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class="blog-box-text">
           <strong>${post.title}</strong>
-          <a href="${getPostPageURL(post)}">${post.summary}</a>
+          <a href="${getPostPageURL(post)}" class="post-link">${post.summary}</a>
           <p>${post.content}</p>
           <div class="blog-author">
             <div class="blog-author-img">
@@ -46,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       </div>
     `;
+
+    return postHTML;
   }
 
   function getPostPageURL(post) {
@@ -56,5 +61,24 @@ document.addEventListener('DOMContentLoaded', function () {
   function getPostFileName(post) {
     // Convert the post title to a valid file name
     return post.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  }
+
+  function addPostLinkListeners() {
+    // Select all post links
+    const postLinks = document.querySelectorAll('.post-link');
+
+    // Add a click event listener to each post link
+    postLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+        // Prevent the default link behavior to avoid navigating to the URL
+        event.preventDefault();
+
+        // Get the target URL from the link's href attribute
+        const targetURL = this.getAttribute('href');
+
+        // Redirect the user to the individual post page
+        window.location.href = targetURL;
+      });
+    });
   }
 });
