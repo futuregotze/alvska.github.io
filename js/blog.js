@@ -1,90 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const featuredPostContainer = document.querySelector(".featured-post .featured-content");
-  const carouselContainer = document.getElementById("post-carousel"); // Updated to match the HTML id
-  const loadMoreButton = document.getElementById("load-more-button");
+document.addEventListener('DOMContentLoaded', function () {
+  // Select the container where you want to append the blog posts
+  const blogContainer = document.querySelector('.blog-box-container');
 
-  // Number of posts to load at a time
-  const postsPerPage = 5;
-  let currentPage = 1;
-
-  function displayPost(container, content, isFeatured) {
-    const postCard = document.createElement("div");
-    postCard.classList.add("post-card");
-    if (isFeatured) {
-      postCard.classList.add("featured-post-preview"); // Add a class for featured post in the carousel
-    }
-    postCard.innerHTML = content;
-
-    container.appendChild(postCard);
-  }
-
-  function loadMorePosts() {
-    // Use a fetch function to load posts dynamically
-    fetchPost(`./doc-posts/post${currentPage}.html`)
-      .then((postContent) => {
-        const isFeatured = currentPage === 1;
-        displayPost(carouselContainer, postContent, isFeatured);
-        currentPage++;
-      })
-      .catch((error) => {
-        console.error("Error loading post:", error);
-      });
-  }
-
-  // Function to fetch and display blog posts
-  function fetchBlogPosts() {
-    // Fetch featured post HTML
-    fetchPost("./doc-posts/featured-post.html")
-      .then((featuredPostContent) => {
-        // Display the featured post
-        displayPost(featuredPostContainer, featuredPostContent, true);
-      })
-      .catch((error) => {
-        console.error("Error loading featured post:", error);
-      });
-
-    // Load more posts when the button is clicked
-    if (loadMoreButton) {
-      loadMoreButton.addEventListener("click", loadMorePosts);
-    }
-
-    // Initial load of posts
-    loadMorePosts();
-  }
-
-  // Function to fetch a single post from an HTML file
-  async function fetchPost(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch post: ${response.status} ${response.statusText}`);
-    }
-
-    const postContent = await response.text();
-    return postContent;
-  }
-
-  // Call the function to fetch and display blog posts
+  // Fetch the list of blog posts from the server
   fetchBlogPosts();
 
-  // Initialize the Slick Carousel for the blog post carousel
-  $('#post-carousel').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          vertical: false, // Ensure horizontal layout on smaller screens
-          verticalSwiping: false, // Disable vertical swiping
-        },
-      },
-    ],
-  });
+  async function fetchBlogPosts() {
+    try {
+      const response = await fetch('./doc-posts/posts.json'); // Assuming you have a JSON file containing the list of posts
+      const postsData = await response.json();
 
-  // Add any additional script code specific to your blog page
+      // Iterate through the posts and append them to the blog container
+      postsData.forEach(post => {
+        const postHTML = createPostHTML(post);
+        blogContainer.insertAdjacentHTML('beforeend', postHTML);
+      });
+    } catch (error) {
+      console.error('Error fetching blog posts:', error);
+    }
+  }
+
+  function createPostHTML(post) {
+    // Create HTML for each blog post with a link to the individual post page
+    return `
+      <div class="blog-box">
+        <div class="blog-box-img">
+          <img alt="blog" src="${post.image}">
+          <a href="${getPostPageURL(post)}" class="blog-img-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        <div class="blog-box-text">
+          <strong>${post.title}</strong>
+          <a href="${getPostPageURL(post)}">${post.summary}</a>
+          <p>${post.content}</p>
+          <div class="blog-author">
+            <div class="blog-author-img">
+              <img alt="" src="${post.authorImage}">
+            </div>
+            <div class="blog-author-text">
+              <strong>${post.author}</strong>
+              <span>${post.date}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function getPostPageURL(post) {
+    // Generate the URL for the individual post page
+    return `./doc-posts/${getPostFileName(post)}.html`;
+  }
+
+  function getPostFileName(post) {
+    // Convert the post title to a valid file name
+    return post.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  }
 });
