@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   async function fetchBlogPosts() {
     try {
-      const response = await fetch('./doc-posts/posts.json'); // Assuming you have a JSON file containing the list of posts
+      const response = await fetch('./doc-posts/posts.html'); // Assuming you have a JSON file containing the list of posts
       const postsData = await response.json();
 
       // Iterate through the posts and append them to the blog container
