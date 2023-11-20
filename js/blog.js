@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   async function fetchBlogPosts() {
     try {
       // Assuming you have a certain number of posts, let's say 10
-      const numberOfPosts = 10;
+      const numberOfPosts = 3; // Display only 3 posts at a time
 
       // Iterate through the post numbers
       for (let i = 1; i <= numberOfPosts; i++) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function addPostLinkListeners() {
     // Select all post links
-    const postLinks = document.querySelectorAll('.post-link');
+    const postLinks = document.querySelectorAll('.blog-box a.blog-img-link');
 
     // Add a click event listener to each post link
     postLinks.forEach(link => {
@@ -49,4 +49,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
