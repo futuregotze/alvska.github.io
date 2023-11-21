@@ -31,20 +31,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function addPostLinkListeners() {
-    // Select all post links
-    const postLinks = document.querySelectorAll('.blog-box a.blog-img-link');
+    // Select all blog boxes
+    const blogBoxes = document.querySelectorAll('.blog-box');
 
-    // Add a click event listener to each post link
-    postLinks.forEach(link => {
-      link.addEventListener('click', function (event) {
+    // Add a click event listener to each blog box
+    blogBoxes.forEach((box, index) => {
+      const postLink = box.querySelector('.blog-img-link');
+
+      // Add a click event listener to each blog image link
+      postLink.addEventListener('click', function (event) {
         // Prevent the default link behavior to avoid navigating to the URL
         event.preventDefault();
 
-        // Get the target URL from the link's href attribute
-        const targetURL = this.getAttribute('href');
-
         // Redirect the user to the individual post page
-        window.location.href = targetURL;
+        window.location.href = `./doc-posts/post${index + 1}.html`;
       });
     });
   }
