@@ -20,7 +20,7 @@ body {
 
 .blog-heading h3 {
     font-size: 2.4rem;
-    color: #yourcolor; /* Replace with the desired color value */
+    color: #000000; /* Replace with the desired color value */
     font-weight: 900;
     text-transform: uppercase;
     line-height: 2.4rem;
