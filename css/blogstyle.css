@@ -9,6 +9,12 @@
     margin-top: 150px;
     margin-bottom: 150px;
 }
+img{ 
+    max width: 100%;
+}
+body{
+        margin: 0px;
+}
 .blog-heading h3{
     font-size:2.4rem;
     color: canvastext;
