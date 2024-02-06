@@ -1,132 +1,313 @@
-<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<!-- proj.html-->
+<!DOCTYPE html>
+<html lang="en">
 
-<style>
-  /* CSS for styling the content */
-  #markdown-content {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-left: 5px solid #007acc;
-    border-radius: 5px;
-    margin: 10px;
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/blogstyle.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/bottom-menu.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Jose's Portfolio</title>
+<body>
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Jose Fernandez</span>
+        </a>
+        <div class="hamburger-icon" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
 
-  h1, h2, h3 {
-    color: #007acc;
-  }
-</style>
+    <!-- Mobile Menu (initially hidden) -->
+    <div class="mobile-menu">
+        <a class="mobile-menu-item" href="proj.html">Projects</a>
+        <a class="mobile-menu-item" href="resume.html">Resume</a>
+        <a class="mobile-menu-item" href="mailto:iamalvska@gmail.com">Contact Me</a>
+    </div>
 
-<div id="markdown-content">
-  <!-- Your Markdown content will be displayed here -->
-</div>
+    <!-- Include your navbar -->
+    <div class="navbar scroll-fade">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Jose Fernandez</span>
+        </a>
 
-<script>
-  // Your Markdown content
-  var markdownText = `
-# Understanding Risk Management in IT
+        <div class="button-container">
+            <a class="button" href="proj.html">
+                <span class="button-text">Projects</span>
+            </a>
+            <a class="button" href="resume.html">
+                <span class="button-text">Resume</span>
+            </a>
+            <a class="button" href="mailto:iamalvska@gmail.com">
+                <span class="button-text">Contact Me</span>
+            </a>
+        </div>
+    </div>
+  <title>Artemis Capstone Project</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
 
-## Introduction
+    section {
+      margin-bottom: 30px;
+    }
 
-In the world of Information Technology, risk management is a critical aspect of ensuring the security, compliance, and overall well-being of an organization's digital assets. This blog post delves into the key components of risk management, including policies, security controls, procedures, and more.
+    h1, h2, h3 {
+      color: #333;
+    }
 
-## Key Components of Risk Management
+    h1 {
+      text-align: center;
+    }
 
-### 1. Policies
+    p, ul {
+      color: #555;
+    }
 
-**Acceptable Use Policy:**
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
 
-- Define ownership: Clarify who owns and is responsible for IT assets.
-- Web Site Access: Define rules for accessing websites.
-- Access time: Specify permitted access times.
+    strong {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
 
-**Remote Access Policy:**
+  <!-- Section 1: Instructions -->
+  <section>
+    <h1>Artemis Capstone Project</h1>
+    <p>Follow the phases of the Artemis Capstone Project to enhance cybersecurity resilience. This comprehensive project involves reconnaissance, vulnerability scanning, threat assessment, and risk mitigation. Each phase is carefully crafted to provide actionable insights for fortifying Artemis, Incorporated against cyber threats.</p>
+  </section>
+  <!-- Section 2: Phase 1 -->
+  <section>
+    <h2>Artemis Capstone Project: Phase 1</h2>
 
-- VPN: Establish guidelines for virtual private network usage.
-- Authentication: Describe the methods and requirements for user authentication.
-- Authorization: Explain who has access and under what conditions.
+    <p>In the initial phase of the Artemis Capstone Project, our focus is on performing thorough reconnaissance to build a comprehensive profile of Artemis, Incorporated. The primary goal is to gather publicly available information that provides insight into the organization's digital footprint, potential vulnerabilities, and overall security posture.</p>
 
-**Password Policy:**
+    <p>As cybersecurity consultants, our team will employ a strategic blend of tools and methods, ranging from advanced Google searches and WHOIS lookups to social media analysis and DNS interrogation. By harnessing these resources, we aim to understand Artemis deeply, ensuring a solid foundation for subsequent phases of the penetration test. This reconnaissance phase not only sets the stage for a successful engagement but also underscores our commitment to delivering tailored cybersecurity solutions that address Artemis' unique challenges and concerns. Let's embark on this crucial first step towards fortifying Artemis against emerging cyber threats.</p>
 
-- Complexity: Define password complexity requirements.
-- Duration/Age: Set rules for password duration and age.
-- Lockout: Explain lockout policies after unsuccessful login attempts.
+    <h3>Procedure:</h3>
+    <ol>
+      <li><strong>Google Search:</strong> Use advanced Google searches to find information about Artemis.</li>
+      <li><strong>WHOIS Lookup:</strong> Look up domain registration details to understand Artemis' online presence.</li>
+      <li><strong>Social Media Check:</strong> Review social media platforms for insights into Artemis' structure and potential risks.</li>
+      <!-- Add the rest of the steps here -->
+    </ol>
+  </section>
+  <!-- Section 3: Phase 2 -->
+  <section>
+    <h2>Artemis Capstone Project: Phase 2</h2>
 
-**IT Safety Policy:**
+    <p>In the second phase of the Artemis Capstone Project, our primary focus shifts to meticulously identifying potential targets and executing scans to unveil crucial details about Artemis, Incorporated. This stage is pivotal for comprehending the organization's network architecture and vulnerabilities. Our cybersecurity consulting team will utilize a comprehensive set of tools, including Nmap, OpenVAS, Metasploit, Nikto, Lynis, Fierce, Wireshark, and Aircrack-ng. Each tool has a distinct role, contributing to the overall success of the penetration test. However, it is essential to acknowledge the challenges and potential limitations associated with each tool, as navigating through these nuances ensures that our subsequent actions align with the overarching objective of fortifying Artemis against cyber threats.</p>
 
-- Lifting equipment: Provide safety guidelines for lifting heavy equipment.
-- Safety Glasses: Specify the use of safety glasses in certain scenarios.
-- Equipment handling: Explain proper equipment handling procedures.
-- Spills: Define procedures for dealing with spills.
+    <!-- Add content for each tool in Phase 2 -->
 
-**NDA (Non-Disclosure Agreement):**
+  </section>
+  <!-- Section 4: Phase 3 -->
+  <section>
+    <h2>Artemis Capstone Project: Phase 3</h2>
 
-- Don't spill da company beans: Emphasize the importance of keeping company information confidential.
+    <p>As we delve into Phase 3 of the Artemis Capstone Project, our mission pivots towards the crucial task of identifying vulnerabilities within Artemis, Incorporated's digital landscape. In this phase, our cybersecurity team is geared to deploy an array of cutting-edge tools, including OpenVAS, Tenable Nessus, Burp Suite, Wapiti, W3af, and XSSPY. Our objective is to conduct comprehensive vulnerability scans, scrutinizing the organization's systems, applications, and network infrastructure. By meticulously identifying potential weaknesses, we aim to equip Artemis with the insights necessary to fortify its security posture effectively.</p>
 
-**License Restrictions:**
+    <!-- Add content for each tool in Phase 3 -->
 
-- Usage: Specify how software licenses can be used.
-- Transfer: Describe the rules for transferring software licenses.
-- Renewal: Explain the process for renewing software licenses.
+  </section>
+    <!-- Tools in Phase 3 -->
+    <div class="tools-container">
+      <div class="tool">
+        <h3>(GVM) OpenVAS:</h3>
+        <p><strong>Purpose:</strong> OpenVAS is a robust open-source vulnerability scanner designed to identify and assess security issues within networks.</p>
+        <p><strong>Usage:</strong> Configuring OpenVAS, our team will perform a comprehensive scan of Artemis' infrastructure, highlighting vulnerabilities across various network components.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-**International Export Control:**
+      <!-- Repeat the structure for each tool in Phase 3 -->
 
-- Military Info: Address the export of military-related information.
-- Nuclear Info: Cover the export of nuclear-related information.
-- License Keys: Describe the handling of license keys for export.
+    </div>
+  </section>
+      <!-- Continue Tools in Phase 3 -->
+      <div class="tool">
+        <h3>Tenable Nessus:</h3>
+        <p><strong>Purpose:</strong> Nessus is a widely-utilized vulnerability scanning tool known for identifying and assessing vulnerabilities across diverse assets.</p>
+        <p><strong>Usage:</strong> Leveraging Nessus, our team will conduct detailed vulnerability assessments on Artemis' systems, providing in-depth insights into potential risks.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-### 2. Security Controls
+      <!-- Repeat the structure for each tool in Phase 3 -->
 
-Security controls are measures and safeguards put in place to protect IT assets. These controls can include firewalls, intrusion detection systems, access controls, and encryption methods.
+    </div>
+  </section>
+        <!-- Continue Tools in Phase 3 -->
+      <div class="tool">
+        <h3>Burp Suite:</h3>
+        <p><strong>Purpose:</strong> Burp Suite is an integrated platform tailored for security testing of web applications.</p>
+        <p><strong>Usage:</strong> Focused on web application security, Burp Suite will scrutinize Artemis' web-based systems, identifying potential vulnerabilities such as SQL injection or cross-site scripting.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-### 3. Procedures
+      <div class="tool">
+        <h3>Wapiti:</h3>
+        <p><strong>Purpose:</strong> Wapiti is a specialized web application vulnerability scanner designed to detect security weaknesses.</p>
+        <p><strong>Usage:</strong> Wapiti will be employed for targeted scans of Artemis' web applications, identifying vulnerabilities exploitable by attackers.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-Procedures are detailed instructions that explain how policies and security controls are implemented and carried out.
+      <!-- Repeat the structure for each tool in Phase 3 -->
 
-## Change Management
+    </div>
+  </section>
+        <div class="tool">
+        <h3>W3af:</h3>
+        <p><strong>Purpose:</strong> W3af is a comprehensive web application attack and audit framework designed for identifying and exploiting vulnerabilities.</p>
+        <p><strong>Usage:</strong> Our team will utilize W3af to conduct thorough audits of Artemis' web applications, uncovering potential security flaws.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-Effective change management is crucial to risk management. This involves documenting and controlling changes to IT systems, ensuring they do not introduce vulnerabilities or risks.
+      <div class="tool">
+        <h3>XSSPY:</h3>
+        <p><strong>Purpose:</strong> XSSPY is a dedicated tool for identifying Cross-Site Scripting vulnerabilities in web applications.</p>
+        <p><strong>Usage:</strong> Employing XSSPY, we will scrutinize Artemis' web applications for potential XSS vulnerabilities, ensuring a comprehensive assessment of security risks.</p>
+        <!-- Add Configuration Images here if available -->
+      </div>
 
-## Business Documents
+      <!-- Repeat the structure for each tool in Phase 3 -->
 
-Risk management often involves various business documents that help define roles, responsibilities, and agreements:
+    </div>
+  </section>
+  <section id="phase4">
+    <h2>Artemis Capstone Project: Phase 4</h2>
+    <p>As we transition into Phase 4 of the Artemis Capstone Project, our cybersecurity team is shifting gears to convert the results from our vulnerability scans into a comprehensive threat assessment. Following scans with tools like OpenVAS (GVM), Tenable Nessus, Burp Suite, Wapiti, W3af, and XSSPY, our focus now is to analyze identified vulnerabilities, categorize risks, and propose effective remediation strategies.</p>
 
-- **Service Level Agreement (SLA):** Defines the agreed-upon levels of service between parties.
-- **Memorandum of Understanding (MOU):** An agreement between two parties that outlines duties, time frames, and other terms. It's used when a legally binding contract is not necessary.
-- **Multi-Source Agreement (MSA):** Involves multiple parties agreeing to adhere to a single concept or standard, such as USB-C.
-- **Statement of Work (SOW):** A legal contract between a vendor and a customer that defines services, timeframes, deliverables, and milestones.
+    <div class="tools-container">
 
-## Mitigating Threats
+      <!-- Add the tools content for Phase 4 here -->
 
-Effective risk management also involves strategies to mitigate threats:
+    </div>
 
-1. **Training and Awareness:** Educating employees about risks and best practices.
-2. **Patch Management:** Regularly updating software and systems to address vulnerabilities.
-3. **Policies and Procedures:** Enforcing policies and procedures that minimize risks.
-4. **Incident Response:** Having a plan in place to respond to security incidents.
+    <h2>Key Summary Findings and Recommendations:</h2>
 
-## DMZ (Demilitarized Zone)
+    <div class="summary">
+      <ol>
+        <li>
+          <h3>Unpatched RDP Exposed to the Internet:</h3>
+          <p><strong>Risk Level:</strong> Critical</p>
+          <p><strong>Recommendation:</strong> Immediate patching of Remote Desktop Protocol (RDP), implementation of Network Level Authentication (NLA), and strengthening password policies.</p>
+        </li>
 
-A DMZ is a network segment that acts as a buffer between the internal network and the internet. Key elements include:
+        <!-- Repeat the structure for each scenario in Phase 4 -->
 
-- **Bastion Host:** A machine directly exposed to the internet.
-- **Firewalls:** Protect the DMZ and control traffic.
-- **Honeypot:** A system designed to attract and monitor malicious activity.
-- **Honeynet:** A network of honeypots that collectively monitor and collect data on threats.
+      </ol>
+    </div>
+  </section>
+  <section id="executive-summary">
+    <h2>CONFIDENTIAL</h2>
+    <h3>Artemis Inc. Vulnerability Assessment</h3>
 
-## Testing Network
+    <div class="summary">
+      <h4>EXECUTIVE SUMMARY</h4>
+      <p>Artemis Inc. recently underwent a comprehensive cybersecurity risk assessment to evaluate the potential impact of internal and external threats. The assessment, conducted from January 2023, focused on identifying vulnerabilities that could compromise the organization's security. The following summary provides a high-level view of the business risks in plain English, ensuring that executives can make informed decisions.</p>
 
-Testing open ports and security measures is crucial to risk management. Methods include:
+      <h5>Overall Assessment Results:</h5>
+      <p>The assessment uncovered critical insights into Artemis Inc.'s cybersecurity posture, highlighting vulnerabilities that could pose significant business risks. The identified vulnerabilities fall into three main risk categories: Critical, High, and Moderate.</p>
 
-- **Testing Open Ports:** Examining the software and services running on open ports to ensure they are secure.
+      <div class="risk-categories">
+        <div class="red">
+          <p><strong>Critical Risks (Red):</strong> Immediate action is required to address these vulnerabilities, as they present severe threats that could lead to unauthorized access, data breaches, and potential network compromise. Failure to address critical risks promptly may result in severe business disruptions.</p>
+        </div>
+        <div class="orange">
+          <p><strong>High Risks (Orange):</strong> These vulnerabilities pose substantial risks and require urgent attention. While not as imminent as critical risks, high-risk vulnerabilities could still lead to serious consequences if exploited. Timely remediation is essential to safeguard business operations.</p>
+        </div>
+        <div class="yellow">
+          <p><strong>Moderate Risks (Yellow):</strong> While not as severe as critical or high risks, moderate-risk vulnerabilities still present potential threats. Managing these risks is important for overall cybersecurity resilience. A proactive approach is recommended to prevent escalation into more critical issues.</p>
+        </div>
+        <div class="green">
+          <p><strong>Visual Representation:</strong> To enhance clarity, we have used a color-coded system</p>
+          <ul>
+            <li><span class="red"></span> Red: Critical Risks</li>
+            <li><span class="orange"></span> Orange: High Risks</li>
+            <li><span class="yellow"></span> Yellow: Moderate Risks</li>
+            <li><span class="green"></span> Green: No Significant Risks</li>
+          </ul>
+        </div>
+      </div>
 
-By understanding and implementing these components of risk management, organizations can better protect their IT assets and reduce the likelihood of security breaches and other IT-related risks.
-  `;
+      <h5>Key Summary Findings and Recommendations:</h5>
 
-  // Create a new Showdown converter
-  var converter = new showdown.Converter();
+      <ol>
+        <li>
+          <h6>Unpatched RDP Exposed to the Internet:</h6>
+          <p><strong>Risk Level:</strong> Critical</p>
+          <p><strong>Recommendation:</strong> Immediate patching of Remote Desktop Protocol (RDP), implementation of Network Level Authentication (NLA), and strengthening password policies.</p>
+        </li>
 
-  // Convert Markdown to HTML
-  var htmlText = converter.makeHtml(markdownText);
+        <!-- Repeat the structure for each scenario in the Executive Summary -->
 
-  // Display the HTML in the designated div
-  document.getElementById("markdown-content").innerHTML = htmlText;
-</script>
+      </ol>
+    </div>
+
+    <p>Conclusion:</p>
+    <p>While Artemis Inc. demonstrates the ability to patch and remediate vulnerabilities, the assessment reveals potential gaps in the comprehensiveness and effectiveness of existing processes. Unmitigated vulnerabilities, if exploited, can compromise the entire corporate network. Artemis Inc. is strongly urged to explore opportunities to enhance vulnerability and patch management strategies for comprehensive risk mitigation. This executive summary serves as a strategic compass for Artemis Inc.'s cybersecurity journey. The full list of vulnerabilities, along with comprehensive details and recommendations, is documented in the supplementary document.</p>
+  </section>
+</body>
+    <!-- FOOTER -->
+    <div id="footer">
+        <!-- Row 1: Social icons and dark mode switch container -->
+        <div id="row-1-container">
+            <!-- Instagram -->
+            <a class="icon-link" target="_blank" href="https://www.instagram.com/iamalvska/">
+                <img src="./assets/icons/instagram.svg" class="footer-icon" />
+            </a>
+            <!-- LinkedIn -->
+            <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/iamalvska/">
+                <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon" />
+            </a>
+            <!-- GitHub -->
+            <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+                <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon" />
+            </a>
+            <!-- Email -->
+            <a class="icon-link" href="mailto:iamalvska3@gmail.com">
+                <img src="./assets/icons/mail.svg" class="footer-icon" />
+            </a>
+            <!-- Dark mode switch -->
+            <div class="dark-mode-switch-container">
+                <label for="dark-mode-switch" class="dark-mode-switch-label">
+                    <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon"
+                        id="dark-mode-switch-icon">
+                </label>
+                <input type="checkbox" id="dark-mode-switch">
+            </div>
+        </div>
+
+        <!-- Row 2: Button Menu Container -->
+        <div id="row-2-container" class="button-menu-container">
+            <a class="button-menu-item" href="proj.html">Projects</a>
+            <a class="button-menu-item" href="resume.html">Resume</a>
+        </div>
+    </div>
+
+    <!-- Include your JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/blog.js"></script>
+
+</body>
+
+</html>
+
+
