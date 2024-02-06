@@ -1,8 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/blogstyle.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/bottom-menu.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Jose's Portfolio</title>
+
+<body>
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Jose Fernandez</span>
+        </a>
+        <div class="hamburger-icon" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (initially hidden) -->
+    <div class="mobile-menu">
+        <a class="mobile-menu-item" href="proj.html">Projects</a>
+        <a class="mobile-menu-item" href="resume.html">Resume</a>
+        <a class="mobile-menu-item" href="mailto:iamalvska@gmail.com">Contact Me</a>
+    </div>
+
+    <!-- Include your navbar -->
+    <div class="navbar scroll-fade">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Jose Fernandez</span>
+        </a>
+
+        <div class="button-container">
+            <a class="button" href="proj.html">
+                <span class="button-text">Projects</span>
+            </a>
+            <a class="button" href="resume.html">
+                <span class="button-text">Resume</span>
+            </a>
+            <a class="button" href="mailto:iamalvska@gmail.com">
+                <span class="button-text">Contact Me</span>
+            </a>
+        </div>
+    </div>
     <title>Artemis Capstone Project: Phase 1</title>
     <style>
         body {
