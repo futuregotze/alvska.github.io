@@ -1,62 +1,65 @@
+Certainly! I've integrated the tech-tree code into your existing HTML. Please replace your current HTML with the following:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/images/IconJF-3.png" />
-    <title>Jose's Portfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/stuff.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
-    <link rel="stylesheet" href="./css/utilities.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/inblog.css">
-    <link rel="stylesheet" href="./css/animations.css">
-    <link rel="stylesheet" href="./css/bottom-menu.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  </head>
-  <body>
-    <!-- Mobile Navbar -->
-<div class="mobile-navbar">
-  <a class="nav-title-link" href="./index.html">
-    <span class="nav-title">Jose Fernandez</span>
-  </a>
-  <div class="hamburger-icon" onclick="toggleMobileMenu()">
-    <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
-</div>
-</div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/IconJF-3.png" />
+  <title>Jose's Portfolio</title>
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/stuff.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/inblog.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/bottom-menu.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Mobile Navbar -->
+  <div class="mobile-navbar">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose Fernandez</span>
+    </a>
+    <div class="hamburger-icon" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
+    </div>
+  </div>
 
-    <!-- Mobile Menu (initially hidden) -->
+  <!-- Mobile Menu (initially hidden) -->
   <div class="mobile-menu">
     <a class="mobile-menu-item" href="proj.html">Projects</a>
     <a class="mobile-menu-item" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">Resume</a>
     <a class="mobile-menu-item" href="mailto:iamalvska@gmail.com">Contact Me</a>
   </div>
 
-    <!-- Navbar (same structure as index.html) -->
-    <div class="navbar scroll-fade">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Jose Fernandez</span>
+  <!-- Navbar (same structure as index.html) -->
+  <div class="navbar scroll-fade">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-title">Jose Fernandez</span>
+    </a>
+
+    <div class="button-container">
+      <a class="button" href="proj.html">
+        <span class="button-text">Projects</span>
       </a>
-
-      <div class="button-container">
-        <a class="button" href="proj.html">
-          <span class="button-text">Projects</span>
-        </a>
-        <a class="button" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">
-          <span class="button-text">Resume</span>
-        </a>
-        <a class="button" href="mailto:iamalvska@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </div>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">
+        <span class="button-text">Resume</span>
+      </a>
+      <a class="button" href="mailto:iamalvska@gmail.com">
+        <span class="button-text">Contact Me</span>
+      </a>
     </div>
+  </div>
 
- <div class="tech-tree">
+  <!-- Tech Tree -->
+  <div class="tech-tree">
     <div class="node" onclick="toggleNode('cybersecurity')">
       <div class="node-title">Cybersecurity</div>
       <div id="cybersecurity" class="node-children">
@@ -91,46 +94,53 @@
           <div class="node-details" id="projectB">
             <p>Project details go here...</p>
           </div>
+
+
         </div>
       </div>
     </div>
   </div>
-<!-- FOOTER -->
-<div id="footer">
-  <!-- Row 1: Social icons and dark mode switch container -->
-  <div id="row-1-container">
-    <!-- Instagram -->
-    <a class="icon-link" target="_blank" href="https://www.instagram.com/iamalvska/">
-      <img src="./assets/icons/instagram.svg" class="footer-icon"/>
-    </a>
-    <!-- LinkedIn -->
-    <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/iamalvska/">
-      <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
-    </a>
-    <!-- GitHub -->
-    <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
-      <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
-    </a>
-    <!-- Email -->
-    <a class="icon-link" href="mailto:iamalvska@gmail.com">
-      <img src="./assets/icons/mail.svg" class="footer-icon"/>
-    </a>
-    <!-- Dark mode switch -->
-    <div class="dark-mode-switch-container">
-      <label for="dark-mode-switch" class="dark-mode-switch-label">
-        <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
-      </label>
-      <input type="checkbox" id="dark-mode-switch">
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <!-- Row 1: Social icons and dark mode switch container -->
+    <div id="row-1-container">
+      <!-- Instagram -->
+      <a class="icon-link" target="_blank" href="https://www.instagram.com/iamalvska/">
+        <img src="./assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- LinkedIn -->
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/iamalvska/">
+        <img src="./assets/icons/linkedin-svgrepo-com-2.svg" class="footer-icon"/>
+      </a>
+      <!-- GitHub -->
+      <a class="icon-link" target="_blank" href="https://github.com/futuregotze">
+        <img src="./assets/icons/github-svgrepo-com.svg" class="footer-icon"/>
+      </a>
+      <!-- Email -->
+      <a class="icon-link" href="mailto:iamalvska@gmail.com">
+        <img src="./assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <!-- Dark mode switch -->
+      <div class="dark-mode-switch-container">
+        <label for="dark-mode-switch" class="dark-mode-switch-label">
+          <img src="https://futuregotze.github.io/assets/icons/darkmoon.svg" alt="Dark Mode Icon" id="dark-mode-switch-icon">
+        </label>
+        <input type="checkbox" id="dark-mode-switch">
+      </div>
+    </div>
+
+    <!-- Row 2: Button Menu Container -->
+    <div id="row-2-container" class="button-menu-container">
+      <a class="button-menu-item" href="proj.html">Projects</a>
+      <a class="button-menu-item" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">Resume</a>
     </div>
   </div>
 
-  <!-- Row 2: Button Menu Container -->
-  <div id="row-2-container" class="button-menu-container">
-    <a class="button-menu-item" href="proj.html">Projects</a>
-    <a class="button-menu-item" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">Resume</a>
-  </div>
-</div>
-<script src="./js/script.js"></script>
-<script src="./js/stuff.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/stuff.js"></script>
 </body>
 </html>
+```
+
+Now your page includes the tech-tree code below the existing content. Adjust it further according to your design preferences.
