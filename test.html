@@ -18,7 +18,43 @@
     <link rel="stylesheet" href="./css/bottom-menu.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<body>
+  </head>
+  <body>
+    <!-- Mobile Navbar -->
+<div class="mobile-navbar">
+  <a class="nav-title-link" href="./index.html">
+    <span class="nav-title">Jose Fernandez</span>
+  </a>
+  <div class="hamburger-icon" onclick="toggleMobileMenu()">
+    <i class="fa fa-bars"></i> <!-- Font Awesome bars icon -->
+</div>
+</div>
+
+    <!-- Mobile Menu (initially hidden) -->
+  <div class="mobile-menu">
+    <a class="mobile-menu-item" href="proj.html">Projects</a>
+    <a class="mobile-menu-item" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">Resume</a>
+    <a class="mobile-menu-item" href="mailto:iamalvska@gmail.com">Contact Me</a>
+  </div>
+
+    <!-- Navbar (same structure as index.html) -->
+    <div class="navbar scroll-fade">
+      <a class="nav-title-link" href="./index.html">
+        <span class="nav-title">Jose Fernandez</span>
+      </a>
+
+      <div class="button-container">
+        <a class="button" href="proj.html">
+          <span class="button-text">Projects</span>
+        </a>
+        <a class="button" href="https://drive.google.com/uc?export=download&id=1gJ8KS0ijti6Ttu1sMaWr_AZwfMGPjuj9" download="Jose_Fernandez_Resume.pdf">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button" href="mailto:iamalvska@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
 
   <header>
     <!-- Your header content here -->
