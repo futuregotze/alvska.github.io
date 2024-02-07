@@ -3,92 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .category {
-      margin-bottom: 20px;
-      cursor: pointer;
-    }
-
-    .category-title {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-    }
-
-    .project {
-      margin-left: 20px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    .project-details {
-      margin-left: 40px;
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="path-to-your-fontawesome/css/all.min.css">
   <title>Cybersecurity Portfolio</title>
 </head>
 <body>
 
-  <div class="category" onclick="toggleCategory('cybersecurity')">
-    <div class="category-title">Cybersecurity</div>
-    <div id="cybersecurity">
-      <div class="project" onclick="toggleDetails('project1')">
-        <h3>Project 1</h3>
-        <div class="project-details" id="project1">
-          <p>Project details go here...</p>
+  <header>
+    <!-- Your header content here -->
+    <h1>Your Portfolio Title</h1>
+  </header>
+
+  <nav>
+    <!-- Your navigation bar content here -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Your cybersecurity portfolio content here -->
+    <div class="category" onclick="toggleCategory('cybersecurity')">
+      <div class="category-title">Cybersecurity</div>
+      <div id="cybersecurity">
+        <div class="project" onclick="toggleDetails('project1')">
+          <h3><i class="fas fa-folder"></i> Project 1</h3>
+          <div class="project-details" id="project1">
+            <p>Project details go here...</p>
+          </div>
+        </div>
+
+        <div class="project" onclick="toggleDetails('project2')">
+          <h3><i class="fas fa-folder"></i> Project 2</h3>
+          <div class="project-details" id="project2">
+            <p>Project details go here...</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="project" onclick="toggleDetails('project2')">
-        <h3>Project 2</h3>
-        <div class="project-details" id="project2">
-          <p>Project details go here...</p>
+    <div class="category" onclick="toggleCategory('volunteer')">
+      <div class="category-title">Volunteer</div>
+      <div id="volunteer">
+        <div class="project" onclick="toggleDetails('projectA')">
+          <h3><i class="fas fa-folder"></i> Project A</h3>
+          <div class="project-details" id="projectA">
+            <p>Project details go here...</p>
+          </div>
+        </div>
+
+        <div class="project" onclick="toggleDetails('projectB')">
+          <h3><i class="fas fa-folder"></i> Project B</h3>
+          <div class="project-details" id="projectB">
+            <p>Project details go here...</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="category" onclick="toggleCategory('volunteer')">
-    <div class="category-title">Volunteer</div>
-    <div id="volunteer">
-      <div class="project" onclick="toggleDetails('projectA')">
-        <h3>Project A</h3>
-        <div class="project-details" id="projectA">
-          <p>Project details go here...</p>
-        </div>
-      </div>
+  <footer>
+    <!-- Your footer content here -->
+    <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+  </footer>
 
-      <div class="project" onclick="toggleDetails('projectB')">
-        <h3>Project B</h3>
-        <div class="project-details" id="projectB">
-          <p>Project details go here...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleCategory(categoryId) {
-      var category = document.getElementById(categoryId);
-      var projects = category.getElementsByClassName('project');
-      for (var i = 0; i < projects.length; i++) {
-        projects[i].style.display = (projects[i].style.display === 'none' || projects[i].style.display === '') ? 'block' : 'none';
-      }
-    }
-
-    function toggleDetails(projectId) {
-      var projectDetails = document.getElementById(projectId);
-      if (projectDetails.style.display === 'none' || projectDetails.style.display === '') {
-        projectDetails.style.display = 'block';
-      } else {
-        projectDetails.style.display = 'none';
-      }
-    }
-  </script>
-
+  <script src="scripts.js"></script>
 </body>
 </html>
