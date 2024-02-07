@@ -56,47 +56,45 @@
       </div>
     </div>
 
-  <div class="container">
-    <!-- Your cybersecurity portfolio content here -->
-    <div class="category" onclick="toggleCategory('cybersecurity')">
-      <div class="category-title">Cybersecurity</div>
-      <div id="cybersecurity">
-        <div class="project" onclick="toggleDetails('project1')">
+ <div class="tech-tree">
+    <div class="node" onclick="toggleNode('cybersecurity')">
+      <div class="node-title">Cybersecurity</div>
+      <div id="cybersecurity" class="node-children">
+        <div class="node" onclick="toggleNode('project1')">
           <h3><i class="fas fa-folder"></i> Project 1</h3>
-          <div class="project-details" id="project1">
+          <div class="node-details" id="project1">
             <p>Project details go here...</p>
           </div>
         </div>
 
-        <div class="project" onclick="toggleDetails('project2')">
+        <div class="node" onclick="toggleNode('project2')">
           <h3><i class="fas fa-folder"></i> Project 2</h3>
-          <div class="project-details" id="project2">
+          <div class="node-details" id="project2">
             <p>Project details go here...</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="category" onclick="toggleCategory('volunteer')">
-      <div class="category-title">Volunteer</div>
-      <div id="volunteer">
-        <div class="project" onclick="toggleDetails('projectA')">
+    <div class="node" onclick="toggleNode('volunteer')">
+      <div class="node-title">Volunteer</div>
+      <div id="volunteer" class="node-children">
+        <div class="node" onclick="toggleNode('projectA')">
           <h3><i class="fas fa-folder"></i> Project A</h3>
-          <div class="project-details" id="projectA">
+          <div class="node-details" id="projectA">
             <p>Project details go here...</p>
           </div>
         </div>
 
-        <div class="project" onclick="toggleDetails('projectB')">
+        <div class="node" onclick="toggleNode('projectB')">
           <h3><i class="fas fa-folder"></i> Project B</h3>
-          <div class="project-details" id="projectB">
+          <div class="node-details" id="projectB">
             <p>Project details go here...</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 <!-- FOOTER -->
 <div id="footer">
   <!-- Row 1: Social icons and dark mode switch container -->
