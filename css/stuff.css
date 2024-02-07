@@ -56,3 +56,7 @@ header, footer {
   font-size: 1em;
   color: #bdc3c7;
 }
+/* Add space between navbar and tech tree */
+.spacer {
+  height: 100px; /* Adjust the height as needed */
+}
