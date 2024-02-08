@@ -13,9 +13,10 @@
 }
 
 .tree details summary::before {
-  content: "\1F5C0"; /* Unicode character for right arrow */
+  content: '\f07b'; /* Font Awesome class for closed folder */
+  font-family: 'Font Awesome 6 Pro';
   display: inline-block;
-  width: 16px; /* Adjust the width and height based on your icon dimensions */
+  width: 16px;
   height: 16px;
   margin-right: 5px;
   transform: rotate(0deg);
@@ -23,6 +24,7 @@
 }
 
 .tree details[open] summary::before {
+  content: '\f07c'; /* Font Awesome class for open folder */
   transform: rotate(90deg);
 }
 
