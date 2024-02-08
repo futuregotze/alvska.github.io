@@ -103,6 +103,8 @@ function displayJsonTree(data) {
     htmlRetStr += "<li class='folder-item' onclick='toggleFolder(this)'>" + data[i].name + "</li><li class='folder-wrapper'>";
     if (data[i].children) {
       htmlRetStr += displayJsonTree(data[i].children);
+    } else if (data[i].type === 'file') {
+      htmlRetStr += "<li class='file-item'><a href='" + data[i].link + "' target='_blank'>" + data[i].name + "</a></li>";
     }
     htmlRetStr += '</li>';
   }
