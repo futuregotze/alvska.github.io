@@ -1,47 +1,33 @@
-body {
-  margin-top: 20px;
-  background-color: #ECEFF1;
+.tree {
+  list-style: none;
+  padding-left: 20px;
 }
 
-.widget {
-  padding: 18px;
-  background-color: #fff;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+.tree li {
+  margin-bottom: 5px;
 }
 
-.widget > input {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  margin-bottom: 20px;
-  border: 0 none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
+.tree summary {
+  cursor: pointer;
 }
 
-.folder-container {
-  margin: 10px;
-  padding: 0 20px;
+.tree details summary::before {
+  content: "\25B6"; /* Unicode character for right arrow */
+  display: inline-block;
+  margin-right: 5px;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-out;
 }
 
-.folder-wrapper {
-  margin: 10px 0;
-  padding: 0;
-  list-style-type: none;
+.tree details[open] summary::before {
+  transform: rotate(90deg);
 }
 
-.file-item,
-.folder-item {
-  margin-left: -16px;
-  padding-left: 30px; /* Adjusted padding for spacing */
-  list-style-type: none;
+.tree li ul {
+  margin-top: 5px;
+  padding-left: 20px;
 }
 
-.file-item {
-  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsUlEQVQ4T2NkgIKE2q4DMDZW+j+jAgPj//0LmssSkeUZEQZ0/1/QXArnoxuSUNPdwMDIEMDwn2HDgpbSBpg8aQYw/H/PwMCQwMDIMHFBc9kCkCGkGODAwMAAwiBd9TDXYhiQUNtdwPCfgR97ePy7uKClfENCLcK7RLsA2UC8BoADi4HhP44YObigpfTAsHfBgMcC3vwAzze0TAcUuKDrAMN/RlwJCNVcRoaPC5pLA0CCALOMnRHTr6OKAAAAAElEQVR42mP8/wBiwAIAP8CgUHZgAAAABJRU5ErkJggg==') no-repeat left center;
-}
-
-.folder-item {
-  font-weight: bold;
-  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA6UlEQVQ4T62TvQ3CMBCF31OgDxPACGwATAAjeAOgSKpECgoCiRTABmYDNgA2yAawAUpNwiGHH0GBlATcuPH3vbPvTPy4+COPXKCCpY30sgORPIU6dLtF5FTeYgWgA2KtQ1fnQj8amQ2C81fJVcZ65sZUfhTr0GmrYN5iZjWLpIqwC0oLVjah8hd7WPUBsvQIwC4ieD9zFwgDELuyMCCHuwDcAliWFgg2jwoQgxxWEDzeICfZqSDoPa9QHjZpVq1B5UUnEIXa91GhSKKnrm3mQEqXngNyMNNqBKYD/QqSsQ6d1X8+U4X0F3IDjRRPOikDqHUAAAAASUVORK5CYII=') no-repeat left center;
+.tree li ul li {
+  margin-bottom: 5px;
 }
