@@ -12,7 +12,7 @@
 }
 
 .tree details summary::before {
-  content: "\25B6"; /* Unicode character for right arrow */
+  content: "\25B6"; /* Unicode bet character for right arrow */
   display: inline-block;
   margin-right: 5px;
   transform: rotate(0deg);
