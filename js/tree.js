@@ -1,39 +1,24 @@
-const folders =
+rconst folders =
   {
     type: 'dir',
-    name: 'app',
+    name: 'Cybersecurity',
     children: [
       {
-        type: 'file',
-        name: 'index.html'
-      },
-      {
         type: 'dir',
-        name: 'js',
+        name: 'Vulnerability',
         children: [
           {
             type: 'file',
-            name: 'main.js'
+            name: 'Project 1'
           },
           {
             type: 'file',
-            name: 'app.js'
+            name: 'Project 2'
           },
           {
             type: 'file',
-            name: 'misc.js'
+            name: 'Project 3'
           },
-          {
-            type: 'dir',
-            name: 'vendor',
-            children: [
-              {
-                type: 'file',
-                name: 'jquery.js'
-              },
-              {
-                type: 'file',
-                name: 'underscore.js'
               }
             ]
           }
@@ -41,15 +26,19 @@ const folders =
       },
       {
         type: 'dir',
-        name: 'css',
+        name: 'Identiy & Access Management',
         children: [
           {
             type: 'file',
-            name: 'reset.css'
+            name: 'Project 1'
           },
           {
             type: 'file',
-            name: 'main.css'
+            name: 'Project 2'
+          },
+          {
+            type: 'file',
+            name: 'Project 3'
           }
         ]
       }
