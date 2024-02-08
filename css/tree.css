@@ -13,7 +13,7 @@
 }
 
 .tree details summary::before {
-  content: '\f07b'; /* Font Awesome class for closed folder */
+  /* content: '\f07b'; /* Font Awesome class for closed folder */
   font-family: 'Font Awesome 6 Pro';
   display: inline-block;
   width: 16px;
