@@ -37,3 +37,8 @@
 .tree details summary::-webkit-details-marker {
   display: none;
 }
+/* Reset the list-style-type to none for all lists */
+ul, ol {
+  list-style-type: none;
+}
+
