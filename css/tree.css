@@ -24,7 +24,7 @@
 }
 
 .tree details[open] summary::before {
-  content: '\f07c'; /* Font Awesome class for open folder */
+  /* content: '\f07c'; /* Font Awesome class for open folder */
   transform: rotate(90deg);
 }
 
