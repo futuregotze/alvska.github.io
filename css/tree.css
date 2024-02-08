@@ -13,7 +13,7 @@
 }
 
 .tree details summary::before {
-  content: url('assets/icons/folder-3.png');
+  content: "\25B6"; /* Unicode character for right arrow */
   display: inline-block;
   width: 16px; /* Adjust the width and height based on your icon dimensions */
   height: 16px;
