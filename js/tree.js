@@ -101,7 +101,9 @@ function displayJsonTree(data) {
   var htmlRetStr = "<ul class='folder-container' style='list-style-type:none;'>";
   for (var i = 0; i < data.length; i++) {
     htmlRetStr += "<li class='folder-item' onclick='toggleFolder(this)'>" + data[i].name + "</li><li class='folder-wrapper'>";
-    htmlRetStr += displayJsonTree(data[i].children);
+    if (data[i].children) {
+      htmlRetStr += displayJsonTree(data[i].children);
+    }
     htmlRetStr += '</li>';
   }
   htmlRetStr += '</ul>';
