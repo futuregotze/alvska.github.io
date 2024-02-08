@@ -13,8 +13,10 @@
 }
 
 .tree details summary::before {
-  content: "\25B6"; /* Unicode character for right arrow */
+  content: url('./assets/icons/folder-3.png');
   display: inline-block;
+  width: 16px; /* Adjust the width and height based on your icon dimensions */
+  height: 16px;
   margin-right: 5px;
   transform: rotate(0deg);
   transition: transform 0.2s ease-out;
@@ -37,8 +39,8 @@
 .tree details summary::-webkit-details-marker {
   display: none;
 }
+
 /* Reset the list-style-type to none for all lists */
 ul, ol {
   list-style-type: none;
 }
-
