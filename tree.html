@@ -7,7 +7,7 @@
   <link rel="icon" href="./assets/images/IconJF-3.png" />
   <title>Jose's Portfolio</title>
   <link rel="stylesheet" href="./css/layout.css">
-  <link rel="stylesheet" href="./css/tree.css">
+  <!-- <link rel="stylesheet" href="./css/tree.css"> -->
   <link rel="stylesheet" href="./css/typography.css">
   <link rel="stylesheet" href="./css/dark-mode.css" id="dark-mode-stylesheet">
   <link rel="stylesheet" href="./css/utilities.css">
@@ -41,6 +41,128 @@
     <a class="nav-title-link" href="./index.html">
       <span class="nav-title">Jose Fernandez</span>
     </a>
+    <!-- Tree View Structure -->
+    <ul class="spectrum-TreeView" style="width: 250px">
+      <!-- Top-Level Item -->
+      <li class="spectrum-TreeView-item is-open">
+        <a class="spectrum-TreeView-itemLink" href="#">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+          <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder"></use>
+          </svg>
+          <span class="spectrum-TreeView-itemLabel">Design Files</span>
+        </a>
+        <!-- Sub-Level Items -->
+        <ul class="spectrum-TreeView">
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+              <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                <use xlink:href="#spectrum-icon-18-Folder"></use>
+              </svg>
+              <span class="spectrum-TreeView-itemLabel">Production Ready</span>
+            </a>
+          </li>
+          <li class="spectrum-TreeView-item is-open">
+            <a class="spectrum-TreeView-itemLink" href="#">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+              <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                <use xlink:href="#spectrum-icon-18-Folder"></use>
+              </svg>
+              <span class="spectrum-TreeView-itemLabel">Work in Progress</span>
+            </a>
+            <!-- Nested Sub-Level Items -->
+            <ul class="spectrum-TreeView">
+              <li class="spectrum-TreeView-item is-open">
+                <a class="spectrum-TreeView-itemLink" href="#">
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron100" />
+                  </svg>
+                  <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                    <use xlink:href="#spectrum-icon-18-Folder"></use>
+                  </svg>
+                  <span class="spectrum-TreeView-itemLabel">Branding</span>
+                </a>
+                <!-- Nested Sub-Level Items -->
+                <ul class="spectrum-TreeView">
+                  <li class="spectrum-TreeView-item">
+                    <a class="spectrum-TreeView-itemLink" href="#">
+                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron100" />
+                      </svg>
+                      <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                        <use xlink:href="#spectrum-icon-18-Folder"></use>
+                      </svg>
+                      <span class="spectrum-TreeView-itemLabel">Assets</span>
+                    </a>
+                  </li>
+                  <li class="spectrum-TreeView-item is-open">
+                    <a class="spectrum-TreeView-itemLink" href="#">
+                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron100" />
+                      </svg>
+                      <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                        <use xlink:href="#spectrum-icon-18-Folder"></use>
+                      </svg>
+                      <span class="spectrum-TreeView-itemLabel">Explorations</span>
+                    </a>
+                    <!-- Nested Sub-Level Items -->
+                    <ul class="spectrum-TreeView">
+                      <li class="spectrum-TreeView-item">
+                        <a class="spectrum-TreeView-itemLink" href="#">
+                          <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Document">
+                            <use xlink:href="#spectrum-icon-18-Document"></use>
+                          </svg>
+                          <span class="spectrum-TreeView-itemLabel">CocaCola_01.ai</span>
+                        </a>
+                      </li>
+                      <li class="spectrum-TreeView-item">
+                        <a class="spectrum-TreeView-itemLink" href="#">
+                          <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Document">
+                            <use xlink:href="#spectrum-icon-18-Document"></use>
+                          </svg>
+                          <span class="spectrum-TreeView-itemLabel">CocaCola_02.ai</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="spectrum-TreeView-item">
+            <a class="spectrum-TreeView-itemLink" href="#">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+              <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+                <use xlink:href="#spectrum-icon-18-Folder"></use>
+              </svg>
+              <span class="spectrum-TreeView-itemLabel">Archive</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="spectrum-TreeView-item">
+        <a class="spectrum-TreeView-itemLink" href="#">
+          <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-TreeView-itemIndicator" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Chevron100" />
+          </svg>
+          <svg class="spectrum-TreeView-itemIcon spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Folder">
+            <use xlink:href="#spectrum-icon-18-Folder"></use>
+          </svg>
+          <span class="spectrum-TreeView-itemLabel">References</span>
+        </a>
+      </li>
+    </ul>
+    <!-- End of Tree View Structure -->
+  </div>
   <!-- FOOTER -->
   <div id="footer">
     <!-- Row 1: Social icons and dark mode switch container -->
@@ -78,6 +200,6 @@
   </div>
 
   <script src="./js/script.js"></script>
-  <script src="./js/tree.js"></script>
+  <!-- <script src="./js/tree.js"></script> -->
 </body>
 </html>
