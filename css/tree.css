@@ -64,3 +64,7 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
