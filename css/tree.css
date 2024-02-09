@@ -10,11 +10,15 @@
 
 .tree summary {
   cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: 500; /* Adjust the font weight as needed */
+  color: #333; /* Adjust the font color as needed */
+  margin-bottom: 5px; /* Additional styles for the summary element */
 }
 
 .tree details summary::before {
-  /* content: '\f07b'; /* Font Awesome class for closed folder */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  content: '\f07b'; /* Font Awesome class for closed folder */
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -24,7 +28,7 @@
 }
 
 .tree details[open] summary::before {
-  /* content: '\f07c'; /* Font Awesome class for open folder */
+  content: '\f07c'; /* Font Awesome class for open folder */
   transform: rotate(90deg);
 }
 
@@ -35,6 +39,10 @@
 
 .tree li ul li {
   margin-bottom: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Adjust the font family as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: 500; /* Adjust the font weight as needed */
+  color: #333; /* Adjust the font color as needed */
 }
 
 /* Hide the default marker for WebKit browsers */
@@ -46,13 +54,14 @@
 ul, ol {
   list-style-type: none;
 }
+
 .tree-container {
   background-color: #f8f8f8; /* Adjust the background color as needed */
   padding: 10px; /* Adjust the padding as needed */
   margin-top: 20px; /* Adjust the margin as needed */
   border-radius: 8px; /* Add border-radius for a rounded appearance */
-
 }
+
 .search-container {
   margin-bottom: 10px; /* Adjust margin for spacing between search and tree */
 }
@@ -64,7 +73,9 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+
