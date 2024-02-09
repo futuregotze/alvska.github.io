@@ -51,4 +51,14 @@ ul, ol {
   padding: 20px; /* Adjust the padding based on your design */
   border-radius: 8px; /* Optional: Add border-radius for rounded corners */
 }
+.search-container {
+  margin-bottom: 10px; /* Adjust margin for spacing between search and tree */
+}
 
+#tree-search {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
