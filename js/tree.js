@@ -1,6 +1,22 @@
-// tree.js
 document.addEventListener('DOMContentLoaded', function() {
   var detailsElements = document.querySelectorAll('.tree details');
+
+  // Search functionality
+  var searchInput = document.getElementById('tree-search');
+  searchInput.addEventListener('input', function() {
+    var searchTerm = searchInput.value.toLowerCase();
+
+    detailsElements.forEach(function(detailsElement) {
+      var summaryElement = detailsElement.querySelector('summary');
+      var summaryText = summaryElement.textContent.toLowerCase();
+
+      if (summaryText.includes(searchTerm)) {
+        detailsElement.style.display = 'block';
+      } else {
+        detailsElement.style.display = 'none';
+      }
+    });
+  });
 
   detailsElements.forEach(function(detailsElement) {
     detailsElement.addEventListener('toggle', function() {
