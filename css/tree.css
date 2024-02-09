@@ -5,7 +5,7 @@
 }
 
 .tree li {
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Adjust margin for better spacing between tree items */
 }
 
 .tree summary {
