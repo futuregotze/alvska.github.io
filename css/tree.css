@@ -70,7 +70,19 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.text-underlined {
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 100, 50, 0.1); /* Use rgba() instead of parentheses */
+/* A link that has not been visited */
+a:link {
+    color: pink;
+}
+/* A link that has been visited */
+a:visited {
+    color: blue;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+}
+/* A link that is selected */
+a:active {
+    color: green;
 }
