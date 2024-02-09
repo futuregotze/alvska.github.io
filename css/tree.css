@@ -11,10 +11,10 @@
 .tree summary {
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px; /* Adjust the font size as needed */
-  font-weight: 500; /* Adjust the font weight as needed */
-  color: #333; /* Adjust the font color as needed */
-  margin-bottom: 5px; /* Additional styles for the summary element */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: 800; /* Adjust the font weight as needed */
+  color: #000; /* Adjust the font color as needed */
+  margin-bottom: 10px; /* Additional styles for the summary element */
 }
 
 .tree details summary::before {
@@ -62,9 +62,6 @@ ul, ol {
   border-radius: 8px; /* Add border-radius for a rounded appearance */
 }
 
-.search-container {
-  margin-bottom: 10px; /* Adjust margin for spacing between search and tree */
-}
 
 #tree-search {
   padding: 8px;
@@ -74,8 +71,12 @@ ul, ol {
   border-radius: 4px;
 }
 
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+.text-underlined {
+  text-decoration: underline;
+}
 
+/* Change the color of the underline */
+.text-underlined {
+  text-decoration: underline;
+  text-decoration-color: (0, 100%, 50%, 0.1);
+}
