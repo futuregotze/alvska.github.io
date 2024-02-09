@@ -47,9 +47,11 @@ ul, ol {
   list-style-type: none;
 }
 .tree-container {
-  background-color: #f5f5f5; /* Choose your preferred background color */
-  padding: 20px; /* Adjust the padding based on your design */
-  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  background-color: #f8f8f8; /* Adjust the background color as needed */
+  padding: 10px; /* Adjust the padding as needed */
+  margin-top: 20px; /* Adjust the margin as needed */
+  border-radius: 8px; /* Add border-radius for a rounded appearance */
+
 }
 .search-container {
   margin-bottom: 10px; /* Adjust margin for spacing between search and tree */
