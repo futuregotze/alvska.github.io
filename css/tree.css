@@ -70,13 +70,7 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 .text-underlined {
   text-decoration: underline;
-}
-
-/* Change the color of the underline */
-.text-underlined {
-  text-decoration: underline;
-  text-decoration-color: (0, 100%, 50%, 0.1);
+  text-decoration-color: rgba(0, 100, 50, 0.1); /* Use rgba() instead of parentheses */
 }
