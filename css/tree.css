@@ -14,7 +14,7 @@
 
 .tree details summary::before {
   /* content: '\f07b'; /* Font Awesome class for closed folder */
-  font-family: 'Font Awesome 6 Pro';
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: inline-block;
   width: 16px;
   height: 16px;
