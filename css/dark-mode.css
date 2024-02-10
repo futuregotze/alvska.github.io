@@ -116,4 +116,20 @@ body.dark-mode {
   border-radius: 0; /* Remove any border radius */
 }
 
-/* Add dark mode styles for other elements as needed */
+/* Exclude tree view from dark mode styling */
+.body.dark-mode .tree-container {
+  background-color: #f8f8f8; /* Set background color to your desired color for tree view in dark mode */
+  color: #000; /* Set text color to your desired color for tree view in dark mode */
+}
+
+/* Add this rule to maintain text color in tree view during dark mode */
+.body.dark-mode .tree .icon-text {
+  color: #000 !important; /* Set text color to your desired color for tree view items in dark mode */
+}
+
+/* Add this rule to maintain icon color in tree view during dark mode */
+.body.dark-mode .tree details summary::before,
+.body.dark-mode .tree li ul li i.fa-solid.fa-file {
+  color: #000 !important; /* Set icon color to your desired color for tree view items in dark mode */
+}
+
