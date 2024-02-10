@@ -47,3 +47,17 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+/* Center the text and arrow vertically in the button */
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.button .button-text {
+  margin-right: 5px; /* Adjust the margin as needed */
+}
+
+.button .right-arrow-icon {
+  width: 16px;
+  height: 16px;
+}
