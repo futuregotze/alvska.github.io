@@ -89,12 +89,15 @@ a:active {
   margin-left: 10px; /* Adjust the value as needed */
 }
 /* Add this rule to maintain text color in tree view during dark mode */
-#dark-mode-toggle:checked + .tree-container .tree .icon-text {
+#dark-mode-switch:checked + #footer .tree-container .icon-text,
+#dark-mode-switch:checked + #footer .tree-container .tree details summary::before,
+#dark-mode-switch:checked + #footer .tree-container .tree li ul li i.fa-solid.fa-file {
   color: #000;
 }
 
 /* Add this rule to maintain icon color in tree view during dark mode */
-#dark-mode-toggle:checked + .tree-container .tree details summary::before,
-#dark-mode-toggle:checked + .tree-container .tree li ul li i.fa-solid.fa-file {
-  color: #333;
+#dark-mode-switch:checked + #footer .tree-container .icon-text,
+#dark-mode-switch:checked + #footer .tree-container .tree details summary::before,
+#dark-mode-switch:checked + #footer .tree-container .tree li ul li i.fa-solid.fa-file {
+  color: #000;
 }
