@@ -21,10 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
   detailsElements.forEach(function(detailsElement) {
     detailsElement.addEventListener('toggle', function() {
       var summaryElement = detailsElement.querySelector('summary');
+      var iconElement = summaryElement.querySelector('i');
+
       if (detailsElement.hasAttribute('open')) {
-        summaryElement.innerHTML = '<i class="fa-sharp fa-solid fa-folder-open" style="color: #606060;"></i> ' + summaryElement.textContent;
+        iconElement.classList.remove('fa-folder-closed');
+        iconElement.classList.add('fa-folder-open');
       } else {
-        summaryElement.innerHTML = '<i class="fa-sharp fa-solid fa-folder-closed" style="color: #606060;"></i> ' + summaryElement.textContent;
+        iconElement.classList.remove('fa-folder-open');
+        iconElement.classList.add('fa-folder-closed');
       }
     });
   });
