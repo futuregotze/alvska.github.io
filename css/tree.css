@@ -57,7 +57,7 @@ ul, ol {
 
 /* Make file icons larger */
 .tree li ul li i.fa-solid.fa-file {
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 21px; /* Adjust the font size as needed */
 }
 
 .tree-container {
