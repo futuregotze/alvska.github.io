@@ -90,12 +90,11 @@ a:active {
 }
 /* Add this rule to maintain text color in tree view during dark mode */
 #dark-mode-toggle:checked + .tree-container .tree .icon-text {
-  color: #000 !important; /* Adjust the color as needed */
+  color: #000;
 }
 
 /* Add this rule to maintain icon color in tree view during dark mode */
 #dark-mode-toggle:checked + .tree-container .tree details summary::before,
 #dark-mode-toggle:checked + .tree-container .tree li ul li i.fa-solid.fa-file {
-  color: #000 !important; /* Adjust the color as needed */
+  color: #333;
 }
-
