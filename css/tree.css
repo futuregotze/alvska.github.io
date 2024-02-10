@@ -55,6 +55,11 @@ ul, ol {
   list-style-type: none;
 }
 
+/* Make file icons larger */
+.tree li ul li i.fa-solid.fa-file {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
 .tree-container {
   background-color: #f8f8f8; /* Adjust the background color as needed */
   padding: 10px; /* Adjust the padding as needed */
@@ -64,7 +69,6 @@ ul, ol {
   border-radius: 8px; /* Add border-radius for a rounded appearance */
 }
 
-
 #tree-search {
   padding: 8px;
   width: 100%;
@@ -72,22 +76,15 @@ ul, ol {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-/* A link that has not been visited */
-a:link {
-    color: #000;
-}
-/* A link that has been visited */
-a:visited {
-    color: #000;
-}
-/* A link that is hovered on */
-a:hover {
-    color: #000;
-}
-/* A link that is selected */
+
+/* A link styles */
+a:link,
+a:visited,
+a:hover,
 a:active {
-    color: #000;
+  color: #000;
 }
+
 .icon-text {
-    margin-left: 10px; /* Adjust the value as needed */
+  margin-left: 10px; /* Adjust the value as needed */
 }
